@@ -9,5 +9,12 @@
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS"
-  }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "witra-marketing-production",
+      "database_id": "b2b6c359-dfa6-4cc6-a6ab-d8e4141710ef"
+    }
+  ]
 }
