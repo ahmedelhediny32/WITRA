@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "witra-marketing",
+  "compatibility_date": "2026-08-25",
+  "pages_build_output_dir": "./dist",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "witra-marketing-production",
+      "database_id": "REPLACE_WITH_PRODUCTION_DATABASE_ID"
+    }
+  ]
+}
