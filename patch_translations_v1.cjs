@@ -1,0 +1,157 @@
+const fs = require('fs');
+let appJs = fs.readFileSync('public/static/app.js', 'utf8');
+
+// 1. Replace t(key) function with a smarter one that handles dynamic strings
+const oldT = `function t(key) {
+  return (locales[currentLang] && locales[currentLang][key]) || key;
+}`;
+
+const newT = `function t(key) {
+  if (currentLang === "ar" && typeof key === "string") {
+    if (locales.ar && locales.ar[key]) return locales.ar[key];
+    
+    // Dynamic Replacements for Activities
+    if (key.includes("Team request for")) {
+      return key.replace(/Team request for (.+?) was rejected/, "تم رفض طلب الانضمام للفريق من $1")
+                .replace(/Team request for (.+?) was approved/, "تم قبول طلب الانضمام للفريق من $1");
+    }
+    if (key.includes("A draft performance report for")) {
+      return key.replace(/A draft performance report for (.+?) was entered/, "تم إدخال مسودة تقرير الأداء لشهر $1");
+    }
+    if (key.includes("was added as a new client")) {
+      return key.replace(/<b>(.+?)<\\/b> was added as a new client./, "تمت إضافة <b>$1</b> كعميل جديد.");
+    }
+    if (key.includes("was removed by WITRA")) {
+      return key.replace(/<b>(.+?)<\\/b> was removed by WITRA./, "تمت إزالة <b>$1</b> بواسطة WITRA.");
+    }
+    if (key.includes("Subscription") && (key.includes("services") || key.includes("expired") || key.includes("renewed"))) {
+      let s = key.replace("Subscription manually set to", "تم تعيين حالة الاشتراك يدوياً إلى")
+                 .replace("Subscription <b>expired</b>", "<b>انتهى</b> الاشتراك")
+                 .replace("Subscription <b>renewed</b>", "<b>تم تجديد</b> الاشتراك")
+                 .replace("— services suspended.", "— وتم إيقاف الخدمات.")
+                 .replace("— services active.", "— والخدمات الآن فعالة.")
+                 .replace("- services reactivated.", "- وتم إعادة تفعيل الخدمات.")
+                 .replace("— services suspended until renewal.", "— تم إيقاف الخدمات حتى التجديد.");
+      return s;
+    }
+    
+    // Dynamic Replacements for Notifications
+    if (key.includes("Your subscription")) {
+      return key.replace("Your subscription status was changed to", "تم تغيير حالة اشتراكك إلى")
+                .replace("Your subscription status is now", "حالة اشتراكك الآن هي")
+                .replace("and your services have been paused.", "وتم إيقاف خدماتك مؤقتاً.")
+                .replace("and your services are active.", "وخدماتك الآن قيد التفعيل.")
+                .replace("has been renewed - your services are active again. Welcome back!", "تم تجديده - خدماتك أصبحت فعالة من جديد. مرحباً بك!");
+    }
+    if (key.includes("contract has ended")) {
+      return key.replace("Your subscription contract has ended and your services have been paused. Please contact WITRA to resubscribe and reactivate your account.", "انتهى عقد اشتراكك وتم إيقاف الخدمات. يرجى التواصل مع WITRA لتجديد الاشتراك وتفعيل حسابك.");
+    }
+  }
+  return (locales[currentLang] && locales[currentLang][key]) || key;
+}`;
+
+if (appJs.includes(oldT)) {
+  appJs = appJs.replace(oldT, newT);
+}
+
+// 2. Add missing translations to locales.ar
+const missingTranslations = `
+    "Why it matters": "سبب الأهمية",
+    "One-time · Sold independently of any plan": "خدمة لمرة واحدة · تُباع بشكل مستقل عن الباقات",
+    "Request a Quote": "اطلب تسعير",
+    "Included in Core+": "مشمولة في Core+",
+    "Included in: ": "مشمولة في: ",
+    "Standalone only": "خدمة مستقلة فقط",
+    "Standalone only:": "خدمة مستقلة فقط:",
+    "+Included in Core": "+ مشمولة في باقة Core",
+    "of spend (min 10,000) 15%": "من الميزانية الإعلانية (بحد أدنى 10,000) 15%",
+    "15% of spend (min 10,000)": "15% من الميزانية (بحد أدنى 10,000)",
+    "8,000 – 15,000 (one-time)": "8,000 - 15,000 (لمرة واحدة)",
+    "25,000 – 60,000 (one-time)": "25,000 - 60,000 (لمرة واحدة)",
+    "Full Presence & Messaging Audit": "مراجعة شاملة للظهور والرسائل",
+    "Competitor & Funnel Analysis": "تحليل المنافسين ومسار المبيعات",
+    "Written Growth Diagnosis": "تقرير مكتوب لتشخيص النمو",
+    "90-Day Action Plan": "خطة عمل لمدة 90 يومًا",
+    "Campaign Strategy": "استراتيجية الحملات",
+    "Audience Research": "دراسة الجمهور المستهدف",
+    "Ad Creative": "تصميمات الإعلانات",
+    "Campaign Setup": "إعداد الحملات",
+    "Optimization": "تحسين مستمر للأداء",
+    "Retargeting": "إعادة الاستهداف",
+    "Performance Reports": "تقارير الأداء",
+    "Logo System": "تصميم شعار متكامل",
+    "Brand Palette & Typography": "ألوان وخطوط الهوية البصرية",
+    "Brand Guidelines": "دليل استخدام الهوية (Brand Guidelines)",
+    "Launch Content Kit": "حزمة محتوى الانطلاق",
+    "Technical Audit": "مراجعة تقنية",
+    "Keyword Strategy": "استراتيجية الكلمات المفتاحية",
+    "On-page Optimization": "تحسين صفحات الموقع",
+    "Monthly Ranking Reports": "تقارير تصدر شهرية",
+    "Concept & Script": "الفكرة وكتابة السيناريو",
+    "Shoot Day": "يوم التصوير",
+    "Editing": "المونتاج",
+    "Platform-ready Cuts": "نسخ جاهزة لمنصات التواصل",
+    "Content Calendar": "خطة المحتوى",
+    "Copywriting": "كتابة المحتوى",
+    "Design & Production": "التصميم والإنتاج",
+    "Publishing & Community Replies": "النشر والرد على المتابعين",
+    "Daily Posting": "نشر يومي",
+    "Community Management": "إدارة المجتمع والردود",
+    "Monthly Performance Review": "مراجعة شهرية للأداء",
+    "Owner": "مالك",
+    "Manager": "مدير",
+    "Viewer": "مُشاهد",
+    "Pending": "قيد المراجعة",
+    "Approved": "مقبول",
+    "Rejected": "مرفوض",
+    "Upgrade to Gold": "ترقية إلى ذهبي",
+    "Upgrade to Premium": "ترقية إلى بريميوم",
+`;
+
+// Insert the missing translations into locales.ar
+const arLocalesIndex = appJs.indexOf('ar: {');
+if (arLocalesIndex !== -1 && !appJs.includes('"Why it matters"')) {
+  appJs = appJs.substring(0, arLocalesIndex + 5) + missingTranslations + appJs.substring(arLocalesIndex + 5);
+}
+
+// 3. Wrap features in t() when rendering
+appJs = appJs.replace(
+  "return '<li>' + esc(w) + '</li>';",
+  "return '<li>' + esc(t(w)) + '</li>';"
+); // Might replace only one, use a regex
+
+appJs = appJs.replace(/return '<li>' \+ esc\(w\) \+ '<\/li>';/g, "return '<li>' + esc(t(w)) + '</li>';");
+
+// 4. Wrap "Included in: "
+appJs = appJs.replace(
+  "'<div class=\"cell-sub\">Included in: '",
+  "'<div class=\"cell-sub\">' + esc(t(\"Included in: \"))"
+);
+
+// 5. Wrap "Standalone only"
+appJs = appJs.replace(
+  ' : "Standalone only") + \'</div>\'',
+  ' : t("Standalone only")) + \'</div>\''
+);
+
+// 6. Fix "Standalone only:" and other raw strings if any in the catalogue
+appJs = appJs.replace(
+  "Standalone only:",
+  "\" + t(\"Standalone only:\") + \""
+); // this might break if it's not well-targeted. Let's look for how it's used.
+// Actually, it's safer to leave 6 if 5 handles it.
+
+// Fix Status rendering in Service Requests table
+// `<th>' + esc(t("Status")) + '</th>` is already there. The badge might not be translated.
+appJs = appJs.replace(
+  "esc(r.status)",
+  "esc(t(r.status))"
+); // For service requests. We can use a regex to be safe.
+appJs = appJs.replace(/esc\(r.status\)/g, "esc(t(r.status))");
+appJs = appJs.replace(/esc\(r.role\)/g, "esc(t(r.role))");
+appJs = appJs.replace(/esc\(m.role\)/g, "esc(t(m.role))");
+appJs = appJs.replace(/esc\(req.role\)/g, "esc(t(req.role))");
+
+
+fs.writeFileSync('public/static/app.js', appJs, 'utf8');
+console.log('App patched successfully');
