@@ -643,7 +643,30 @@ var locales = {
     "Increase organic visibility.": "زد ظهورك المجاني في البحث.",
     "Create professional content.": "أنتج محتوى احترافيًا.",
     "A steady stream of content that sounds like you.": "تدفق مستمر من المحتوى بصوت علامتك.",
-    "Your channels, handled daily.": "قنواتك تُدار يوميًا."
+    "Your channels, handled daily.": "قنواتك تُدار يوميًا.",
+    "Attachments": "المرفقات",
+    "Business Documents": "مستندات الأعمال",
+    "Strategy, SWOT Analysis, Marketing Plans and other business documents uploaded by WITRA.": "الاستراتيجية وتحليل SWOT وخطط التسويق ومستندات الأعمال الأخرى المرفوعة من WITRA.",
+    "No attachments yet": "لا توجد مرفقات بعد",
+    "Your business documents will appear here once WITRA uploads them.": "ستظهر مستندات أعمالك هنا بمجرد أن يرفعها فريق WITRA.",
+    "Download": "تحميل",
+    "Uploaded by": "رفع بواسطة",
+    "Upload Attachment": "رفع مرفق",
+    "Category": "الفئة",
+    "Choose file": "اختر ملف",
+    "Upload": "رفع",
+    "Uploading…": "جارٍ الرفع…",
+    "Attachment uploaded": "تم رفع المرفق",
+    "Attachment deleted": "تم حذف المرفق",
+    "Delete this attachment?": "حذف هذا المرفق؟",
+    "Strategy": "الاستراتيجية",
+    "SWOT Analysis": "تحليل SWOT",
+    "Marketing Plan": "خطة التسويق",
+    "Business Plan": "خطة العمل",
+    "Brand Guidelines": "دليل الهوية",
+    "Other": "أخرى",
+    "Client Attachments": "مرفقات العميل",
+    "Upload business documents for this client — visible on their portal.": "ارفع مستندات الأعمال لهذا العميل — ستكون مرئية على بوابته."
   }
 };
 
@@ -904,7 +927,14 @@ var api = {
     client: function () { return apiFetch("/api/portal/client"); },
     saveBusiness: function (payload) { return apiFetch("/api/portal/business", { method: "PUT", body: payload }); },
     saveSocialLinks: function (links) { return apiFetch("/api/portal/social-links", { method: "PUT", body: { socialLinks: links } }); },
-    saveBrand: function (payload) { return apiFetch("/api/portal/brand", { method: "PUT", body: payload }); }
+    saveBrand: function (payload) { return apiFetch("/api/portal/brand", { method: "PUT", body: payload }); },
+    attachments: function () { return apiFetch("/api/attachments/portal"); },
+    downloadAttachment: function (id) { return apiFetch("/api/attachments/portal/" + id + "/download"); }
+  },
+  attachments: {
+    ofClient: function (clientId) { return apiFetch("/api/attachments/client/" + clientId); },
+    upload: function (clientId, payload) { return apiFetch("/api/attachments/client/" + clientId, { method: "POST", body: payload }); },
+    remove: function (id) { return apiFetch("/api/attachments/" + id, { method: "DELETE" }); }
   },
   reportsMeta: {
     methodologyNote: "Reports & Performance numbers are entered manually by the WITRA team based on each platform's native analytics (Meta Business Suite, Google Ads, etc). Each report shows who entered it and when, so the number always has a clear source."
@@ -1060,18 +1090,19 @@ function boot() {
         state.adminSection = "dashboard";
       }
     } else {
-      state.view = "login";
+      state.view = window.location.pathname === "/login" ? "login" : "public";
     }
     render();
   }).catch(function () {
     state.booted = true;
-    state.view = "login";
+    state.view = window.location.pathname === "/login" ? "login" : "public";
     render();
   });
 }
 
 function render() {
   var root = document.getElementById("root");
+  if (state.view === "public") { window.renderPublicSite(); return; }
   if (state.view === "login") { root.innerHTML = loginHtml(); bindLoginEvents(); return; }
   if (state.view === "admin") { root.innerHTML = shellHtml("admin"); bindShellEvents(); renderAdminSection(); return; }
   if (state.view === "client") { root.innerHTML = shellHtml("client"); bindShellEvents(); renderClientSection(); return; }
@@ -1145,6 +1176,7 @@ var ADMIN_NAV = [
   { group: "Command Center", items: [{ id: "dashboard", label: "Dashboard", icon: "◆" }] },
   { group: "Client Management", items: [
     { id: "clients", label: "Clients", icon: "◈" },
+    { id: "diagnostic-leads", label: "Diagnostic Leads", icon: "◇" },
     { id: "subscriptions", label: "Subscriptions", icon: "◇" },
     { id: "requests", label: "Service Requests", icon: "✎" }
   ]},
@@ -1161,7 +1193,10 @@ var ADMIN_NAV = [
 ];
 var CLIENT_NAV = [
   { group: "", items: [{ id: "dashboard", label: "Dashboard", icon: "◆" }] },
-  { group: "My Business", items: [{ id: "business", label: "Business Profile", icon: "◈" }] },
+  { group: "My Business", items: [
+    { id: "business", label: "Business Profile", icon: "◈" },
+    { id: "attachments", label: "Attachments", icon: "◫" }
+  ]},
   { group: "My Marketing", items: [
     { id: "content-planner", label: "Content Ops Tracker", icon: "▧" },
     { id: "services", label: "My Services", icon: "✦" },
@@ -1354,7 +1389,7 @@ function renderAdminSection() {
   var navActive = state.adminSection === "client-profile" ? "clients" : state.adminSection;
   document.querySelectorAll(".sidebar-link").forEach(function (el) { el.classList.toggle("active", el.getAttribute("data-nav") === navActive); });
   var titles = { dashboard: "WITRA Command Center", clients: "Clients", subscriptions: t("Subscriptions"),
-    requests: "Service Requests", services: "Services", "witra-ops": "WITRA Ops Tracker", reports: "Reports & Performance", activities: "Activities / Audit Log",
+    requests: "Service Requests", "diagnostic-leads": "Diagnostic Leads", services: "Services", "witra-ops": "WITRA Ops Tracker", reports: "Reports & Performance", activities: "Activities / Audit Log",
     "witra-team": "WITRA Team", settings: "Settings" };
   var title = titles[state.adminSection] || "";
   document.getElementById("topbarTitle").textContent = t(title);
@@ -1363,7 +1398,7 @@ function renderAdminSection() {
 
   var fn = {
     dashboard: renderAdminDashboard, clients: renderAdminClients,
-    subscriptions: renderAdminSubscriptions, requests: renderAdminRequests, services: renderAdminServices,
+    subscriptions: renderAdminSubscriptions, requests: renderAdminRequests, "diagnostic-leads": renderAdminDiagnosticLeads, services: renderAdminServices,
     "witra-ops": renderAdminWitraOps,
     reports: renderAdminReports, activities: renderAdminActivities, "witra-team": renderAdminTeam, settings: renderAdminSettings,
     "client-profile": renderAdminClientProfile
@@ -1389,6 +1424,38 @@ function healthBarWidget(counts, total) {
     '<p class="cell-sub health-legend-note">' + esc(t("Health is calculated automatically from this month's Content Ops Tracker execution: ≥70% done = On Track, 40–69% = Needs Attention, below 40% = At Risk. A client with no planned items yet shows as Onboarding.")) + '</p></div>';
 }
 
+
+function renderAdminDiagnosticLeads(container) {
+  apiFetch("/api/public/diagnostic").then(function (res) {
+    var leads = res.leads || [];
+    var html = '<div class="section-title">' + esc(t("Diagnostic Leads")) + '</div>';
+    html += '<div class="panel-card"><p class="cell-sub" style="margin-top:0;margin-bottom:14px;">New requests from the public WITRA website.</p>';
+    if (!leads.length) {
+      html += '<div class="cell-sub">No diagnostic requests yet.</div>';
+    } else {
+      html += '<div class="table-wrap diagnostic-leads-table-wrap"><table class="data-table diagnostic-leads-table"><colgroup><col class="lead-col-name"><col class="lead-col-business"><col class="lead-col-contact"><col class="lead-col-challenge"><col class="lead-col-status"><col class="lead-col-received"></colgroup><thead><tr><th>Name</th><th>Business</th><th>Contact</th><th>Challenge</th><th>Status</th><th>Received</th></tr></thead><tbody>';
+      html += leads.map(function (lead) {
+        return '<tr><td><div class="cell-main">' + esc(lead.name) + '</div><div class="cell-sub">' + esc(lead.industry || "") + '</div></td>' +
+          '<td><div class="lead-cell-text">' + esc(lead.business_name) + '</div></td>' +
+          '<td><div class="lead-cell-text">' + esc(lead.email) + '</div><div class="cell-sub lead-phone">' + esc(lead.phone) + '</div></td>' +
+          '<td><div class="lead-challenge">' + esc(lead.challenge) + '</div></td>' +
+          '<td><select class="status-badge lead-status-select" data-diagnostic-status="' + esc(lead.id) + '">' + ["New", "Contacted", "Qualified", "Diagnostic Booked", "Won", "Lost"].map(function (status) { return '<option' + (lead.status === status ? ' selected' : '') + '>' + esc(status) + '</option>'; }).join('') + '</select></td>' +
+          '<td class="mono lead-received">' + esc(String(lead.created_at || "").replace("T", " ").slice(0, 16)) + '</td></tr>';
+      }).join("");
+      html += '</tbody></table></div>';
+    }
+    html += '</div>';
+    container.innerHTML = html;
+    container.querySelectorAll("[data-diagnostic-status]").forEach(function (select) {
+      select.addEventListener("change", function () {
+        apiFetch("/api/public/diagnostic/" + select.getAttribute("data-diagnostic-status"), { method: "PUT", body: { status: select.value } }).then(function () { toast("Lead status updated", "success"); }).catch(function (err) { errorToast(err); });
+      });
+    });
+  }).catch(function (err) {
+    container.innerHTML = errorState(err);
+    bindRetry(function () { renderAdminDiagnosticLeads(container); });
+  });
+}
 function renderAdminDashboard(container) {
   api.dashboard.get().then(function (d) {
     var activeSubs = d.activeSubscriptions != null ? d.activeSubscriptions : d.clients.filter(function (c) { return c.billingStatus === "Active"; }).length;
@@ -1641,6 +1708,25 @@ function renderAdminClientProfile(container) {
       '<textarea class="notes-area" id="internalNotesArea" placeholder="' + esc(t("Sales notes, delivery notes, risk/retention notes…")) + '">' + esc(c.internalNotes || "") + '</textarea>' +
       '<div style="margin-top:10px;text-align:right;"><button class="btn btn-primary btn-sm" id="saveNotesBtn">Save Notes</button></div></div>';
 
+    /* ── Client Attachments section (admin upload) ── */
+    html += '<div class="section-title">' + esc(t("Client Attachments")) + '</div>';
+    html += '<div class="panel-card"><p class="cell-sub" style="margin-bottom:12px;">' + esc(t("Upload business documents for this client — visible on their portal.")) + '</p>';
+    html += '<div id="adminAttachmentsList"><div class="content-loading"><div class="spinner"></div></div></div>';
+    html += '<div class="attachment-upload-zone" id="attachmentUploadZone">' +
+      '<div class="attachment-upload-form">' +
+      '<select id="attachLabel" class="form-input" style="min-width:160px;">' +
+      '<option value="Strategy">' + esc(t("Strategy")) + '</option>' +
+      '<option value="SWOT Analysis">' + esc(t("SWOT Analysis")) + '</option>' +
+      '<option value="Marketing Plan">' + esc(t("Marketing Plan")) + '</option>' +
+      '<option value="Business Plan">' + esc(t("Business Plan")) + '</option>' +
+      '<option value="Brand Guidelines">' + esc(t("Brand Guidelines")) + '</option>' +
+      '<option value="Other">' + esc(t("Other")) + '</option>' +
+      '</select>' +
+      '<label class="btn btn-sm" style="cursor:pointer;">' + esc(t("Choose file")) + '<input type="file" id="attachFileInput" style="display:none;" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.png,.jpg,.jpeg,.svg"></label>' +
+      '<span id="attachFileName" class="cell-sub" style="flex:1;"></span>' +
+      '<button class="btn btn-primary btn-sm" id="attachUploadBtn" disabled>' + esc(t("Upload")) + '</button>' +
+      '</div></div></div>';
+
     container.innerHTML = html;
     bindContentDelegation(container);
 
@@ -1660,6 +1746,39 @@ function renderAdminClientProfile(container) {
         setButtonLoading(btn, false);
         toast("Notes saved", "success");
       }).catch(function (err) { setButtonLoading(btn, false); errorToast(err); });
+    });
+    // Load admin attachments list and bind upload
+    loadAdminAttachments(c.id);
+    var _attachFile = null;
+    document.getElementById("attachFileInput").addEventListener("change", function (e) {
+      _attachFile = e.target.files && e.target.files[0];
+      document.getElementById("attachFileName").textContent = _attachFile ? _attachFile.name : "";
+      document.getElementById("attachUploadBtn").disabled = !_attachFile;
+    });
+    document.getElementById("attachUploadBtn").addEventListener("click", function () {
+      if (!_attachFile) return;
+      if (_attachFile.size > 10000000) { toast("File is too large (max ~10 MB).", "error"); return; }
+      var btn = this;
+      setButtonLoading(btn, true, t("Uploading\u2026"));
+      var reader = new FileReader();
+      reader.onload = function (evt) {
+        api.attachments.upload(c.id, {
+          label: document.getElementById("attachLabel").value,
+          filename: _attachFile.name,
+          mimeType: _attachFile.type,
+          fileSize: _attachFile.size,
+          fileData: evt.target.result
+        }).then(function () {
+          setButtonLoading(btn, false);
+          toast(t("Attachment uploaded"), "success");
+          _attachFile = null;
+          document.getElementById("attachFileName").textContent = "";
+          document.getElementById("attachUploadBtn").disabled = true;
+          document.getElementById("attachFileInput").value = "";
+          loadAdminAttachments(c.id);
+        }).catch(function (err) { setButtonLoading(btn, false); errorToast(err); });
+      };
+      reader.readAsDataURL(_attachFile);
     });
   }).catch(function (err) {
     container.innerHTML = errorState(err);
@@ -2606,7 +2725,8 @@ function renderClientSection() {
 
   var titles = { dashboard: "Dashboard", business: "Business Profile", services: "My Services",
     "content-planner": "Content Ops Tracker",
-    subscription: "Subscription", reports: "Reports & Performance", activities: "Activities", requests: "Requests", team: "Team", settings: "Settings" };
+    subscription: "Subscription", reports: "Reports & Performance", activities: "Activities", requests: "Requests", team: "Team", settings: "Settings",
+    attachments: "Attachments" };
   document.getElementById("topbarTitle").textContent = t(titles[state.clientSection]) || "";
   var content = document.getElementById("content");
   content.innerHTML = '<div class="content-loading"><div class="spinner"></div></div>';
@@ -2615,7 +2735,8 @@ function renderClientSection() {
     dashboard: renderClientDashboard, business: renderClientBusiness, services: renderClientServices,
     subscription: renderClientSubscription, reports: renderClientReports,
     activities: renderClientActivities, requests: renderClientRequests, team: renderClientTeam, settings: renderClientSettings,
-    "content-planner": renderClientContentPlanner
+    "content-planner": renderClientContentPlanner,
+    attachments: renderClientAttachments
   }[state.clientSection];
   if (fn) fn(content); else content.innerHTML = "";
 }
@@ -2814,12 +2935,12 @@ function renderClientSubscription(container) {
     var planIdx = plans.indexOf(plan);
     var nextPlan = plans[planIdx + 1];
 
-    var html = '<div class="current-plan-hero"><div class="row"><div><div class="eyebrow">Current Plan</div><div class="name">' + esc(plan.name) + '</div><div class="price">EGP ' + esc(plan.price) + ' / ' + esc(plan.cycle) + ' · ' + esc(t("renews")) + ' ' + esc(c.renewal) + '</div></div>' +
+    var html = '<div class="current-plan-hero"><div class="row"><div><div class="eyebrow">Current Plan</div><div class="name">' + esc(plan.name) + '</div><div class="price">EGP ' + esc(plan.price) + ' / ' + esc(plan.cycle) + ' \u00b7 ' + esc(t("renews")) + ' ' + esc(c.renewal) + '</div></div>' +
       '<div><span class="status-badge ' + healthClass(c.billingStatus) + '" style="background:rgba(255,255,255,0.2);color:#fff;">' + esc(t(c.billingStatus)) + '</span></div></div></div>';
 
     html += '<div class="section-title">' + esc(t("Included Services")) + '</div><div class="panel-card"><ul style="list-style:none;padding:0;margin:0;">' +
       entLabels.filter(function (e) { return plan.entitlements.indexOf(e.key) !== -1; })
-        .map(function (e) { return '<li style="padding:6px 0;">✓ ' + esc(trF(e.label, e.labelAr)) + '</li>'; }).join('') + '</ul></div>';
+        .map(function (e) { return '<li style="padding:6px 0;">\u2713 ' + esc(trF(e.label, e.labelAr)) + '</li>'; }).join('') + '</ul></div>';
 
     if (nextPlan) {
       html += '<div class="section-title">' + esc(t("Next Step Up")) + '</div><div class="plan-card-row"><div class="plan-card featured">' +
@@ -2956,6 +3077,133 @@ function renderClientTeam(container) {
   });
 }
 
+/* ===================== ATTACHMENT HELPERS ===================== */
+
+function fileIcon(mime, filename) {
+  if (mime.indexOf("pdf") !== -1) return "\ud83d\udcc4";
+  if (mime.indexOf("word") !== -1 || /\.docx?$/i.test(filename)) return "\ud83d\udcdd";
+  if (mime.indexOf("spreadsheet") !== -1 || mime.indexOf("excel") !== -1 || /\.xlsx?$/i.test(filename)) return "\ud83d\udcca";
+  if (mime.indexOf("presentation") !== -1 || mime.indexOf("powerpoint") !== -1 || /\.pptx?$/i.test(filename)) return "\ud83d\udcd1";
+  if (mime.indexOf("image") !== -1) return "\ud83d\uddbc\ufe0f";
+  return "\ud83d\udcce";
+}
+
+function fmtFileSize(bytes) {
+  if (bytes < 1024) return bytes + " B";
+  if (bytes < 1048576) return Math.round(bytes / 1024) + " KB";
+  return (bytes / 1048576).toFixed(1) + " MB";
+}
+
+function attachmentCategoryIcon(label) {
+  var icons = { "Strategy": "\ud83c\udfaf", "SWOT Analysis": "\ud83d\udcd0", "Marketing Plan": "\ud83d\udcc8", "Business Plan": "\ud83d\udcbc", "Brand Guidelines": "\ud83c\udfa8", "Other": "\ud83d\udcce" };
+  return icons[label] || "\ud83d\udcce";
+}
+
+function renderAttachmentRows(attachments, isAdmin) {
+  if (!attachments.length) return '<div class="cell-sub">' + esc(t("No attachments yet")) + '</div>';
+  var groups = {};
+  attachments.forEach(function (att) {
+    if (!groups[att.label]) groups[att.label] = [];
+    groups[att.label].push(att);
+  });
+  var html = '';
+  Object.keys(groups).forEach(function (label) {
+    html += '<div class="attachment-category-label">' + attachmentCategoryIcon(label) + ' ' + esc(t(label)) + '</div>';
+    html += '<div class="attachments-grid">';
+    groups[label].forEach(function (att) {
+      html += '<div class="attachment-card">' +
+        '<div class="attachment-icon">' + fileIcon(att.mimeType, att.filename) + '</div>' +
+        '<div class="attachment-info">' +
+          '<div class="attachment-name">' + esc(att.filename) + '</div>' +
+          '<div class="attachment-meta">' + fmtFileSize(att.fileSize) + ' \u00b7 ' + esc(t("Uploaded by")) + ' ' + esc(att.uploaderName) + ' \u00b7 ' + esc(att.createdAt.split("T")[0]) + '</div>' +
+        '</div>' +
+        '<div class="attachment-actions">' +
+        '<button class="btn btn-sm attachment-download-btn" data-download-attachment="' + att.id + '" data-filename="' + esc(att.filename) + '">\u2b07 ' + esc(t("Download")) + '</button>' +
+        (isAdmin ? '<button class="btn btn-sm btn-danger-subtle" data-delete-attachment="' + att.id + '" data-att-name="' + esc(att.filename) + '">\u2715</button>' : '') +
+        '</div></div>';
+    });
+    html += '</div>';
+  });
+  return html;
+}
+
+function triggerAttachmentDownload(attId, fname) {
+  apiFetch("/api/attachments/portal/" + attId + "/download").then(function (res) {
+    var link = document.createElement("a");
+    link.href = res.fileData;
+    link.download = res.filename || fname;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }).catch(errorToast);
+}
+
+function renderClientAttachments(container) {
+  api.portal.attachments().then(function (res) {
+    var attachments = res.attachments || [];
+    if (!attachments.length) {
+      container.innerHTML = emptyState("\ud83d\udcce", t("No attachments yet"), t("Your business documents will appear here once WITRA uploads them."));
+      bindRetry(function () { renderClientAttachments(container); });
+      return;
+    }
+    var html = '<p class="cell-sub" style="margin-bottom:16px;">' + esc(t("Strategy, SWOT Analysis, Marketing Plans and other business documents uploaded by WITRA.")) + '</p>';
+    html += renderAttachmentRows(attachments, false);
+    container.innerHTML = html;
+    bindContentDelegation();
+    container.querySelectorAll("[data-download-attachment]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var attId = btn.getAttribute("data-download-attachment");
+        var fname = btn.getAttribute("data-filename");
+        setButtonLoading(btn, true, t("Working\u2026"));
+        apiFetch("/api/attachments/portal/" + attId + "/download").then(function (res) {
+          setButtonLoading(btn, false);
+          var link = document.createElement("a");
+          link.href = res.fileData;
+          link.download = res.filename || fname;
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+        }).catch(function (err) { setButtonLoading(btn, false); errorToast(err); });
+      });
+    });
+  }).catch(function (err) {
+    container.innerHTML = errorState(err);
+    bindRetry(function () { renderClientAttachments(container); });
+  });
+}
+
+function loadAdminAttachments(clientId) {
+  var listEl = document.getElementById("adminAttachmentsList");
+  if (!listEl) return;
+  api.attachments.ofClient(clientId).then(function (res) {
+    var atts = res.attachments || [];
+    listEl.innerHTML = renderAttachmentRows(atts, true);
+    listEl.querySelectorAll("[data-download-attachment]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var attId = btn.getAttribute("data-download-attachment");
+        var fname = btn.getAttribute("data-filename");
+        setButtonLoading(btn, true, t("Working\u2026"));
+        triggerAttachmentDownload(attId, fname);
+        setTimeout(function () { setButtonLoading(btn, false); }, 1500);
+      });
+    });
+    listEl.querySelectorAll("[data-delete-attachment]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var attId = btn.getAttribute("data-delete-attachment");
+        var attName = btn.getAttribute("data-att-name");
+        if (!confirm(t("Delete this attachment?") + "\n" + attName)) return;
+        setButtonLoading(btn, true, "\u2026");
+        api.attachments.remove(attId).then(function () {
+          toast(t("Attachment deleted"), "success");
+          loadAdminAttachments(clientId);
+        }).catch(function (err) { setButtonLoading(btn, false); errorToast(err); });
+      });
+    });
+  }).catch(function () {
+    listEl.innerHTML = '<div class="cell-sub">' + esc(t("No attachments yet")) + '</div>';
+  });
+}
+
 function renderClientSettings(container) {
   var rows = [["Profile", "Your name, email, and photo"], ["Business Profile", "Edit under My Business"],
     ["Team Members", "Manage under Team"],
@@ -2966,10 +3214,6 @@ function renderClientSettings(container) {
   bindContentDelegation();
 }
 
-/* ===================== GLOBAL CONTENT-LEVEL EVENT DELEGATION =====================
-   Bound once on #root at boot time. Handles every data-* action across all
-   admin and client-portal pages. Safe to call bindContentDelegation() many
-   times — it no-ops after the first bind thanks to the _delegationBound flag. */
 var _delegationBound = false;
 function bindContentDelegation() {
   if (_delegationBound) return;
@@ -3014,7 +3258,8 @@ function bindContentDelegation() {
       var id = el.getAttribute("data-nav");
       if (id === "logout") {
         api.auth.logout().finally(function () {
-          state.view = "login"; state.currentUser = null; state.impersonatingClientId = null; state.viewingClientId = null;
+          state.view = "public"; state.currentUser = null; state.impersonatingClientId = null; state.viewingClientId = null;
+          window.history.replaceState({}, "", "/");
           invalidateCache();
           render();
         });

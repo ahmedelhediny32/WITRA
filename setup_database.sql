@@ -182,6 +182,43 @@ CREATE TABLE activities (
 
 CREATE INDEX idx_activities_client_created ON activities(client_id, created_at);
 
+-- ===================== CLIENT BUSINESS ATTACHMENTS =====================
+-- WITRA uploads these documents; clients can only view and download them.
+
+CREATE TABLE attachments (
+  id          TEXT PRIMARY KEY,
+  client_id   TEXT NOT NULL REFERENCES clients(id),
+  label       TEXT NOT NULL DEFAULT 'Other',
+  filename    TEXT NOT NULL,
+  mime_type   TEXT NOT NULL DEFAULT '',
+  file_data   TEXT NOT NULL,
+  file_size   INTEGER NOT NULL DEFAULT 0,
+  uploaded_by TEXT NOT NULL REFERENCES users(id),
+  created_at  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_attachments_client_id ON attachments(client_id);
+
+-- ===================== PUBLIC DIAGNOSTIC LEADS =====================
+
+CREATE TABLE diagnostic_leads (
+  id             TEXT PRIMARY KEY,
+  name           TEXT NOT NULL,
+  business_name  TEXT NOT NULL,
+  email          TEXT NOT NULL,
+  phone          TEXT NOT NULL,
+  industry       TEXT NOT NULL DEFAULT '',
+  team_size      TEXT NOT NULL DEFAULT '',
+  challenge      TEXT NOT NULL,
+  budget         TEXT NOT NULL DEFAULT '',
+  preferred_time TEXT NOT NULL DEFAULT '',
+  status         TEXT NOT NULL DEFAULT 'New',
+  source         TEXT NOT NULL DEFAULT 'public-website',
+  created_at     DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_diagnostic_leads_status_created ON diagnostic_leads(status, created_at);
+
 -- ===================== NOTIFICATIONS =====================
 
 CREATE TABLE notifications (

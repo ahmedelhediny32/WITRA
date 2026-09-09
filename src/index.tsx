@@ -15,6 +15,8 @@ import teamRoutes from "./routes/team";
 import contentOpsRoutes from "./routes/content-ops";
 import portalRoutes from "./routes/portal";
 import settingsRoutes from "./routes/settings";
+import attachmentsRoutes from "./routes/attachments";
+import publicRoutes from "./routes/public";
 
 const app = new Hono<{ Bindings: Bindings }>();
 
@@ -32,6 +34,8 @@ app.route("/api/team", teamRoutes);
 app.route("/api/content-ops", contentOpsRoutes);
 app.route("/api/portal", portalRoutes);
 app.route("/api/settings", settingsRoutes);
+app.route("/api/attachments", attachmentsRoutes);
+app.route("/api/public", publicRoutes);
 
 // Fallback JSON 404 for unmatched API routes
 app.all("/api/*", (c) => c.json({ error: "Not found." }, 404));
@@ -53,9 +57,11 @@ app.get("*", (c) => {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="/static/style.css?v=3" rel="stylesheet">
+<link href="/static/public-site.css?v=1" rel="stylesheet">
 </head>
 <body>
 <div id="root"><div class="app-loading"><div class="spinner"></div></div></div>
+<script src="/static/public-site.js?v=1"></script>
 <script src="/static/app.js?v=6"></script>
 </body>
 </html>`);
