@@ -10,6 +10,18 @@ export function parseJsonArray<T = any>(value: unknown): T[] {
   }
 }
 
+export function parseJsonObject(value: unknown): Record<string, any> {
+  if (value === null || value === undefined) return {};
+  if (typeof value === "object" && !Array.isArray(value)) return value as Record<string, any>;
+  if (typeof value !== "string") return {};
+  try {
+    const parsed = JSON.parse(value);
+    return typeof parsed === "object" && parsed !== null && !Array.isArray(parsed) ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
 export function toJson(value: unknown): string {
   return JSON.stringify(value ?? []);
 }

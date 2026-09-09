@@ -95,7 +95,15 @@ portal.put("/brand", async (c) => {
     updates.push("secondary_color = ?");
     binds.push(body.secondaryColor);
   }
-  if (typeof body.logoImage === "string") {
+  if (typeof body.typography === "string" && body.typography.length <= 100) {
+    updates.push("typography = ?");
+    binds.push(body.typography);
+  }
+  if (typeof body.brandVoice === "string" && body.brandVoice.length <= 2_000) {
+    updates.push("brand_voice = ?");
+    binds.push(body.brandVoice);
+  }
+  if (body.logoImage === null || typeof body.logoImage === "string") {
     if (body.logoImage.length > 2_000_000) {
       return c.json({ error: "Image is too large. Please use an image under ~1.5MB." }, 400);
     }

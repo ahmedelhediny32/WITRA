@@ -102,6 +102,177 @@ var locales = {
     "Last Activity": "Last Activity"
   },
   ar: {
+    "Current Plan": "الباقة الحالية",
+    "renews": "يتجدد",
+    "Included Services": "الخدمات المشمولة",
+    "Next Step Up": "الباقة التالية",
+    "Request Upgrade →": "طلب ترقية →",
+
+    "Subscriptions": "الاشتراكات",
+    "Subscription": "الاشتراك",
+    "Subscription & Contract": "الاشتراك والعقد",
+    "Client Subscriptions": "اشتراكات العملاء",
+    "Billing Status": "حالة الفاتورة",
+    "Contract Value": "قيمة العقد",
+    "Recent Activity": "آخر النشاطات",
+    "No recent activity.": "لا يوجد نشاط حديث.",
+    "Internal Notes": "ملاحظات داخلية",
+    "Internal only — never shown to client": "داخلي فقط — لا يظهر للعميل",
+    "Save Notes": "حفظ الملاحظات",
+    "Sales notes, delivery notes, risk/retention notes…": "ملاحظات المبيعات، التسليم، المخاطر...",
+    "Plans": "الباقات",
+    "Edit Plan": "تعديل الباقة",
+    "Each tier includes everything in the one before it, plus what's listed. Content Plan (the Content Ops Tracker) unlocks starting at Core.": "كل باقة تتضمن كل ما في الباقة السابقة، بالإضافة للمذكور. خطة المحتوى (متتبع عمليات المحتوى) تبدأ من باقة Core.",
+    "Standalone Service": "خدمة مستقلة",
+    "Resubscribe": "إعادة الاشتراك",
+    "Remove client": "إزالة العميل",
+    "client currently billed": "عميل مُفوتر حالياً",
+    "clients currently billed": "عملاء مُفوترين حالياً",
+    "awaiting review": "بانتظار المراجعة",
+    "all caught up": "لا يوجد طلبات",
+    "Subscription renews on": "الاشتراك يتجدد في",
+    "View Client": "عرض العميل",
+    "Upcoming Renewals": "التجديدات القادمة",
+
+    "Suspended": "موقوف",
+    "This archives the client and deactivates their portal login. Historical data is kept.": "سيتم أرشفة العميل وإلغاء تفعيل تسجيل دخوله. سيتم الاحتفاظ بالبيانات السابقة.",
+    "Client removed": "تم إزالة العميل",
+    "Client resubscribed — services reactivated": "تم تجديد الاشتراك — تم تفعيل الخدمات",
+    "Requested Access": "الصلاحية المطلوبة",
+    "Approving creates their real portal account immediately, using the password the client already set for them. Rejecting just notifies the client — no account is created.": "عند الموافقة، سيتم إنشاء حساب حقيقي لهم فوراً باستخدام الرقم السري الذي حدده العميل. عند الرفض، سيتم إشعار العميل فقط ولن يتم إنشاء حساب.",
+    "Review Team Request": "مراجعة طلب الفريق",
+    "Request approved — account created": "تمت الموافقة على الطلب — تم إنشاء الحساب",
+    "Client Team Requests": "طلبات فريق العميل",
+    "pending": "قيد الانتظار",
+    "No client team requests yet — these appear here whenever a client asks to add a teammate.": "لا توجد طلبات انضمام للفريق بعد — ستظهر هنا عندما يطلب العميل إضافة عضو جديد لفريقه.",
+    "Review": "مراجعة",
+    "Add Team Member": "إضافة عضو للفريق",
+    "Set by WITRA — this is what they'll use to log in.": "تم تحديده بواسطة WITRA — سيتم استخدامه لتسجيل الدخول.",
+    "Team Members only see the clients checked here. Super Admins automatically see everyone.": "أعضاء الفريق يرون فقط العملاء المحددين هنا. المدراء يرون الجميع تلقائياً.",
+    "Add to Team": "إضافة للفريق",
+    "(overview — open Content Planner for the full calendar)": "(نظرة عامة — افتح مخطط المحتوى للتقويم الكامل)",
+    "Add Link": "إضافة رابط",
+    "Secondary Color": "اللون الثانوي",
+    "Social links saved": "تم حفظ روابط التواصل الاجتماعي",
+    "Secondary color updated": "تم تحديث اللون الثانوي",
+    "Why you need it": "سبب الأهمية",
+    "Adding a teammate is a request — WITRA reviews it and creates their account, so every person who ever gets access is on record.": "إضافة عضو جديد هو طلب — تقوم WITRA بمراجعته وإنشاء حسابه، لضمان تسجيل كل من يحصل على صلاحية الدخول.",
+    "Request Team Member": "طلب عضو فريق",
+    "Access Level": "مستوى الصلاحية",
+    "They'll use this to log in once WITRA approves the request.": "سيستخدمونه لتسجيل الدخول بمجرد موافقة WITRA على الطلب.",
+    "Submit Request": "إرسال الطلب",
+    "Active Team": "الفريق الفعال",
+    "Renewed": "مُجدد",
+    "Expired": "منتهي",
+    "Cancelled": "ملغى",
+    "Active": "نشط",
+
+    "Status": "الحالة",
+    "Last Activity": "آخر النشاطات",
+    "Service Requests": "طلبات الخدمة",
+    "New": "جديد",
+    "Catalog": "الخدمات",
+    "Activities / Audit Log": "النشاطات / السجل",
+    "Activities": "النشاطات",
+    "Feed": "السجل",
+    "Team request for": "طلب انضمام للفريق من",
+    "Viewer": "مشاهد",
+    "Manager": "مدير",
+    "Notification": "إشعار",
+    "Notifications": "الإشعارات",
+    "Nothing to see here yet.": "لا يوجد شيء لعرضه حتى الآن.",
+    "Mark all as read": "تحديد الكل كمقروء",
+    "Client": "العميل",
+    "Package": "الباقة",
+    "MRR": "العائد المتكرر",
+    "Health": "حالة العميل",
+    "Renewal": "التجديد",
+    "Active Services": "الخدمات الفعالة",
+    "Business": "النشاط التجاري",
+    "Owner": "المالك",
+    "Service": "الخدمة",
+    "Requested": "تاريخ الطلب",
+    "Notes": "ملاحظات",
+    "Period": "الفترة",
+    "Reach": "الوصول",
+    "Engagement": "التفاعل",
+    "Leads": "العملاء المحتملين",
+    "ROAS": "العائد على الإعلانات",
+    "Access": "الصلاحية",
+    "Name": "الاسم",
+    "Email": "الإيميل",
+    "Role": "الصلاحية",
+
+    "e.g. Sunrise Bakery": "مثل: مخبز الشروق",
+    "e.g. Retail": "مثل: تجزئة",
+    "Min. 6 characters": "بحد أدنى 6 أحرف",
+    "Business Name *": "اسم النشاط التجاري *",
+    "Owner Name": "اسم المالك",
+    "Industry": "مجال العمل",
+    "Location": "الموقع",
+    "Portal Email": "إيميل بوابة العميل",
+    "Portal Password": "رقم السر لبوابة العميل",
+    "Plan": "الباقة",
+    "Monthly Recurring Revenue (EGP)": "العائد الشهري المتكرر (جنيه)",
+
+    "Why it matters": "سبب الأهمية",
+    "One-time · Sold independently of any plan": "خدمة لمرة واحدة · تُباع بشكل مستقل عن الباقات",
+    "Request a Quote": "اطلب تسعير",
+    "Included in Core+": "مشمولة في Core+",
+    "Included in: ": "مشمولة في: ",
+    "Standalone only": "خدمة مستقلة فقط",
+    "Standalone only:": "خدمة مستقلة فقط:",
+    "+Included in Core": "+ مشمولة في باقة Core",
+    "of spend (min 10,000) 15%": "من الميزانية الإعلانية (بحد أدنى 10,000) 15%",
+    "15% of spend (min 10,000)": "15% من الميزانية (بحد أدنى 10,000)",
+    "8,000 – 15,000 (one-time)": "8,000 - 15,000 (لمرة واحدة)",
+    "25,000 – 60,000 (one-time)": "25,000 - 60,000 (لمرة واحدة)",
+    "Full Presence & Messaging Audit": "مراجعة شاملة للظهور والرسائل",
+    "Competitor & Funnel Analysis": "تحليل المنافسين ومسار المبيعات",
+    "Written Growth Diagnosis": "تقرير مكتوب لتشخيص النمو",
+    "90-Day Action Plan": "خطة عمل لمدة 90 يومًا",
+    "Campaign Strategy": "استراتيجية الحملات",
+    "Audience Research": "دراسة الجمهور المستهدف",
+    "Ad Creative": "تصميمات الإعلانات",
+    "Campaign Setup": "إعداد الحملات",
+    "Optimization": "تحسين مستمر للأداء",
+    "Retargeting": "إعادة الاستهداف",
+    "Performance Reports": "تقارير الأداء",
+    "Logo System": "تصميم شعار متكامل",
+    "Brand Palette & Typography": "ألوان وخطوط الهوية البصرية",
+    "Brand Guidelines": "دليل استخدام الهوية (Brand Guidelines)",
+    "Launch Content Kit": "حزمة محتوى الانطلاق",
+    "Technical Audit": "مراجعة تقنية",
+    "Keyword Strategy": "استراتيجية الكلمات المفتاحية",
+    "On-page Optimization": "تحسين صفحات الموقع",
+    "Monthly Ranking Reports": "تقارير تصدر شهرية",
+    "Concept & Script": "الفكرة وكتابة السيناريو",
+    "Shoot Day": "يوم التصوير",
+    "Editing": "المونتاج",
+    "Platform-ready Cuts": "نسخ جاهزة لمنصات التواصل",
+    "Content Calendar": "خطة المحتوى",
+    "Copywriting": "كتابة المحتوى",
+    "Design & Production": "التصميم والإنتاج",
+    "Publishing & Community Replies": "النشر والرد على المتابعين",
+    "Daily Posting": "نشر يومي",
+    "Community Management": "إدارة المجتمع والردود",
+    "Monthly Performance Review": "مراجعة شهرية للأداء",
+    "Owner": "مالك",
+    "Manager": "مدير",
+    "Viewer": "مُشاهد",
+    "Pending": "قيد المراجعة",
+    "Approved": "مقبول",
+    "Rejected": "مرفوض",
+    "Upgrade to Gold": "ترقية إلى ذهبي",
+    "Upgrade to Premium": "ترقية إلى بريميوم",
+    "Active": "مُفعل",
+    "Expired": "منتهي",
+    "Renewed": "مُجدد",
+    "Cancelled": "ملغي",
+    "Update Billing Status": "تحديث حالة الاشتراك",
+    "Status updated": "تم تحديث الحالة بنجاح",
+    "Save": "حفظ",
+
     "Dashboard": "لوحة التحكم",
     "Clients": "العملاء",
     "Packages": "الباقات",
@@ -477,6 +648,64 @@ var locales = {
 };
 
 function t(key) {
+  if (currentLang === "ar" && typeof key === "string") {
+    if (locales.ar && locales.ar[key]) return locales.ar[key];
+    
+    // Dynamic Replacements for Activities
+    if (key.includes("Team request for")) {
+      return key.replace(/Team request for (.+?) was rejected/, "تم رفض طلب الانضمام للفريق من $1")
+                .replace(/Team request for (.+?) was approved/, "تم قبول طلب الانضمام للفريق من $1");
+    }
+    if (key.includes("A draft performance report for")) {
+      return key.replace(/A (?:draft|final) performance report for (.+?) was entered/, "تم إدخال تقرير الأداء لشهر $1");
+    }
+    if (key.includes("was added as a new client")) {
+      return key.replace(/<b>(.+?)<\/b> was added as a new client./, "تمت إضافة <b>$1</b> كعميل جديد.");
+    }
+    if (key.includes("was removed by WITRA")) {
+      return key.replace(/<b>(.+?)<\/b> was removed by WITRA./, "تمت إزالة <b>$1</b> بواسطة WITRA.");
+    }
+    if (key.includes("Subscription") && (key.includes("services") || key.includes("expired") || key.includes("renewed"))) {
+      let s = key.replace("Subscription manually set to", "تم تعيين حالة الاشتراك يدوياً إلى")
+                 .replace("Subscription <b>expired</b>", "<b>انتهى</b> الاشتراك")
+                 .replace("Subscription <b>renewed</b>", "<b>تم تجديد</b> الاشتراك")
+                 .replace("— services suspended.", "— وتم إيقاف الخدمات.")
+                 .replace("— services active.", "— والخدمات الآن فعالة.")
+                 .replace("- services reactivated.", "- وتم إعادة تفعيل الخدمات.")
+                 .replace("— services suspended until renewal.", "— تم إيقاف الخدمات حتى التجديد.");
+      return s;
+    }
+    
+    
+    // Health statuses and reasons
+    if (key.includes("Execution is falling behind")) {
+      return key.replace(/Execution is falling behind [\-—] just (\d+)% of planned work done \((\d+)\/(\d+)\)\./, "التنفيذ متأخر — تم إنجاز $1% فقط من العمل المخطط ($2/$3).");
+    }
+    if (key.includes("planned work is executed so far")) {
+      return key.replace(/Only (\d+)% of this month's planned work is executed so far \((\d+)\/(\d+)\)\./, "يحتاج انتباه — تم إنجاز $1% من العمل المخطط هذا الشهر ($2/$3).");
+    }
+    if (key.includes("planned work is executed")) {
+      return key.replace(/(\d+)% of this month's planned work is executed \((\d+)\/(\d+)\)\./, "على المسار الصحيح — تم إنجاز $1% من العمل المخطط هذا الشهر ($2/$3).");
+    }
+    if (key.includes("Just onboarded")) {
+      return "بدأ حديثاً — سيتم حساب الحالة بعد بدء التنفيذ.";
+    }
+    if (key.includes("No execution data yet")) {
+      return "لا توجد بيانات تنفيذ بعد — سيتم حساب الحالة بمجرد إضافة مهام لخطة المحتوى.";
+    }
+
+    // Dynamic Replacements for Notifications
+    if (key.includes("Your subscription")) {
+      return key.replace("Your subscription status was changed to", "تم تغيير حالة اشتراكك إلى")
+                .replace("Your subscription status is now", "حالة اشتراكك الآن هي")
+                .replace("and your services have been paused.", "وتم إيقاف خدماتك مؤقتاً.")
+                .replace("and your services are active.", "وخدماتك الآن قيد التفعيل.")
+                .replace("has been renewed - your services are active again. Welcome back!", "تم تجديده - خدماتك أصبحت فعالة من جديد. مرحباً بك!");
+    }
+    if (key.includes("contract has ended")) {
+      return key.replace("Your subscription contract has ended and your services have been paused. Please contact WITRA to resubscribe and reactivate your account.", "انتهى عقد اشتراكك وتم إيقاف الخدمات. يرجى التواصل مع WITRA لتجديد الاشتراك وتفعيل حسابك.");
+    }
+  }
   return (locales[currentLang] && locales[currentLang][key]) || key;
 }
 
@@ -692,6 +921,16 @@ var api = {
 
 /* ===================== GENERAL HELPERS ===================== */
 function esc(v) { if (v === undefined || v === null) return ""; return String(v).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+
+function inlineBillingStatusSelect(c) {
+  return '<select data-inline-billing-status="' + c.id + '" class="status-badge ' + healthClass(c.billingStatus) + '" style="border:none; outline:none; cursor:pointer; appearance:menulist; padding-right:4px; font-family:inherit; font-weight:600; font-size:12px;">' +
+    '<option value="Active"' + (c.billingStatus === 'Active' ? ' selected' : '') + '>' + esc(t("Active")) + '</option>' +
+    '<option value="Renewed"' + (c.billingStatus === 'Renewed' ? ' selected' : '') + '>' + esc(t("Renewed")) + '</option>' +
+    '<option value="Expired"' + (c.billingStatus === 'Expired' ? ' selected' : '') + '>' + esc(t("Expired")) + '</option>' +
+    '<option value="Cancelled"' + (c.billingStatus === 'Cancelled' ? ' selected' : '') + '>' + esc(t("Cancelled")) + '</option>' +
+  '</select>';
+}
+
 function healthClass(h) { return "status-" + String(h || "").toLowerCase().replace(/ /g, "-"); }
 function initials(name) { return (name || "?").split(" ").map(function (w) { return w[0] || ""; }).slice(0, 2).join("").toUpperCase() || "?"; }
 function fmtMoney(n) { var num = Number(n) || 0; return num.toLocaleString("en-US"); }
@@ -1053,11 +1292,12 @@ function refreshBellDot() {
 }
 
 function notifPanelHtml(notifications) {
+  var unread = notifications.filter(function(n) { return !n.read; });
   return '<div class="notif-panel" id="notifPanel">' +
-    '<div class="notif-panel-head">Notifications <span id="markAllReadBtn">Mark all read</span></div>' +
-    (notifications.length ? notifications.map(function (n) {
-      return '<div class="notif-item ' + (n.read ? 'read' : '') + '"><div class="dot"></div><div><div>' + n.text + '</div><div class="time">' + timeAgo(n.time) + '</div></div></div>';
-    }).join('') : '<div class="notif-item"><div>No notifications yet.</div></div>') +
+    '<div class="notif-panel-head">' + esc(t("Notifications")) + '</div>' +
+    (unread.length ? unread.map(function (n) {
+      return '<div class="notif-item"><div class="dot"></div><div><div>' + t(n.text) + '</div><div class="time">' + timeAgo(n.time) + '</div></div></div>';
+    }).join('') : '<div class="notif-item"><div>' + esc(t("No new notifications.")) + '</div></div>') +
     '</div>';
 }
 
@@ -1073,7 +1313,7 @@ function kpiHero(icon, label, val, footnote) {
     (footnote ? '<div class="kpi-hero-foot">' + esc(footnote) + '</div>' : '') + '</div></div>';
 }
 function activityRow(a) {
-  return '<div class="activity-row"><div class="activity-dot"></div><div style="flex:1;"><div class="activity-text">' + a.text + '</div></div><div class="activity-time">' + timeAgo(a.time) + '</div></div>';
+  return '<div class="activity-row"><div class="activity-dot"></div><div style="flex:1;"><div class="activity-text">' + t(a.text) + '</div></div><div class="activity-time">' + timeAgo(a.time) + '</div></div>';
 }
 function emptyState(emoji, title, desc) {
   return '<div class="empty-state"><div class="emoji">' + emoji + '</div><h4>' + esc(title) + '</h4><p>' + esc(desc) + '</p></div>';
@@ -1113,7 +1353,7 @@ function svgLineChart(data, opts) {
 function renderAdminSection() {
   var navActive = state.adminSection === "client-profile" ? "clients" : state.adminSection;
   document.querySelectorAll(".sidebar-link").forEach(function (el) { el.classList.toggle("active", el.getAttribute("data-nav") === navActive); });
-  var titles = { dashboard: "WITRA Command Center", clients: "Clients", subscriptions: "Subscriptions",
+  var titles = { dashboard: "WITRA Command Center", clients: "Clients", subscriptions: t("Subscriptions"),
     requests: "Service Requests", services: "Services", "witra-ops": "WITRA Ops Tracker", reports: "Reports & Performance", activities: "Activities / Audit Log",
     "witra-team": "WITRA Team", settings: "Settings" };
   var title = titles[state.adminSection] || "";
@@ -1187,19 +1427,19 @@ function renderAdminDashboard(container) {
           // Clients page (which is clickable) to open a client's profile.
           return '<tr><td class="cell-main">' + esc(c.name) + '</td><td>' + esc(planNameFromList(plans, c.planId)) + '</td>' +
             '<td class="mono">EGP ' + fmtMoney(c.mrr) + '</td>' +
-            '<td><span class="health-dot ' + c.health.toLowerCase().replace(/ /g, "-") + '"></span>' + esc(c.health) + '</td>' +
+            '<td><div style="display: flex; align-items: center; gap: 6px;"><span class="health-dot ' + c.health.toLowerCase().replace(/ /g, "-") + '" style="margin:0;"></span><span>' + esc(t(c.health)) + '</span></div></td>' +
             '<td class="mono">' + esc(c.renewal) + '</td><td class="cell-sub">' + esc(c.lastActivity) + '</td></tr>';
         }).join('') + '</tbody></table></div>';
 
       html += '<div class="section-title">Status</div>';
       html += '<div class="service-grid">' + d.clients.map(function (c) {
         return '<div class="panel-card" style="margin-bottom:0;"><div style="display:flex;justify-content:space-between;align-items:flex-start;">' +
-          '<div><b>' + esc(c.name) + '</b><div class="cell-sub" style="margin-top:4px;">' + esc(c.healthReason) + '</div></div>' +
-          '<span class="status-badge ' + healthClass(c.health) + '">' + esc(c.health) + '</span></div></div>';
+          '<div><b>' + esc(c.name) + '</b><div class="cell-sub" style="margin-top:4px;">' + esc(t(c.healthReason)) + '</div></div>' +
+          '<span class="status-badge ' + healthClass(c.health) + '">' + esc(t(c.health)) + '</span></div></div>';
       }).join('') + '</div>';
 
-      html += '<div class="section-title">Recent Activity</div><div class="panel-card"><div class="activity-feed">' +
-        (d.recentActivities.length ? d.recentActivities.map(activityRow).join('') : '<div class="cell-sub">No recent activity.</div>') + '</div></div>';
+      html += '<div class="section-title">' + esc(t("Recent Activity")) + '</div><div class="panel-card"><div class="activity-feed">' +
+        (d.recentActivities.length ? d.recentActivities.map(activityRow).join('') : '<div class="cell-sub">' + esc(t("No recent activity.")) + '</div>') + '</div></div>';
 
       container.innerHTML = html;
       bindContentDelegation(container);
@@ -1253,7 +1493,7 @@ function renderAdminClients(container) {
           return '<tr class="clickable client-row" data-view-profile="' + c.id + '">' +
             '<td><div style="display:flex;align-items:center;gap:10px;"><div class="avatar-sm" style="' + avatarStyle + '">' + (c.logoImage ? '' : initials(c.name)) + '</div><div><div class="cell-main">' + esc(c.name) + (suspended ? ' <span class="status-badge status-suspended" style="margin-left:6px;">' + esc(t("Suspended")) + '</span>' : '') + '</div><div class="cell-sub">' + esc(c.industry) + '</div></div></div></td>' +
             '<td>' + esc(c.owner) + '</td><td>' + esc(planNameFromList(plans, c.planId)) + '</td><td class="mono">EGP ' + fmtMoney(c.mrr) + '</td>' +
-            '<td><span class="status-badge ' + healthClass(c.health) + '">' + esc(c.health) + '</span></td>' +
+            '<td><span class="status-badge ' + healthClass(c.health) + '">' + esc(t(c.health)) + '</span></td>' +
             '<td class="cell-sub">' + c.activeServices.length + ' active</td><td class="mono">' + esc(c.renewal) + '</td><td class="cell-sub">' + esc(c.lastActivity) + '</td>' +
             '<td class="row-action-cell">' + rowAction + '</td></tr>';
         }).join('') + '</tbody></table></div>';
@@ -1295,17 +1535,17 @@ function renderAdminClients(container) {
 
 function createClientModal(plans) {
   var body = '<div class="form-grid">' +
-    '<div class="form-field"><label>Business Name *</label><input type="text" id="ncName" placeholder="e.g. Sunrise Bakery"></div>' +
-    '<div class="form-field"><label>Owner Name</label><input type="text" id="ncOwner"></div>' +
+    '<div class="form-field"><label>' + esc(t("Business Name *")) + '</label><input type="text" id="ncName" placeholder="' + esc(t("e.g. Sunrise Bakery")) + '"></div>' +
+    '<div class="form-field"><label>' + esc(t("Owner Name")) + '</label><input type="text" id="ncOwner"></div>' +
     '</div><div class="form-grid">' +
-    '<div class="form-field"><label>Industry</label><input type="text" id="ncIndustry" placeholder="e.g. Retail"></div>' +
-    '<div class="form-field"><label>Location</label><input type="text" id="ncLocation"></div>' +
+    '<div class="form-field"><label>' + esc(t("Industry")) + '</label><input type="text" id="ncIndustry" placeholder="' + esc(t("e.g. Retail")) + '"></div>' +
+    '<div class="form-field"><label>' + esc(t("Location")) + '</label><input type="text" id="ncLocation"></div>' +
     '</div><div class="form-grid">' +
-    '<div class="form-field"><label>Portal Email</label><input type="email" id="ncEmail" placeholder="owner@business.com"></div>' +
-    '<div class="form-field"><label>Plan</label><select id="ncPlan">' + plans.map(function (p) { return '<option value="' + p.id + '">' + esc(p.name) + '</option>'; }).join('') + '</select></div>' +
+    '<div class="form-field"><label>' + esc(t("Portal Email")) + '</label><input type="email" id="ncEmail" placeholder="owner@business.com"></div>' +
+    '<div class="form-field"><label>' + esc(t("Portal Password")) + '</label><input type="password" id="ncPassword" placeholder="' + esc(t("Min. 6 characters")) + '" autocomplete="new-password"></div>' +
     '</div><div class="form-grid">' +
-    '<div class="form-field"><label>Monthly Recurring Revenue (EGP)</label><input type="text" id="ncMrr" placeholder="18000"></div>' +
-    '<div class="form-field"><label>Portal Password</label><input type="password" id="ncPassword" placeholder="Min. 6 characters" autocomplete="new-password"><span class="cell-sub">🔐 Set by WITRA — the client will use this email + password to log into their own portal dashboard.</span></div>' +
+    '<div class="form-field"><label>' + esc(t("Plan")) + '</label><select id="ncPlan">' + plans.map(function (p) { return '<option value="' + p.id + '">' + esc(t(p.name)) + '</option>'; }).join('') + '</select></div>' +
+    '<div class="form-field"><label>' + esc(t("Monthly Recurring Revenue (EGP)")) + '</label><input type="text" id="ncMrr" placeholder="18000"></div>' +
     '</div>' +
     '<div class="form-error" id="ncFormError"></div>';
   var foot = '<button class="btn btn-sm" data-close-modal="1">Cancel</button><button class="btn btn-primary btn-sm" id="ncSaveBtn">Create Client</button>';
@@ -1318,14 +1558,16 @@ function createClientModal(plans) {
     errEl.textContent = "";
     if (!name) { errEl.textContent = "Business name is required."; return; }
     var pw = document.getElementById("ncPassword").value.trim();
-    if (pw && pw.length < 6) { errEl.textContent = "Portal password must be at least 6 characters."; return; }
+    var portalEmail = document.getElementById("ncEmail").value.trim();
+    if (portalEmail && pw.length < 6) { errEl.textContent = "A portal password of at least 6 characters is required when adding portal access."; return; }
+    if (!portalEmail && pw) { errEl.textContent = "Enter a portal email before setting a password."; return; }
     setButtonLoading(btn, true, "Creating…");
     api.clients.create({
       name: name,
       owner: document.getElementById("ncOwner").value,
       industry: document.getElementById("ncIndustry").value,
       location: document.getElementById("ncLocation").value,
-      portalEmail: document.getElementById("ncEmail").value,
+      portalEmail: portalEmail,
       portalPassword: pw,
       planId: document.getElementById("ncPlan").value,
       mrr: parseInt(document.getElementById("ncMrr").value, 10) || 0
@@ -1359,10 +1601,10 @@ function renderAdminClientProfile(container) {
     var logoStyle = c.logoImage ? 'background-image:url(' + c.logoImage + ');background-size:cover;background-position:center;' : 'background:' + c.logoColor + ';';
     html += '<div class="profile-hero"><div class="logo" style="' + logoStyle + '"></div>' +
       '<div><h1>' + esc(c.name) + '</h1><div class="meta">' + esc(c.owner) + ' · ' + esc(c.industry) + ' · ' + esc(c.location) + '</div></div>' +
-      '<div class="right"><span class="status-badge ' + healthClass(c.health) + '">' + esc(c.health) + '</span>' +
+      '<div class="right"><span class="status-badge ' + healthClass(c.health) + '">' + esc(t(c.health)) + '</span>' +
       '<button class="btn btn-sm" id="previewPortalBtn">👁 Preview Client Portal →</button></div></div>';
 
-    html += '<div class="health-callout ' + c.health.toLowerCase().replace(/ /g, "-") + '"><div class="dot"></div><div><b>' + esc(c.health) + '</b><p>' + esc(c.healthReason) + '</p></div></div>';
+    html += '<div class="health-callout ' + c.health.toLowerCase().replace(/ /g, "-") + '"><div class="dot"></div><div><b>' + esc(t(c.health)) + '</b><p>' + esc(t(c.healthReason)) + '</p></div></div>';
 
     html += '<div class="section-title">This Month\'s Execution</div>';
     html += '<div class="exec-grid">' +
@@ -1383,20 +1625,20 @@ function renderAdminClientProfile(container) {
         '<div class="tracker-frame-wrap" style="margin-bottom:16px;"><iframe src="/static/content-ops.html?clientId=' + encodeURIComponent(c.id) + '&readonly=1&embed=1&view=dashboard' + (currentLang === "ar" ? '&lang=ar' : '') + '" style="width:100%;height:420px;border:0;display:block;" title="Content Ops Tracker (read-only)"></iframe></div>';
     }
 
-    html += '<div class="section-title">Subscription &amp; Contract</div><div class="panel-card"><div class="form-grid">' +
-      '<div><div class="cell-sub">Plan</div><div class="cell-main">' + esc(planNameFromList(plans, c.planId)) + '</div></div>' +
-      '<div><div class="cell-sub">MRR</div><div class="cell-main mono">EGP ' + fmtMoney(c.mrr) + '</div></div>' +
-      '<div><div class="cell-sub">Contract Value</div><div class="cell-main mono">EGP ' + fmtMoney(c.contractValue) + '</div></div>' +
-      '<div><div class="cell-sub">Renewal</div><div class="cell-main mono">' + esc(c.renewal) + '</div></div>' +
-      '<div><div class="cell-sub">Billing Status</div><div><span class="status-badge ' + healthClass(c.billingStatus) + '">' + esc(c.billingStatus) + '</span></div></div>' +
+    html += '<div class="section-title">' + esc(t("Subscription & Contract")) + '</div><div class="panel-card"><div class="form-grid">' +
+      '<div><div class="cell-sub">' + esc(t("Plan")) + '</div><div class="cell-main">' + esc(planNameFromList(plans, c.planId)) + '</div></div>' +
+      '<div><div class="cell-sub">' + esc(t("MRR")) + '</div><div class="cell-main mono">EGP ' + fmtMoney(c.mrr) + '</div></div>' +
+      '<div><div class="cell-sub">' + esc(t("Contract Value")) + '</div><div class="cell-main mono">EGP ' + fmtMoney(c.contractValue) + '</div></div>' +
+      '<div><div class="cell-sub">' + esc(t("Renewal")) + '</div><div class="cell-main mono">' + esc(c.renewal) + '</div></div>' +
+      '<div><div class="cell-sub">' + esc(t("Billing Status")) + '</div><div>' + inlineBillingStatusSelect(c) + '</div></div>' +
       '</div></div>';
 
     var acts = allActivities.filter(function (a) { return a.clientId === c.id; });
     html += '<div class="section-title">Recent Activity</div><div class="panel-card"><div class="activity-feed">' +
       (acts.length ? acts.map(activityRow).join('') : '<div class="cell-sub">No recent activity.</div>') + '</div></div>';
 
-    html += '<div class="section-title">Internal Notes</div><div class="panel-card"><span class="internal-note-tag">Internal only — never shown to client</span>' +
-      '<textarea class="notes-area" id="internalNotesArea" placeholder="Sales notes, delivery notes, risk/retention notes…">' + esc(c.internalNotes || "") + '</textarea>' +
+    html += '<div class="section-title">' + esc(t("Internal Notes")) + '</div><div class="panel-card"><span class="internal-note-tag">Internal only — never shown to client</span>' +
+      '<textarea class="notes-area" id="internalNotesArea" placeholder="' + esc(t("Sales notes, delivery notes, risk/retention notes…")) + '">' + esc(c.internalNotes || "") + '</textarea>' +
       '<div style="margin-top:10px;text-align:right;"><button class="btn btn-primary btn-sm" id="saveNotesBtn">Save Notes</button></div></div>';
 
     container.innerHTML = html;
@@ -1435,23 +1677,23 @@ function renderAdminSubscriptions(container) {
         '<div class="head"><div class="badge-eyebrow">' + esc(t("One-time · Sold independently of any plan")) + '</div>' +
         '<div class="title-row"><h3>' + esc(trF(bc.name, bc.nameAr)) + '</h3><div class="price">' + esc(bc.price) + '</div></div>' +
         '<p class="headline">' + esc(trF(bc.headline, bc.headlineAr) || t("Know exactly why your marketing isn't working.")) + '</p></div>' +
-        (bc.whatYouGet && bc.whatYouGet.length ? '<ul class="deliverables">' + (trF(bc.whatYouGet, bc.whatYouGetAr) || bc.whatYouGet).map(function (w) { return '<li>' + esc(w) + '</li>'; }).join('') + '</ul>' : '') +
+        (bc.whatYouGet && bc.whatYouGet.length ? '<ul class="deliverables">' + (trF(bc.whatYouGet, bc.whatYouGetAr) || bc.whatYouGet).map(function (w) { return '<li>' + esc(t(w)) + '</li>'; }).join('') + '</ul>' : '') +
         (bc.whyYouNeedIt ? '<div class="why"><b>' + esc(t("Why it matters")) + ' —</b> ' + esc(trF(bc.whyYouNeedIt, bc.whyYouNeedItAr)) + '</div>' : '') +
         '<div class="foot"><button class="btn btn-sm" data-edit-service="business_consulting">' + esc(t("Edit")) + '</button></div></div>';
     }
 
-    html += '<div class="section-title">Plans</div><div class="plan-card-row">' +
+    html += '<div class="section-title">' + esc(t("Plans")) + '</div><div class="plan-card-row">' +
       plans.map(function (p, i) {
         return '<div class="plan-card' + (i === 1 ? ' featured' : '') + '"><div class="name">' + esc(trF(p.name, p.nameAr)) + '</div><div class="price">EGP ' + esc(p.price) + ' <span>/ ' + esc(p.cycle) + '</span></div>' +
           '<ul>' + entLabels.map(function (e) { return '<li class="' + (p.entitlements.indexOf(e.key) === -1 ? 'off' : '') + '">' + esc(trF(e.label, e.labelAr)) + '</li>'; }).join('') + '</ul>' +
           '<div style="margin-top:14px;"><button class="btn btn-sm" data-edit-plan="' + p.id + '">Edit Plan</button></div></div>';
       }).join('') + '</div>';
-    html += '<p class="cell-sub" style="margin:-8px 0 20px;">Each tier includes everything in the one before it, plus what\'s listed. Content Plan (the Content Ops Tracker) unlocks starting at Core.</p>';
+    html += '<p class="cell-sub" style="margin:-8px 0 20px;">' + esc(t("Each tier includes everything in the one before it, plus what's listed. Content Plan (the Content Ops Tracker) unlocks starting at Core.")) + '</p>';
 
     html += '<div class="section-title">' + esc(t("Client Subscriptions")) + '</div><div class="panel-card"><table class="data-table"><thead><tr><th>' + esc(t("Client")) + '</th><th>' + esc(t("Plan")) + '</th><th>' + esc(t("Status")) + '</th><th>' + esc(t("Renewal")) + '</th><th>' + esc(t("MRR")) + '</th></tr></thead><tbody>' +
       clientsList.map(function (c) {
         return '<tr class="clickable" data-view-profile="' + c.id + '"><td class="cell-main">' + esc(c.name) + '</td><td>' + esc(planNameFromList(plans, c.planId)) + '</td>' +
-          '<td><span class="status-badge ' + healthClass(c.billingStatus) + '">' + esc(c.billingStatus) + '</span></td>' +
+          '<td>' + inlineBillingStatusSelect(c) + '</td>' +
           '<td class="mono">' + esc(c.renewal) + '</td><td class="mono">EGP ' + fmtMoney(c.mrr) + '</td></tr>';
       }).join('') + '</tbody></table></div>';
 
@@ -1517,8 +1759,8 @@ function renderAdminRequests(container) {
     var html = '<div class="panel-card"><table class="data-table"><thead><tr><th>' + esc(t("Client")) + '</th><th>' + esc(t("Service")) + '</th><th>' + esc(t("Requested")) + '</th><th>' + esc(t("Status")) + '</th><th>' + esc(t("Notes")) + '</th><th></th></tr></thead><tbody>' +
       _requestsCache.map(function (req) {
         return '<tr><td class="cell-main">' + esc(findClientName(req.clientId)) + '</td><td>' + esc(req.service) + '</td><td class="mono">' + esc(req.requestedDate) + '</td>' +
-          '<td><span class="status-badge ' + healthClass(req.status) + '">' + esc(req.status) + '</span></td><td class="cell-sub">' + esc(req.notes || "—") + '</td>' +
-          '<td>' + (req.status === "Requested" || req.status === "Reviewing" ? '<button class="btn btn-sm" data-review-request="' + req.id + '">Review →</button>' : '<span class="cell-sub">—</span>') + '</td></tr>';
+          '<td><span class="status-badge ' + healthClass(req.status) + '">' + esc(req.status) + '</span></td><td class="cell-sub">' + esc(req.notes || "") + '</td>' +
+          '<td>' + (req.status === "Requested" || req.status === "Reviewing" ? '<button class="btn btn-sm" data-review-request="' + req.id + '">Review →</button>' : '') + '</td></tr>';
       }).join('') + '</tbody></table></div>';
     container.innerHTML = html;
     bindContentDelegation();
@@ -1569,8 +1811,8 @@ function renderAdminServices(container) {
       return '<div class="service-card"><div class="head"><h4>' + esc(trF(s.name, s.nameAr)) + '</h4><span class="status-badge status-active">' + esc(s.status) + '</span></div>' +
         '<div class="headline">' + esc(trF(s.headline, s.headlineAr)) + '</div>' +
         '<div class="price">' + esc(s.price) + '</div>' +
-        '<ul>' + s.whatYouGet.slice(0, 4).map(function (w) { return '<li>' + esc(w) + '</li>'; }).join('') + '</ul>' +
-        '<div class="cell-sub">Included in: ' + (s.includedIn.length ? s.includedIn.map(function (pid) { return planNameFromList(plans, pid); }).join(", ") : "Standalone only") + '</div>' +
+        '<ul>' + s.whatYouGet.slice(0, 4).map(function (w) { return '<li>' + esc(t(w)) + '</li>'; }).join('') + '</ul>' +
+        '<div class="cell-sub">' + esc(t("Included in: ")) + (s.includedIn.length ? s.includedIn.map(function (pid) { return planNameFromList(plans, pid); }).join(", ") : t("Standalone only")) + '</div>' +
         '<div style="margin-top:12px;"><button class="btn btn-sm" data-edit-service="' + s.id + '">Edit</button></div></div>';
     }).join('') + '</div>';
     container.innerHTML = html;
@@ -1639,6 +1881,15 @@ function parseReachNum(v) {
   return (parseFloat(s) || 0) * mult;
 }
 
+function reportMetricInputValue(value) {
+  return value === null || value === undefined ? "" : value;
+}
+
+function reportMetricNumber(id) {
+  var value = document.getElementById(id).value.trim();
+  return value === "" ? null : Number(value);
+}
+
 // Manual report entry: WITRA only ever types in the raw numbers (reach,
 // engagement, leads, cost per lead, conversion rate, ROAS). The narrative —
 // executive summary, what worked, what didn't, recommendations, next month
@@ -1653,24 +1904,42 @@ function reportFormModal(reportId, presetClientId) {
       var sel = (rp ? rp.clientId === c.id : presetClientId === c.id) ? " selected" : "";
       return '<option value="' + c.id + '"' + sel + '>' + esc(c.name) + '</option>';
     }).join('');
-    var m = rp ? rp.metrics : { reach: "", engagement: "", leads: "", cpl: "", conversion: "", roas: "" };
+    var m = rp ? rp.metrics : {
+      reach: "", impressions: "", engagement: "", engagementRate: "", leads: "", conversions: "",
+      conversionRate: "", adSpend: "", revenue: "", cpl: "", roas: ""
+    };
+    var visibility = rp ? (rp.visibility || "Client") : "Client";
+    var notifyClient = rp ? !!rp.notifyClient : true;
 
     var body = '<div class="form-grid">' +
       '<div class="form-field"><label>' + esc(t("Client")) + '</label><select id="rpClient"' + (rp ? " disabled" : "") + '>' + clientOptions + '</select></div>' +
       '<div class="form-field"><label>' + esc(t("Period")) + '</label><input type="text" id="rpPeriod" placeholder="' + esc(t("e.g. August 2026")) + '" value="' + esc(rp ? rp.period : "") + '"></div>' +
       '</div>' +
       '<div class="form-grid" style="margin-top:14px;">' +
-      '<div class="form-field"><label>' + esc(t("Reach")) + '</label><input type="number" min="0" id="rpReach" value="' + esc(m.reach) + '"></div>' +
-      '<div class="form-field"><label>' + esc(t("Engagement")) + '</label><input type="number" min="0" id="rpEngagement" value="' + esc(m.engagement) + '"></div>' +
-      '<div class="form-field"><label>' + esc(t("Leads Generated")) + '</label><input type="number" min="0" id="rpLeads" value="' + esc(m.leads) + '"></div>' +
-      '<div class="form-field"><label>' + esc(t("Cost per Lead (EGP)")) + '</label><input type="number" min="0" step="0.01" id="rpCpl" value="' + esc(m.cpl) + '"></div>' +
-      '<div class="form-field"><label>' + esc(t("Conversion Rate (%)")) + '</label><input type="number" min="0" step="0.1" id="rpConversion" value="' + esc(m.conversion) + '"></div>' +
-      '<div class="form-field"><label>' + esc(t("ROAS (x)")) + '</label><input type="number" min="0" step="0.1" id="rpRoas" value="' + esc(m.roas) + '"></div>' +
+      '<div class="form-field"><label>' + esc(t("Reach")) + '</label><input type="number" min="0" id="rpReach" value="' + esc(reportMetricInputValue(m.reach)) + '"></div>' +
+      '<div class="form-field"><label>Impressions</label><input type="number" min="0" id="rpImpressions" value="' + esc(reportMetricInputValue(m.impressions)) + '"></div>' +
+      '<div class="form-field"><label>' + esc(t("Engagement")) + '</label><input type="number" min="0" id="rpEngagement" value="' + esc(reportMetricInputValue(m.engagement)) + '"></div>' +
+      '<div class="form-field"><label>Engagement Rate (%)</label><input type="number" min="0" step="0.01" id="rpEngagementRate" value="' + esc(reportMetricInputValue(m.engagementRate)) + '"></div>' +
+      '</div><div class="form-grid" style="margin-top:14px;">' +
+      '<div class="form-field"><label>' + esc(t("Leads Generated")) + '</label><input type="number" min="0" step="1" id="rpLeads" value="' + esc(reportMetricInputValue(m.leads)) + '"></div>' +
+      '<div class="form-field"><label>Conversions</label><input type="number" min="0" step="1" id="rpConversions" value="' + esc(reportMetricInputValue(m.conversions)) + '"></div>' +
+      '<div class="form-field"><label>' + esc(t("Conversion Rate (%)")) + '</label><input type="number" min="0" step="0.01" id="rpConversionRate" value="' + esc(reportMetricInputValue(m.conversionRate !== undefined ? m.conversionRate : m.conversion)) + '"></div>' +
+      '<div class="form-field"><label>Ad Spend (EGP)</label><input type="number" min="0" step="0.01" id="rpAdSpend" value="' + esc(reportMetricInputValue(m.adSpend)) + '"></div>' +
+      '</div><div class="form-grid" style="margin-top:14px;">' +
+      '<div class="form-field"><label>Revenue (EGP)</label><input type="number" min="0" step="0.01" id="rpRevenue" value="' + esc(reportMetricInputValue(m.revenue)) + '"></div>' +
+      '<div class="form-field"><label>' + esc(t("Cost per Lead (EGP)")) + '</label><input type="number" min="0" step="0.01" id="rpCpl" value="' + esc(reportMetricInputValue(m.cpl)) + '"></div>' +
+      '<div class="form-field"><label>' + esc(t("ROAS (x)")) + '</label><input type="number" min="0" step="0.01" id="rpRoas" value="' + esc(reportMetricInputValue(m.roas)) + '"></div>' +
+      '</div><div class="form-grid" style="margin-top:14px;">' +
+      '<div class="form-field"><label>Channel</label><input type="text" id="rpChannel" value="' + esc(rp ? rp.channel || "" : "") + '" placeholder="Meta, Google, Instagram…"></div>' +
+      '<div class="form-field"><label>Service Type</label><input type="text" id="rpServiceType" value="' + esc(rp ? rp.serviceType || "" : "") + '" placeholder="Paid Ads, SEO…"></div>' +
+      '<div class="form-field"><label>Campaign</label><input type="text" id="rpCampaign" value="' + esc(rp ? rp.campaign || "" : "") + '"></div>' +
       '</div>' +
-      '<div class="form-field" style="margin-top:14px;"><label>' + esc(t("Status")) + '</label><select id="rpStatus">' +
+      '<div class="form-grid" style="margin-top:14px;"><div class="form-field"><label>Visibility</label><select id="rpVisibility"><option value="Client"' + (visibility === "Client" ? " selected" : "") + '>Client</option><option value="Internal"' + (visibility === "Internal" ? " selected" : "") + '>Internal</option></select></div>' +
+      '<div class="form-field"><label>' + esc(t("Status")) + '</label><select id="rpStatus">' +
       '<option value="Draft"' + (rp && rp.status === "Draft" ? " selected" : "") + '>' + esc(t("Draft")) + '</option>' +
-      '<option value="Published"' + (rp && rp.status === "Published" ? " selected" : "") + '>' + esc(t("Published")) + '</option></select></div>' +
-      '<p class="cell-sub" style="margin-top:10px;">' + esc(t("The full report — executive summary, what worked, what didn't, and recommendations — is generated automatically from these numbers. Publishing notifies the client.")) + '</p>' +
+      '<option value="Published"' + (rp && rp.status === "Published" ? " selected" : "") + '>' + esc(t("Published")) + '</option><option value="Archived"' + (rp && rp.status === "Archived" ? " selected" : "") + '>Archived</option></select></div></div>' +
+      '<label class="cell-sub" style="display:flex;gap:8px;align-items:center;margin-top:12px;"><input type="checkbox" id="rpNotifyClient"' + (notifyClient ? " checked" : "") + '> Notify client when this report is published</label>' +
+      '<p class="cell-sub" style="margin-top:10px;">' + esc(t("The full report — executive summary, what worked, what didn't, and recommendations — is generated automatically from these numbers.")) + '</p>' +
       '<div class="form-error" id="rpFormError"></div>';
     var foot = '<button class="btn btn-sm" data-close-modal="1">' + esc(t("Cancel")) + '</button>' +
       '<button class="btn btn-primary btn-sm" id="rpSaveBtn">' + (rp ? esc(t("Save Changes")) : esc(t("Generate Report"))) + '</button>';
@@ -1687,13 +1956,23 @@ function reportFormModal(reportId, presetClientId) {
         clientId: clientId,
         period: period,
         status: document.getElementById("rpStatus").value,
+        channel: document.getElementById("rpChannel").value.trim(),
+        serviceType: document.getElementById("rpServiceType").value.trim(),
+        campaign: document.getElementById("rpCampaign").value.trim(),
+        visibility: document.getElementById("rpVisibility").value,
+        notifyClient: document.getElementById("rpNotifyClient").checked,
         metrics: {
-          reach: Number(document.getElementById("rpReach").value) || 0,
-          engagement: Number(document.getElementById("rpEngagement").value) || 0,
-          leads: Number(document.getElementById("rpLeads").value) || 0,
-          cpl: Number(document.getElementById("rpCpl").value) || 0,
-          conversion: Number(document.getElementById("rpConversion").value) || 0,
-          roas: Number(document.getElementById("rpRoas").value) || 0
+          reach: reportMetricNumber("rpReach"),
+          impressions: reportMetricNumber("rpImpressions"),
+          engagement: reportMetricNumber("rpEngagement"),
+          engagementRate: reportMetricNumber("rpEngagementRate"),
+          leads: reportMetricNumber("rpLeads"),
+          conversions: reportMetricNumber("rpConversions"),
+          conversionRate: reportMetricNumber("rpConversionRate"),
+          adSpend: reportMetricNumber("rpAdSpend"),
+          revenue: reportMetricNumber("rpRevenue"),
+          cpl: reportMetricNumber("rpCpl"),
+          roas: reportMetricNumber("rpRoas")
         }
       };
       setButtonLoading(btn, true, t("Generating…"));
@@ -1840,21 +2119,31 @@ function reportViewModal(reportId) {
   var isAdmin = state.view === "admin";
   (isAdmin ? api.clients.list() : Promise.resolve({ clients: [] })).then(function (res) {
     var c = res.clients.filter(function (x) { return x.id === rp.clientId; })[0];
+    var metrics = rp.metrics || {};
+    function metricCard(label, value, suffix) {
+      var display = value === null || value === undefined || value === "" ? "N/A" : String(value) + (suffix || "");
+      return '<div class="exec-card"><div class="lbl">' + esc(t(label)) + '</div><div class="val">' + esc(display) + '</div></div>';
+    }
     var body = (isAdmin ? '<p><b>' + esc(t("Client")) + ':</b> ' + esc(c ? c.name : "") + ' &nbsp;·&nbsp; ' : '') +
       '<b>' + esc(t("Period")) + ':</b> ' + esc(rp.period) + ' &nbsp;·&nbsp; <span class="status-badge ' + healthClass(rp.status) + '">' + esc(t(rp.status)) + '</span></p>' +
       (isAdmin ? '<p class="cell-sub">' + esc(t("Entered by")) + ' ' + esc(rp.enteredBy || "WITRA Team") + (rp.createdAt ? ' · ' + esc(rp.createdAt) : '') + '</p>' : '') +
       '<div class="exec-grid" style="margin-top:12px;">' +
-      '<div class="exec-card"><div class="lbl">' + esc(t("Reach")) + '</div><div class="val">' + esc(rp.metrics.reach) + '</div></div>' +
-      '<div class="exec-card"><div class="lbl">' + esc(t("Engagement")) + '</div><div class="val">' + esc(rp.metrics.engagement) + '</div></div>' +
-      '<div class="exec-card"><div class="lbl">' + esc(t("Leads Generated")) + '</div><div class="val">' + rp.metrics.leads + '</div></div>' +
-      '<div class="exec-card"><div class="lbl">' + esc(t("Cost per Lead")) + '</div><div class="val">EGP ' + esc(rp.metrics.cpl) + '</div></div>' +
-      '<div class="exec-card"><div class="lbl">' + esc(t("Conversion Rate")) + '</div><div class="val">' + esc(rp.metrics.conversion) + '%</div></div>' +
-      '<div class="exec-card"><div class="lbl">ROAS</div><div class="val">' + esc(rp.metrics.roas) + 'x</div></div>' +
+      metricCard("Reach", metrics.reach) +
+      metricCard("Impressions", metrics.impressions) +
+      metricCard("Engagement", metrics.engagement) +
+      metricCard("Engagement Rate", metrics.engagementRate, "%") +
+      metricCard("Leads Generated", metrics.leads) +
+      metricCard("Conversions", metrics.conversions) +
+      metricCard("Conversion Rate", metrics.conversionRate !== undefined ? metrics.conversionRate : metrics.conversion, "%") +
+      metricCard("Ad Spend", metrics.adSpend === null || metrics.adSpend === undefined ? null : "EGP " + metrics.adSpend) +
+      metricCard("Revenue", metrics.revenue === null || metrics.revenue === undefined ? null : "EGP " + metrics.revenue) +
+      metricCard("Cost per Lead", metrics.cpl === null || metrics.cpl === undefined ? null : "EGP " + metrics.cpl) +
+      metricCard("ROAS", metrics.roas, "x") +
       '</div>' +
       '<p style="margin-top:14px;"><b>' + esc(t("Executive Summary")) + '</b></p><p>' + esc(rp.summary) + '</p>' +
-      '<p><b>' + esc(t("What Worked")) + '</b></p><ul style="margin:0 0 12px;padding-left:18px;">' + rp.whatWorked.map(function (w) { return '<li>' + esc(w) + '</li>'; }).join('') + '</ul>' +
-      '<p><b>' + esc(t("What Didn't")) + '</b></p><ul style="margin:0 0 12px;padding-left:18px;">' + rp.whatDidnt.map(function (w) { return '<li>' + esc(w) + '</li>'; }).join('') + '</ul>' +
-      '<p><b>' + esc(t("Recommendations")) + '</b></p><ul style="margin:0 0 12px;padding-left:18px;">' + rp.recommendations.map(function (w) { return '<li>' + esc(w) + '</li>'; }).join('') + '</ul>' +
+      '<p><b>' + esc(t("What Worked")) + '</b></p><ul style="margin:0 0 12px;padding-left:18px;">' + rp.whatWorked.map(function (w) { return '<li>' + esc(t(w)) + '</li>'; }).join('') + '</ul>' +
+      '<p><b>' + esc(t("What Didn't")) + '</b></p><ul style="margin:0 0 12px;padding-left:18px;">' + rp.whatDidnt.map(function (w) { return '<li>' + esc(t(w)) + '</li>'; }).join('') + '</ul>' +
+      '<p><b>' + esc(t("Recommendations")) + '</b></p><ul style="margin:0 0 12px;padding-left:18px;">' + rp.recommendations.map(function (w) { return '<li>' + esc(t(w)) + '</li>'; }).join('') + '</ul>' +
       '<p><b>' + esc(t("Next Month Strategy")) + '</b></p><p>' + esc(rp.nextMonth) + '</p>';
     var foot = isAdmin
       ? '<button class="btn btn-sm" data-close-modal="1">' + esc(t("Close")) + '</button><button class="btn btn-primary btn-sm" id="rpViewEditBtn">' + esc(t("Edit")) + '</button>'
@@ -1913,8 +2202,8 @@ function teamRequestReviewModal(reqId) {
 }
 
 function renderAdminTeam(container) {
-  Promise.all([api.team.witraList(), api.clients.list(), api.team.requests()]).then(function (r) {
-    var team = r[0].team, clientsList = r[1].clients, teamRequests = r[2].requests;
+  Promise.all([api.team.witraList(), api.clients.list(), api.team.requests(), fetch("/api/team/client_users", {headers:{"Authorization":"Bearer "+localStorage.getItem("token")}}).then(r=>r.json())]).then(function (r) {
+    var team = r[0].team, clientsList = r[1].clients, teamRequests = r[2].requests, clientUsers = r[3].clientUsers || [];
     function clientNames(ids) {
       if (!ids || !ids.length) return "None yet";
       return ids.map(function (id) {
@@ -1926,42 +2215,88 @@ function renderAdminTeam(container) {
       var c = clientsList.filter(function (x) { return x.id === id; })[0];
       return c ? c.name : id;
     }
+    
+    // Sort requests: newest first
+    teamRequests.sort(function(a, b) { return new Date(b.requestedDate) - new Date(a.requestedDate); });
     var pendingRequests = teamRequests.filter(function (rq) { return rq.status === "Requested"; });
+    
     var html = "";
-    html += '<div class="section-title" style="margin-top:0;">' + esc(t("Client Team Requests")) + (pendingRequests.length ? ' <span class="status-badge status-needs-attention">' + pendingRequests.length + ' ' + esc(t("pending")) + '</span>' : '') + '</div>';
-    if (teamRequests.length === 0) {
-      html += '<p class="cell-sub" style="margin-bottom:16px;">' + esc(t("No client team requests yet — these appear here whenever a client asks to add a teammate.")) + '</p>';
-    } else {
-      html += '<div class="panel-card"><table class="data-table"><thead><tr><th>' + esc(t("Client")) + '</th><th>' + esc(t("Name")) + '</th><th>' + esc(t("Email")) + '</th><th>' + esc(t("Access")) + '</th><th>' + esc(t("Requested")) + '</th><th>' + esc(t("Status")) + '</th><th></th></tr></thead><tbody>' +
-        teamRequests.map(function (rq) {
-          return '<tr><td class="cell-main">' + esc(findClientName(rq.clientId)) + '</td><td>' + esc(rq.name) + '</td>' +
-            '<td class="mono cell-sub">' + esc(rq.email) + '</td><td>' + esc(rq.role) + '</td><td class="mono">' + esc(rq.requestedDate) + '</td>' +
-            '<td><span class="status-badge ' + healthClass(rq.status) + '">' + esc(rq.status) + '</span></td>' +
-            '<td>' + (rq.status === "Requested" ? '<button class="btn btn-sm" data-review-team-request="' + rq.id + '">' + esc(t("Review")) + ' →</button>' : '<span class="cell-sub">—</span>') + '</td></tr>';
-        }).join('') + '</tbody></table></div>';
-    }
-
-    html += '<p class="cell-sub" style="margin:24px 0 16px;">Everyone here logs into this same platform with their own email and password, scoped to the clients they\'re assigned.</p>';
+    
+    // 1. WITRA Agency Team
+    html += '<div class="section-title" style="margin-top:0;">' + esc(t("WITRA Agency Team")) + '</div>';
+    html += '<p class="cell-sub" style="margin-bottom:16px;">Everyone here logs into this same platform with their own email and password, scoped to the clients they\'re assigned.</p>';
     html += '<div class="toolbar"><span style="flex:1;"></span><button class="btn btn-primary btn-sm" data-toggle-witra-invite="1">+ ' + esc(t("Add Team Member")) + '</button></div>';
+    
     if (state._witraInviteOpen) {
       html += '<div class="panel-card"><div class="form-grid">' +
         '<div class="form-field"><label>' + esc(t("Name")) + '</label><input type="text" id="wtName"></div>' +
         '<div class="form-field"><label>' + esc(t("Email")) + '</label><input type="email" id="wtEmail"></div>' +
         '</div><div class="form-grid">' +
         '<div class="form-field"><label>' + esc(t("Role")) + '</label><select id="wtRole"><option>Team Member</option><option>Super Admin</option></select></div>' +
-        '<div class="form-field"><label>' + esc(t("Password")) + '</label><input type="password" id="wtPassword" placeholder="' + esc(t("Min. 6 characters")) + '" autocomplete="new-password"><span class="cell-sub">' + esc(t("Set by WITRA — this is what they'll use to log in. Leave blank to use a default.")) + '</span></div>' +
+        '<div class="form-field"><label>' + esc(t("Password")) + '</label><input type="password" id="wtPassword" placeholder="' + esc(t("Min. 6 characters")) + '" autocomplete="new-password"><span class="cell-sub">' + esc(t("Set by WITRA — this is what they\'ll use to log in.")) + '</span></div>' +
         '</div><div class="form-field" id="wtClientsField"><label>' + esc(t("Assigned Clients")) + '</label>' +
         '<div class="client-picker">' + clientsList.map(function (c) {
           return '<label class="client-picker-item"><input type="checkbox" class="wtClientChk" value="' + esc(c.id) + '"> ' + esc(c.name) + '</label>';
         }).join('') + '</div><span class="cell-sub">' + esc(t("Team Members only see the clients checked here. Super Admins automatically see everyone.")) + '</span></div>' +
         '<div class="form-error" id="wtFormError"></div><button class="btn btn-primary btn-sm" data-send-witra-invite="1">' + esc(t("Add to Team")) + '</button></div>';
     }
-    html += '<div class="panel-card"><table class="data-table"><thead><tr><th>' + esc(t("Name")) + '</th><th>' + esc(t("Email")) + '</th><th>' + esc(t("Role")) + '</th><th>' + esc(t("Assigned Clients")) + '</th><th></th></tr></thead><tbody>' +
+    
+    // Distinct styling for WITRA Team
+    html += '<div class="panel-card" style="background-color: var(--accent-soft); border: 1px solid var(--accent);"><table class="data-table"><thead><tr><th>' + esc(t("Name")) + '</th><th>' + esc(t("Email")) + '</th><th>' + esc(t("Role")) + '</th><th>' + esc(t("Assigned Clients")) + '</th><th></th></tr></thead><tbody>' +
       team.map(function (w) {
         return '<tr><td><div style="display:flex;align-items:center;gap:9px;"><div class="avatar-sm">' + initials(w.name) + '</div>' + esc(w.name) + '</div></td>' +
           '<td class="mono cell-sub">' + esc(w.email) + '</td><td>' + esc(w.role) + '</td><td class="cell-sub">' + esc(clientNames(w.assignedClients)) + '</td>' +
-          '<td>' + (w.role === "Super Admin" ? '<span class="cell-sub">—</span>' : '<button class="btn btn-ghost btn-sm" data-remove-witra="' + w.id + '">Remove</button>') + '</td></tr>';
+          '<td>' + (w.role === "Super Admin" ? '' : '<button class="btn btn-ghost btn-sm" data-remove-witra="' + w.id + '">Remove</button>') + '</td></tr>';
       }).join('') + '</tbody></table></div>';
+      
+    // 2. Client Team Requests
+    html += '<div class="section-title" style="margin-top:32px;">' + esc(t("Client Team Requests")) + (pendingRequests.length ? ' <span class="status-badge status-needs-attention">' + pendingRequests.length + ' ' + esc(t("pending")) + '</span>' : '') + '</div>';
+    if (teamRequests.length === 0) {
+      html += '<p class="cell-sub" style="margin-bottom:16px;">' + esc(t("No client team requests yet — these appear here whenever a client asks to add a teammate.")) + '</p>';
+    } else {
+      html += '<div class="panel-card"><table class="data-table"><thead><tr><th>' + esc(t("Client")) + '</th><th>' + esc(t("Name")) + '</th><th>' + esc(t("Email")) + '</th><th>' + esc(t("Access")) + '</th><th>' + esc(t("Requested")) + '</th><th>' + esc(t("Status")) + '</th><th></th></tr></thead><tbody>' +
+        teamRequests.slice(0, 10).map(function (rq) {
+          return '<tr><td class="cell-main">' + esc(findClientName(rq.clientId)) + '</td><td>' + esc(rq.name) + '</td>' +
+            '<td class="mono cell-sub">' + esc(rq.email) + '</td><td>' + esc(rq.role) + '</td><td class="mono">' + esc(rq.requestedDate) + '</td>' +
+            '<td><span class="status-badge ' + healthClass(rq.status) + '">' + esc(rq.status) + '</span></td>' +
+            '<td>' + (rq.status === "Requested" ? '<button class="btn btn-sm" data-review-team-request="' + rq.id + '">' + esc(t("Review")) + ' →</button>' : '') + '</td></tr>';
+        }).join('') + '</tbody></table>';
+      // Removed hidden footer per user request
+      html += '</div>';
+    }
+
+    // 3. Client Platform Users
+    html += '<div class="section-title" style="margin-top:32px;">' + esc(t("Client Platform Users")) + '</div>';
+    
+    // Group users by client
+    var usersByClient = {};
+    clientUsers.forEach(function(u) {
+      if (!usersByClient[u.clientId]) usersByClient[u.clientId] = [];
+      usersByClient[u.clientId].push(u);
+    });
+    
+    if (Object.keys(usersByClient).length === 0) {
+        html += emptyState("👥", t("No Client Users"), t("When client team requests are approved, they will appear here."));
+    } else {
+        html += '<div class="accordion-list">';
+        clientsList.forEach(function(c) {
+          var cUsers = usersByClient[c.id];
+          if (cUsers && cUsers.length > 0) {
+             html += '<details class="accordion-item" style="margin-bottom:8px; border:1px solid var(--line); border-radius:6px; overflow:hidden;">';
+             html += '<summary style="padding:12px 16px; background:var(--paper); cursor:pointer; font-weight:600; display:flex; justify-content:space-between; align-items:center;">' + '<div style="display:flex; align-items:center;"><span class="accordion-arrow">▶</span> ' + esc(c.name) + '</div> <span class="status-badge" style="background:var(--canvas);color:var(--ink);">' + cUsers.length + ' Users</span></summary>';
+             html += '<div style="background:var(--paper);">';
+             html += '<table class="data-table"><thead><tr><th>' + esc(t("Name")) + '</th><th>' + esc(t("Email")) + '</th><th>' + esc(t("Role")) + '</th><th>' + esc(t("Joined Date")) + '</th></tr></thead><tbody>';
+             html += cUsers.map(function(u) {
+                 var joinedDate = u.createdAt ? new Date(u.createdAt).toISOString().split('T')[0] : 'N/A';
+                 return '<tr><td><div style="display:flex;align-items:center;gap:9px;"><div class="avatar-sm">' + initials(u.name) + '</div>' + esc(u.name) + '</div></td>' +
+                   '<td class="mono cell-sub">' + esc(u.email) + '</td><td>' + esc(u.role) + '</td><td class="mono cell-sub">' + esc(joinedDate) + '</td></tr>';
+             }).join('');
+             html += '</tbody></table></div></details>';
+          }
+        });
+        html += '</div>';
+    }
+
     container.innerHTML = html;
     bindContentDelegation();
   }).catch(function (err) {
@@ -2289,7 +2624,7 @@ function renderClientDashboard(container) {
   Promise.all([api.portal.client(), getPlans(), getServices(), api.activities.mine()]).then(function (r) {
     var c = r[0].client, plans = r[1], services = r[2], acts = r[3].activities;
     var logoStyle = c.logoImage ? 'background-image:url(' + c.logoImage + ');background-size:cover;background-position:center;' : 'background:' + c.logoColor + ';';
-    var html = '<div class="client-header"><div class="logo" style="' + logoStyle + '"></div><div><h1>Good morning, ' + esc((c.owner || "").split(" ")[0]) + '</h1><div class="meta">' + esc(c.name) + ' · ' + esc(planNameFromList(plans, c.planId)) + ' plan · <span class="status-badge ' + healthClass(c.health) + '">' + esc(c.health) + '</span></div></div></div>';
+    var html = '<div class="client-header"><div class="logo" style="' + logoStyle + '"></div><div><h1>Good morning, ' + esc((c.owner || "").split(" ")[0]) + '</h1><div class="meta">' + esc(c.name) + ' · ' + esc(planNameFromList(plans, c.planId)) + ' plan · <span class="status-badge ' + healthClass(c.health) + '">' + esc(t(c.health)) + '</span></div></div></div>';
 
     html += '<div class="kpi-grid">' +
       kpi("Leads Generated", c.kpis.leads) + kpi("Conversion Rate", c.kpis.conversion) +
@@ -2446,7 +2781,7 @@ function renderClientBusiness(container) {
 function lockedServiceCard(s) {
   return '<div class="service-card locked"><div class="head"><h4>' + esc(trF(s.name, s.nameAr)) + '</h4><span class="status-badge status-locked">🔒 Locked</span></div>' +
     '<div class="headline">' + esc(trF(s.headline, s.headlineAr)) + '</div>' +
-    '<ul>' + (trF(s.whatYouGet, s.whatYouGetAr) || s.whatYouGet).slice(0, 4).map(function (w) { return '<li>' + esc(w) + '</li>'; }).join('') + '</ul>' +
+    '<ul>' + (trF(s.whatYouGet, s.whatYouGetAr) || s.whatYouGet).slice(0, 4).map(function (w) { return '<li>' + esc(t(w)) + '</li>'; }).join('') + '</ul>' +
     (s.whyYouNeedIt ? '<div class="why"><b>' + esc(t("Why you need it")) + ' —</b> ' + esc(trF(s.whyYouNeedIt, s.whyYouNeedItAr)) + '</div>' : '') +
     '<div class="price">' + esc(s.price) + '</div>' +
     '<button class="btn btn-primary btn-sm" data-request-service="' + s.id + '">Request Service →</button></div>';
@@ -2460,7 +2795,7 @@ function renderClientServices(container) {
     var html = '<div class="section-title">Your Active Services</div><div class="service-grid">' +
       active.map(function (s) {
         return '<div class="service-card"><div class="head"><h4>' + esc(trF(s.name, s.nameAr)) + '</h4><span class="status-badge status-active">Active</span></div>' +
-          '<div class="headline">' + esc(trF(s.headline, s.headlineAr)) + '</div><ul>' + (trF(s.whatYouGet, s.whatYouGetAr) || s.whatYouGet).map(function (w) { return '<li>' + esc(w) + '</li>'; }).join('') + '</ul></div>';
+          '<div class="headline">' + esc(trF(s.headline, s.headlineAr)) + '</div><ul>' + (trF(s.whatYouGet, s.whatYouGetAr) || s.whatYouGet).map(function (w) { return '<li>' + esc(t(w)) + '</li>'; }).join('') + '</ul></div>';
       }).join('') + '</div>';
     html += '<div class="section-title">Explore More</div><div class="service-grid">' + locked.map(lockedServiceCard).join('') + '</div>';
     container.innerHTML = html;
@@ -2479,15 +2814,15 @@ function renderClientSubscription(container) {
     var planIdx = plans.indexOf(plan);
     var nextPlan = plans[planIdx + 1];
 
-    var html = '<div class="current-plan-hero"><div class="row"><div><div class="eyebrow">Current Plan</div><div class="name">' + esc(plan.name) + '</div><div class="price">EGP ' + esc(plan.price) + ' / ' + esc(plan.cycle) + ' · renews ' + esc(c.renewal) + '</div></div>' +
-      '<div><span class="status-badge ' + healthClass(c.billingStatus) + '" style="background:rgba(255,255,255,0.2);color:#fff;">' + esc(c.billingStatus) + '</span></div></div></div>';
+    var html = '<div class="current-plan-hero"><div class="row"><div><div class="eyebrow">Current Plan</div><div class="name">' + esc(plan.name) + '</div><div class="price">EGP ' + esc(plan.price) + ' / ' + esc(plan.cycle) + ' · ' + esc(t("renews")) + ' ' + esc(c.renewal) + '</div></div>' +
+      '<div><span class="status-badge ' + healthClass(c.billingStatus) + '" style="background:rgba(255,255,255,0.2);color:#fff;">' + esc(t(c.billingStatus)) + '</span></div></div></div>';
 
-    html += '<div class="section-title">Included Services</div><div class="panel-card"><ul style="list-style:none;padding:0;margin:0;">' +
+    html += '<div class="section-title">' + esc(t("Included Services")) + '</div><div class="panel-card"><ul style="list-style:none;padding:0;margin:0;">' +
       entLabels.filter(function (e) { return plan.entitlements.indexOf(e.key) !== -1; })
         .map(function (e) { return '<li style="padding:6px 0;">✓ ' + esc(trF(e.label, e.labelAr)) + '</li>'; }).join('') + '</ul></div>';
 
     if (nextPlan) {
-      html += '<div class="section-title">Next Step Up</div><div class="plan-card-row"><div class="plan-card featured">' +
+      html += '<div class="section-title">' + esc(t("Next Step Up")) + '</div><div class="plan-card-row"><div class="plan-card featured">' +
         '<div class="name">' + esc(nextPlan.name) + '</div><div class="price">EGP ' + esc(nextPlan.price) + ' <span>/ ' + esc(nextPlan.cycle) + '</span></div>' +
         '<ul>' + entLabels.map(function (e) { return '<li class="' + (nextPlan.entitlements.indexOf(e.key) === -1 ? 'off' : '') + '">' + esc(trF(e.label, e.labelAr)) + '</li>'; }).join('') + '</ul>' +
         '<div style="margin-top:16px;"><button class="btn btn-primary btn-sm" data-request-upgrade="' + nextPlan.id + '">Request Upgrade →</button></div></div></div>';
@@ -2646,7 +2981,13 @@ function bindContentDelegation() {
     if (el = e.target.closest("#bellBtn")) {
       e.stopPropagation();
       var existingPanel = document.getElementById("notifPanel");
-      if (existingPanel) { existingPanel.remove(); return; }
+      if (existingPanel) { 
+        existingPanel.remove(); 
+        notifApiForView().markAllRead().then(function() {
+          var b = document.querySelector(".bell-dot"); if(b) b.remove();
+        }).catch(function(){});
+        return; 
+      }
       notifApiForView().list().then(function (res) {
         var wrap = document.getElementById("notifWrap");
         if (wrap) wrap.insertAdjacentHTML("beforeend", notifPanelHtml(res.notifications));
@@ -2664,6 +3005,9 @@ function bindContentDelegation() {
     var notifPanel = document.getElementById("notifPanel");
     if (notifPanel && !notifPanel.contains(e.target) && e.target.id !== "bellBtn" && !e.target.closest("#bellBtn")) {
       notifPanel.remove();
+      notifApiForView().markAllRead().then(function() {
+        var b = document.querySelector(".bell-dot"); if(b) b.remove();
+      }).catch(function(){});
     }
 
     if (el = e.target.closest("[data-nav]")) {
@@ -2687,6 +3031,40 @@ function bindContentDelegation() {
       if (state.view === "admin") { state.adminSection = id; renderAdminSection(); }
       else { state.clientSection = id; renderClientSection(); }
       refreshBellDot();
+      return;
+    }
+
+    
+    if (el = e.target.closest("[data-edit-billing-status]")) {
+      e.stopPropagation();
+      var id = el.getAttribute("data-edit-billing-status");
+      var current = el.getAttribute("data-current-status");
+      var selectHtml = '<select id="billingStatusSelect" class="form-input" style="margin-bottom:12px;">' +
+        '<option value="Active"' + (current === 'Active' ? ' selected' : '') + '>' + esc(t("Active")) + '</option>' +
+        '<option value="Renewed"' + (current === 'Renewed' ? ' selected' : '') + '>' + esc(t("Renewed")) + '</option>' +
+        '<option value="Expired"' + (current === 'Expired' ? ' selected' : '') + '>' + esc(t("Expired")) + '</option>' +
+        '<option value="Cancelled"' + (current === 'Cancelled' ? ' selected' : '') + '>' + esc(t("Cancelled")) + '</option>' +
+        '</select>' +
+        '<div style="text-align:right;"><button class="btn btn-primary" id="saveBillingStatusBtn">' + esc(t("Save")) + '</button></div>';
+      
+      openModal(esc(t("Update Billing Status")), selectHtml);
+      
+      document.getElementById("saveBillingStatusBtn").addEventListener("click", function() {
+        var newVal = document.getElementById("billingStatusSelect").value;
+        var btn = this;
+        btn.disabled = true;
+        apiFetch("/api/clients/" + id + "/billing-status", {
+          method: "PUT",
+          body: JSON.stringify({ status: newVal })
+        }).then(function() {
+          closeModal();
+          toast(t("Status updated"), "success");
+          renderAdminSubscriptions(document.getElementById("adminContent"));
+        }).catch(function(err) {
+          btn.disabled = false;
+          errorToast(err);
+        });
+      });
       return;
     }
 
@@ -2745,7 +3123,7 @@ function bindContentDelegation() {
       var errEl = document.getElementById("wtFormError");
       if (errEl) errEl.textContent = "";
       if (!wn || !we) { if (errEl) errEl.textContent = "Name and email are required."; else toast("Name and email are required", "error"); return; }
-      if (wp && wp.length < 6) { if (errEl) errEl.textContent = "Password must be at least 6 characters."; return; }
+      if (wp.length < 6) { if (errEl) errEl.textContent = "A password of at least 6 characters is required."; return; }
       var assignedClientIds = Array.prototype.slice.call(document.querySelectorAll(".wtClientChk:checked")).map(function (chk) { return chk.value; });
       api.team.witraAdd({
         name: wn, email: we,
@@ -2813,6 +3191,30 @@ function bindContentDelegation() {
   });
 
   document.addEventListener("change", function (e) {
+    var bsTarget;
+    if (bsTarget = e.target.closest("[data-inline-billing-status]")) {
+      var id = bsTarget.getAttribute("data-inline-billing-status");
+      var newVal = bsTarget.value;
+      bsTarget.disabled = true;
+      apiFetch("/api/clients/" + id + "/billing-status", {
+        method: "PUT",
+        body: JSON.stringify({ status: newVal })
+      }).then(function() {
+        toast(t("Status updated"), "success");
+        CACHE.clients = null;
+        var content = document.getElementById("adminContent") || document.getElementById("content");
+        if (state.viewingClientId) {
+          renderAdminClientProfile(content);
+        } else {
+          renderAdminSubscriptions(content);
+        }
+      }).catch(function(err) {
+        bsTarget.disabled = false;
+        errorToast(err);
+      });
+      return;
+    }
+
     if (e.target.matches("[data-upload-logo]")) {
       var file = e.target.files && e.target.files[0];
       if (!file) return;

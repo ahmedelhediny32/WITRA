@@ -64,12 +64,11 @@ This creates all tables and seeds the initial data (plans, services, entitlement
 # Build the project
 npm run build
 
-# Deploy to Cloudflare Pages
+# Deploy to Cloudflare Workers
 npm run deploy
 ```
 
-After deployment, Cloudflare will give you a URL like:
-`https://witra-marketing.pages.dev`
+After deployment, Cloudflare will provide a `workers.dev` URL for the Worker.
 
 ---
 
@@ -91,36 +90,21 @@ After deployment, Cloudflare will give you a URL like:
 3. **Wait for propagation** (usually 15 minutes to 24 hours)
 
 4. **In Cloudflare Dashboard:**
-   - Go to **Pages → witra-marketing → Custom domains**
-   - Add `yourdomain.com` and `www.yourdomain.com`
-   - Cloudflare will automatically set up SSL and routing
-
-### Option B: CNAME Record Only
-
-If you want to keep Hostinger nameservers:
-
-1. **In Cloudflare Pages Dashboard:**
-   - Go to your Pages project → **Custom domains** → **Set up a custom domain**
-   - Enter `yourdomain.com`
-   - Cloudflare will tell you to add a CNAME record
-
-2. **In Hostinger DNS Settings:**
-   - Add a CNAME record:
-     - **Name:** `@` (or leave blank for root)
-     - **Target:** `witra-marketing.pages.dev`
-   - Add another CNAME record:
-     - **Name:** `www`
-     - **Target:** `witra-marketing.pages.dev`
+   - Go to **Workers & Pages**, select **witra-marketing**, then open
+     **Settings → Domains & Routes** (or the **Domains** tab).
+   - Add `yourdomain.com` and `www.yourdomain.com` as Custom Domains.
+   - Cloudflare creates the required DNS records and certificates for domains
+     inside your active Cloudflare zone.
 
 ---
 
 ## Step 7: Verify Everything Works
 
 1. Visit your domain — you should see the WITRA login page
-2. Log in with:
+2. For an initial database only, log in with:
    - **Email:** `admin@witra.agency`
    - **Password:** `WitraAdmin@2026`
-3. **Change the default password immediately** in Settings → Password & Security
+3. **Change the seeded password immediately** in Settings → Password & Security
 
 ---
 

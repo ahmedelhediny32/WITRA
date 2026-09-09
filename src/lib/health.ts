@@ -78,7 +78,7 @@ export function computeContractValue(mrr: number, subscriptionStart: string | nu
 }
 
 /**
- * Lazy expiry sweep — Cloudflare Pages hosted deploy has no cron triggers,
+ * Lazy expiry sweep — this Worker currently has no cron trigger,
  * so instead of a scheduled job we check on every dashboard/portal request:
  * any active client whose renewal date has passed gets suspended (services
  * paused, a client-side notification + warning fired, and a WITRA-side
@@ -102,7 +102,7 @@ export async function checkAndSuspendExpired(db: D1Database, newId: (prefix: str
            subscription_status = 'suspended',
            active_services_before_suspend = active_services,
            active_services = '[]',
-           billing_status = 'Past Due',
+           billing_status = 'Expired',
            last_expiry_notice = CURRENT_TIMESTAMP,
            updated_at = CURRENT_TIMESTAMP
          WHERE id = ?`
@@ -131,7 +131,7 @@ export async function checkAndSuspendExpired(db: D1Database, newId: (prefix: str
 
 /**
  * Upcoming-renewal reminder — same lazy-sweep pattern as checkAndSuspendExpired
- * (no cron on hosted Cloudflare Pages, so this runs on every dashboard/portal
+ * (no cron trigger configured, so this runs on every dashboard/portal
  * request instead). Fires exactly once per renewal cycle, ~7 days before an
  * ACTIVE client's `renewal` date, so WITRA can follow up before the contract
  * actually lapses — separate from (and earlier than) the post-expiry

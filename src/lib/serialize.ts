@@ -1,4 +1,4 @@
-import { parseJsonArray } from "./util";
+import { parseJsonArray, parseJsonObject } from "./util";
 import { computeContractValue } from "./health";
 
 export function serializePlan(row: any) {
@@ -45,6 +45,8 @@ export function serializeClient(row: any, opts: { includeInternal?: boolean } = 
     location: row.location,
     logoColor: row.logo_color,
     secondaryColor: row.secondary_color || "#B7791F",
+    typography: row.typography || "Inter",
+    brandVoice: row.brand_voice || "",
     logoImage: row.logo_image || null,
     planId: row.plan_id,
     mrr: row.mrr,
@@ -113,20 +115,49 @@ export function serializeReport(row: any) {
     summary: row.summary,
     metrics: {
       reach: row.metric_reach,
+      impressions: row.metric_impressions ?? null,
       engagement: row.metric_engagement,
+      engagementRate: row.metric_engagement_rate ?? null,
       leads: row.metric_leads,
+      conversions: row.metric_conversions ?? null,
+      conversionRate: row.metric_conversion ?? null,
+      adSpend: row.metric_ad_spend ?? null,
+      revenue: row.metric_revenue ?? null,
+      cpl: row.metric_cpl ?? null,
       roas: row.metric_roas,
-      cpl: row.metric_cpl || 0,
-      conversion: row.metric_conversion || 0,
     },
+    // Report metadata
+    channel: row.channel || '',
+    serviceType: row.service_type || '',
+    campaign: row.campaign || '',
+    // Existing reports predate this field and were visible in the client portal.
+    visibility: row.visibility || 'Client',
+    notifyClient: !!row.notify_client,
+    // Narrative sections
     whatWorked: parseJsonArray<string>(row.what_worked),
-    whatDidnt: parseJsonArray<string>(row.what_didnt),
+    whatDidnt: parseJsonArray<string>(row.what_didnt),  // legacy compat
+    whatNeedsAttention: parseJsonArray<string>(row.what_needs_attention || row.what_didnt),
     recommendations: parseJsonArray<string>(row.recommendations),
     nextMonth: row.next_month,
+    nextMonthStrategy: parseJsonObject(row.next_month_strategy),
+    // Data quality
+    dataQuality: row.data_quality || 'Verified',
+    anomalies: parseJsonArray<string>(row.anomalies),
+    // Versioning
+    version: row.version || 1,
+    publishedAt: row.published_at || null,
+    updatedBy: row.updated_by || '',
+    // Comparison
+    comparisonStatus: row.comparison_status || 'Baseline',
+    previousReportId: row.previous_report_id || null,
+    momChanges: parseJsonObject(row.mom_changes),
+    // Audit
     enteredBy: row.entered_by || "WITRA Team",
     createdAt: row.created_at,
+    updatedAt: row.updated_at || row.created_at,
   };
 }
+
 
 export function serializeNotification(row: any) {
   return {
@@ -166,5 +197,6 @@ export function serializeUser(row: any) {
     assignedClients: parseJsonArray<string>(row.assigned_clients),
     avatarImage: row.avatar_image || null,
     active: !!row.active,
+    createdAt: row.created_at || null,
   };
 }

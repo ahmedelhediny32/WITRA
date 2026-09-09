@@ -9,7 +9,7 @@ WITRA is a comprehensive marketing agency management platform built for managing
 - **Database:** Cloudflare D1 (SQLite-compatible)
 - **Frontend:** Vanilla JavaScript SPA + CSS
 - **Content Ops:** Standalone HTML calendar/tracker (embedded via iframe)
-- **Hosting:** Cloudflare Pages
+- **Hosting:** Cloudflare Workers with static assets
 
 ---
 
@@ -28,10 +28,13 @@ npm run dev
 
 The app will be available at `http://localhost:8787`
 
-### Default Login
+### Initial Login
 After running migrations, a Super Admin account is created:
 - **Email:** `admin@witra.agency`
 - **Password:** `WitraAdmin@2026`
+
+This seeded credential is for first-time setup only. Change it immediately after
+the first login and never use it for a deployed production account.
 
 ---
 

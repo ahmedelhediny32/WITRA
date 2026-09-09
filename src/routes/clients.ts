@@ -8,7 +8,7 @@ import {
 } from "../lib/middleware";
 import { serializeClient } from "../lib/serialize";
 import { hashPassword } from "../lib/auth";
-import { isValidEmail, newId, todayIso } from "../lib/util";
+import { escapeHtml, isValidEmail, newId, todayIso } from "../lib/util";
 
 const clients = new Hono<{ Bindings: Bindings }>();
 
@@ -51,6 +51,7 @@ clients.post("/", async (c) => {
   const industry = String(body?.industry || "").trim() || "—";
   const location = String(body?.location || "").trim() || "—";
   const email = String(body?.portalEmail || "").trim().toLowerCase();
+  const portalPassword = String(body?.portalPassword || "");
   const planId = String(body?.planId || "core");
   const mrr = Number.isFinite(Number(body?.mrr)) ? Math.max(0, Math.trunc(Number(body.mrr))) : 0;
 
@@ -72,8 +73,11 @@ clients.post("/", async (c) => {
   const countRow = await c.env.DB.prepare("SELECT COUNT(*) as n FROM clients").first<any>();
   const logoColor = PALETTE[(countRow?.n || 0) % PALETTE.length];
 
-  if (body?.portalPassword !== undefined && String(body.portalPassword).trim().length > 0 && String(body.portalPassword).trim().length < 6) {
-    return c.json({ error: "Portal password must be at least 6 characters." }, 400);
+  if (email && portalPassword.length < 6) {
+    return c.json({ error: "A portal password of at least 6 characters is required when creating portal access." }, 400);
+  }
+  if (!email && portalPassword) {
+    return c.json({ error: "A portal email is required when setting a portal password." }, 400);
   }
 
   const id = newId("cl");
@@ -89,7 +93,7 @@ clients.post("/", async (c) => {
       kpi_leads, kpi_conversion, kpi_cpl, kpi_roas,
       exec_content_done, exec_content_planned, exec_stories_done, exec_stories_planned, exec_offline_done, exec_offline_planned, exec_note)
      VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'Onboarding', 'Just onboarded — health will be calculated once execution begins.',
-      '[]', ?, ?, ?, 'Just now', 'Trial',
+      '[]', ?, ?, ?, 'Just now', 'Active',
       0, '0%', 0, 0,
       0, 0, 0, 0, 0, 0, 'Onboarding in progress — no content calendar set up yet.')`
   )
@@ -97,9 +101,7 @@ clients.post("/", async (c) => {
     .run();
 
   if (email) {
-    // WITRA sets the client's portal password directly when creating the account.
-    const password = String(body?.portalPassword || "").trim() || "demo123";
-    const passwordHash = await hashPassword(password);
+    const passwordHash = await hashPassword(portalPassword);
     await c.env.DB.prepare(
       `INSERT INTO users (id, email, password_hash, name, user_type, role, client_id) VALUES (?, ?, ?, ?, 'client', 'Owner', ?)`
     )
@@ -110,7 +112,7 @@ clients.post("/", async (c) => {
   await c.env.DB.prepare(
     "INSERT INTO activities (id, client_id, text) VALUES (?, ?, ?)"
   )
-    .bind(newId("act"), id, `<b>${name.replace(/</g, "&lt;")}</b> was added as a new client.`)
+    .bind(newId("act"), id, `<b>${escapeHtml(name)}</b> was added as a new client.`)
     .run();
 
   const row = await c.env.DB.prepare("SELECT * FROM clients WHERE id = ?").bind(id).first<any>();
@@ -183,6 +185,63 @@ clients.get("/:id", async (c) => {
   const row = await c.env.DB.prepare("SELECT * FROM clients WHERE id = ?").bind(id).first<any>();
   if (!row) return c.json({ error: "Client not found." }, 404);
   return c.json({ client: serializeClient(row, { includeInternal: true }) });
+});
+
+clients.put("/:id/billing-status", async (c) => {
+  const session = await superAdminOrFail(c);
+  if (session instanceof Response) return session;
+
+  const id = c.req.param("id");
+  const body = await c.req.json().catch(() => null);
+  if (!body || !body.status) return c.json({ error: "Missing status" }, 400);
+
+  const existing = await c.env.DB.prepare("SELECT * FROM clients WHERE id = ?").bind(id).first<any>();
+  if (!existing) return c.json({ error: "Client not found." }, 404);
+
+  const newStatus = body.status;
+  if (!["Active", "Renewed", "Past Due", "Expired", "Cancelled"].includes(newStatus)) {
+    return c.json({ error: "Invalid billing status." }, 400);
+  }
+
+  if (newStatus === "Expired" || newStatus === "Cancelled") {
+    await c.env.DB.prepare(
+      `UPDATE clients SET
+         billing_status = ?,
+         subscription_status = 'suspended',
+         active_services_before_suspend = CASE WHEN active_services != '[]' THEN active_services ELSE active_services_before_suspend END,
+         active_services = '[]',
+         updated_at = CURRENT_TIMESTAMP
+       WHERE id = ?`
+    ).bind(newStatus, id).run();
+
+    if (existing.billing_status !== newStatus) {
+      await c.env.DB.prepare("INSERT INTO activities (id, client_id, text) VALUES (?, ?, ?)")
+        .bind(newId("act"), id, `Subscription manually set to <b>${newStatus}</b> — services suspended.`).run();
+      await c.env.DB.prepare("INSERT INTO notifications (id, text, target_user_type, client_id) VALUES (?, ?, 'client', ?)")
+        .bind(newId("ntf"), `Your subscription status was changed to ${newStatus} and your services have been paused.`, id).run();
+    }
+  } else if (newStatus === "Active" || newStatus === "Renewed") {
+    await c.env.DB.prepare(
+      `UPDATE clients SET
+         billing_status = ?,
+         subscription_status = 'active',
+         active_services = CASE WHEN active_services_before_suspend != '[]' THEN active_services_before_suspend ELSE active_services END,
+         active_services_before_suspend = '[]',
+         updated_at = CURRENT_TIMESTAMP
+       WHERE id = ?`
+    ).bind(newStatus, id).run();
+
+    if (existing.billing_status !== newStatus) {
+      await c.env.DB.prepare("INSERT INTO activities (id, client_id, text) VALUES (?, ?, ?)")
+        .bind(newId("act"), id, `Subscription manually set to <b>${newStatus}</b> — services active.`).run();
+      await c.env.DB.prepare("INSERT INTO notifications (id, text, target_user_type, client_id) VALUES (?, ?, 'client', ?)")
+        .bind(newId("ntf"), `Your subscription status is now ${newStatus} and your services are active.`, id).run();
+    }
+  } else {
+    await c.env.DB.prepare("UPDATE clients SET billing_status = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?").bind(newStatus, id).run();
+  }
+
+  return c.json({ success: true });
 });
 
 clients.put("/:id/notes", async (c) => {

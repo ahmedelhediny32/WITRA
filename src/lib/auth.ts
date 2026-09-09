@@ -100,16 +100,18 @@ function parseCookies(cookieHeader: string | undefined): Record<string, string> 
 
 export function setSessionCookie(c: Context, token: string) {
   const maxAge = Math.floor(SESSION_DURATION_MS / 1000);
+  const secure = new URL(c.req.url).protocol === "https:" ? "; Secure" : "";
   c.header(
     "Set-Cookie",
-    `${SESSION_COOKIE}=${token}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${maxAge}`
+    `${SESSION_COOKIE}=${token}; Path=/; HttpOnly${secure}; SameSite=Lax; Max-Age=${maxAge}`
   );
 }
 
 export function clearSessionCookie(c: Context) {
+  const secure = new URL(c.req.url).protocol === "https:" ? "; Secure" : "";
   c.header(
     "Set-Cookie",
-    `${SESSION_COOKIE}=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0`
+    `${SESSION_COOKIE}=; Path=/; HttpOnly${secure}; SameSite=Lax; Max-Age=0`
   );
 }
 

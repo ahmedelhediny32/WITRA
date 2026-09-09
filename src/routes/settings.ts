@@ -124,11 +124,25 @@ settings.put("/profile", async (c) => {
     return c.json({ error: "Invalid request body." }, 400);
   }
   const name = String(body?.name || "").trim();
+  const hasAvatarImage = Object.prototype.hasOwnProperty.call(body || {}, "avatarImage");
+  const avatarImage = body?.avatarImage;
   if (!name) return c.json({ error: "Name is required." }, 400);
 
-  await c.env.DB.prepare("UPDATE users SET name = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?")
-    .bind(name, session.user.id)
-    .run();
+  if (hasAvatarImage) {
+    if (avatarImage !== null && typeof avatarImage !== "string") {
+      return c.json({ error: "Avatar image must be a data URL or null." }, 400);
+    }
+    if (typeof avatarImage === "string" && avatarImage.length > 2_000_000) {
+      return c.json({ error: "Image is too large. Please use an image under ~1.5MB." }, 400);
+    }
+    await c.env.DB.prepare("UPDATE users SET name = ?, avatar_image = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?")
+      .bind(name, avatarImage, session.user.id)
+      .run();
+  } else {
+    await c.env.DB.prepare("UPDATE users SET name = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?")
+      .bind(name, session.user.id)
+      .run();
+  }
 
   return c.json({ ok: true });
 });
