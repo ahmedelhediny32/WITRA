@@ -1,4 +1,6 @@
-(function () {
+import fs from 'fs';
+
+const publicSiteJs = `(function () {
   "use strict";
 
   var currentLanguage = localStorage.getItem("witra-public-lang") || "en";
@@ -14,7 +16,7 @@
       heroSupport: "Egyptian businesses don't need more posts — they need commercial systems.",
       heroText: "WITRA diagnoses the problems behind stalled growth, designs the system around your business, and operates it with you — from strategy and creative to digital marketing, measurement, and optimization.",
       
-      problemHeadline: "Most Agencies Sell Activity.\nWITRA Builds the System Behind Growth.",
+      problemHeadline: "Most Agencies Sell Activity.\\nWITRA Builds the System Behind Growth.",
       problemCopy: "The problem isn't that your business isn't marketing. The problem is that the pieces aren't working together.",
       problemCopy2: "Random content. Disconnected campaigns. Unclear positioning. Reports full of numbers that don't explain what changed.",
       problemCopy3: "WITRA takes a different approach: diagnose the business first, design the growth system second, then operate and measure what actually matters.",
@@ -142,7 +144,7 @@
       heroSupport: "الشركات مش محتاجة محتوى أكتر؛ محتاجة منظومة تسويق مرتبطة بالبيزنس وبتحقق نمو حقيقي.",
       heroText: "في WITRA بنبدأ بفهم المشكلة الحقيقية، ثم بنبني المنظومة المناسبة لبيزنسك، ونشتغل معاك على تنفيذها وقياس نتائجها وتحسينها باستمرار — من الاستراتيجية والـ Creative إلى الـ Digital Marketing والقياس والتطوير.",
       
-      problemHeadline: "معظم الوكالات بتبيع نشاط.\nWITRA بتبني المنظومة وراء النمو.",
+      problemHeadline: "معظم الوكالات بتبيع نشاط.\\nWITRA بتبني المنظومة وراء النمو.",
       problemCopy: "المشكلة مش إن البيزنس مش بيعمل Marketing. المشكلة إن كل جزء شغال لوحده.",
       problemCopy2: "محتوى عشوائي. حملات منفصلة. Positioning غير واضح. وتقارير مليانة أرقام من غير ما تقولك إيه اللي اتغير فعلًا.",
       problemCopy3: "WITRA بتشتغل بطريقة مختلفة: نشخّص المشكلة الأول، نبني منظومة النمو ثانيًا، وبعدها ننفّذ ونقيس ونطوّر اللي بيحقق نتيجة حقيقية.",
@@ -265,19 +267,19 @@
 
   function t(key) { return copy[currentLanguage][key]; }
   function local(en, ar) { return currentLanguage === "ar" ? ar : en; }
-  function esc(value) { return String(value == null ? "" : value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+  function esc(value) { return String(value == null ? "" : value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\"/g, "&quot;"); }
 
   function navLinks() { 
     return t("nav").map((label, index) => { 
       const ids = ["problem", "identity", "services", "engine", "usps", "pricing"];
-      return `<a href="#${ids[index]}">${esc(label)}</a>`; 
+      return \`<a href="#\${ids[index]}">\${esc(label)}</a>\`; 
     }).join(""); 
   }
 
   function pageHtml() {
     const p = t;
     
-    return `
+    return \`
       <div class="public-site theme-burgundy">
         
         <header class="public-header">
@@ -287,12 +289,12 @@
               <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
             </button>
             <nav class="public-nav-links" id="publicNavLinks">
-              ${navLinks()}
+              \${navLinks()}
             </nav>
             <div class="public-nav-actions">
-              <button class="public-lang" id="publicLang">${currentLanguage === "en" ? "AR" : "EN"}</button>
-              <a class="public-ghost" href="/login">${esc(p("login"))}</a>
-              <a class="public-cta" href="#diagnostic">${esc(p("cta"))}</a>
+              <button class="public-lang" id="publicLang">\${currentLanguage === "en" ? "AR" : "EN"}</button>
+              <a class="public-ghost" href="/login">\${esc(p("login"))}</a>
+              <a class="public-cta" href="#diagnostic">\${esc(p("cta"))}</a>
             </div>
           </div>
         </header>
@@ -307,14 +309,14 @@
             <div class="public-shell public-hero-inner">
               <div class="public-hero-content">
                 <h1>
-                  <span class="d-block">${esc(p("heroTitle"))}</span>
-                  <span class="d-block text-gold">${esc(p("heroSubtitle"))}</span>
+                  <span class="d-block">\${esc(p("heroTitle"))}</span>
+                  <span class="d-block text-gold">\${esc(p("heroSubtitle"))}</span>
                 </h1>
-                <p class="hero-support">${esc(p("heroSupport"))}</p>
-                <p class="hero-paragraph">${esc(p("heroText"))}</p>
+                <p class="hero-support">\${esc(p("heroSupport"))}</p>
+                <p class="hero-paragraph">\${esc(p("heroText"))}</p>
                 <div class="public-hero-actions">
-                  <a class="public-cta" href="#diagnostic">${esc(p("cta"))}</a>
-                  <a class="public-ghost" href="#problem">${esc(p("explore"))}</a>
+                  <a class="public-cta" href="#diagnostic">\${esc(p("cta"))}</a>
+                  <a class="public-ghost" href="#problem">\${esc(p("explore"))}</a>
                 </div>
               </div>
             </div>
@@ -323,13 +325,13 @@
           <!-- MISSION & VISION -->
           <section class="public-section mission-section">
             <div class="public-shell text-center">
-              <h2 class="giant-text">${esc(p("missionHeadline"))}</h2>
-              <p class="mission-copy">${esc(p("missionCopy"))}</p>
+              <h2 class="giant-text">\${esc(p("missionHeadline"))}</h2>
+              <p class="mission-copy">\${esc(p("missionCopy"))}</p>
               <div class="vision-block">
-                <h3>${esc(p("visionHeadline"))}</h3>
-                <p>${esc(p("visionCopy"))}</p>
+                <h3>\${esc(p("visionHeadline"))}</h3>
+                <p>\${esc(p("visionCopy"))}</p>
               </div>
-              <p class="mission-highlight">${esc(p("missionHighlight"))}</p>
+              <p class="mission-highlight">\${esc(p("missionHighlight"))}</p>
             </div>
           </section>
 
@@ -337,18 +339,18 @@
           <section class="public-section continuous-section" id="identity">
             <div class="public-shell">
               <div class="editorial-head text-center">
-                <h2>${esc(p("identityHeadline"))}</h2>
-                <p class="lead-text">${esc(p("identitySubtitle"))}</p>
+                <h2>\${esc(p("identityHeadline"))}</h2>
+                <p class="lead-text">\${esc(p("identitySubtitle"))}</p>
               </div>
               
               <div class="identity-editorial">
-                ${p("identityVals").map(val => `
+                \${p("identityVals").map(val => \`
                   <div class="identity-block">
-                    <h3>${esc(val[0])}</h3>
-                    <strong>${esc(val[1])}</strong>
-                    <p>${esc(val[2])}</p>
+                    <h3>\${esc(val[0])}</h3>
+                    <strong>\${esc(val[1])}</strong>
+                    <p>\${esc(val[2])}</p>
                   </div>
-                `).join("")}
+                \`).join("")}
               </div>
             </div>
           </section>
@@ -357,8 +359,8 @@
         <section class="continuous-section anatomy-section" id="anatomy">
           <div class="public-shell">
             <div class="section-header text-center">
-              <span class="eyebrow">${esc(p("anatomyEyebrow"))}</span>
-              <h2>${esc(p("anatomyHeadline"))}</h2>
+              <span class="eyebrow">\${esc(p("anatomyEyebrow"))}</span>
+              <h2>\${esc(p("anatomyHeadline"))}</h2>
             </div>
             
             <div class="anatomy-grid">
@@ -370,15 +372,15 @@
               </div>
               
               <div class="anatomy-content public-reveal">
-                ${p("anatomyItems").map((item, i) => `
-                  <div class="anatomy-item anatomy-anim-${i}">
-                    <div class="anatomy-icon">${item[0]}</div>
+                \${p("anatomyItems").map((item, i) => \`
+                  <div class="anatomy-item anatomy-anim-\${i}">
+                    <div class="anatomy-icon">\${item[0]}</div>
                     <div class="anatomy-text">
-                      <h4>${esc(item[1])}</h4>
-                      <p>${esc(item[2])}</p>
+                      <h4>\${esc(item[1])}</h4>
+                      <p>\${esc(item[2])}</p>
                     </div>
                   </div>
-                `).join("")}
+                \`).join("")}
               </div>
             </div>
           </div>
@@ -388,23 +390,23 @@
         <section class="continuous-section problem-section" id="problem">
             <div class="public-shell">
               <div class="editorial-head">
-                <h2 class="pre-line">${esc(p("problemHeadline"))}</h2>
-                <p class="lead-text">${esc(p("problemCopy"))}</p>
-                <p>${esc(p("problemCopy2"))}</p>
-                <p class="gold-text">${esc(p("problemCopy3"))}</p>
+                <h2 class="pre-line">\${esc(p("problemHeadline"))}</h2>
+                <p class="lead-text">\${esc(p("problemCopy"))}</p>
+                <p>\${esc(p("problemCopy2"))}</p>
+                <p class="gold-text">\${esc(p("problemCopy3"))}</p>
               </div>
               
               <div class="comparison-layout">
                 <div class="comp-col before-col">
-                  <h3>${esc(p("problemBeforeTitle"))}</h3>
+                  <h3>\${esc(p("problemBeforeTitle"))}</h3>
                   <ul class="clean-list">
-                    ${p("problemBeforeList").map(item => `<li>${esc(item)}</li>`).join("")}
+                    \${p("problemBeforeList").map(item => \`<li>\${esc(item)}</li>\`).join("")}
                   </ul>
                 </div>
                 <div class="comp-col with-col">
-                  <h3>${esc(p("problemWithTitle"))}</h3>
+                  <h3>\${esc(p("problemWithTitle"))}</h3>
                   <ul class="clean-list gold-checks">
-                    ${p("problemWithList").map(item => `<li>${esc(item)}</li>`).join("")}
+                    \${p("problemWithList").map(item => \`<li>\${esc(item)}</li>\`).join("")}
                   </ul>
                 </div>
               </div>
@@ -415,21 +417,21 @@
           <section class="public-section continuous-section" id="witra-system">
             <div class="public-shell">
               <div class="editorial-head text-center">
-                <h2>${esc(p("systemHeadline"))}</h2>
-                <p class="lead-text">${esc(p("systemSubtitle"))}</p>
-                <p class="max-width-text">${esc(p("systemIntro"))}</p>
+                <h2>\${esc(p("systemHeadline"))}</h2>
+                <p class="lead-text">\${esc(p("systemSubtitle"))}</p>
+                <p class="max-width-text">\${esc(p("systemIntro"))}</p>
               </div>
               
               <div class="system-flow">
-                ${p("systemStages").map((stage, idx) => `
+                \${p("systemStages").map((stage, idx) => \`
                   <div class="system-node">
                     <div class="node-dot"></div>
                     <div class="node-content">
-                      <h4>${esc(stage[0])}</h4>
-                      <p>${esc(stage[1])}</p>
+                      <h4>\${esc(stage[0])}</h4>
+                      <p>\${esc(stage[1])}</p>
                     </div>
                   </div>
-                `).join("")}
+                \`).join("")}
               </div>
             </div>
           </section>
@@ -438,18 +440,18 @@
           <section class="public-section continuous-section" id="services">
             <div class="public-shell">
               <div class="editorial-head">
-                <h2>${esc(p("servicesHeadline"))}</h2>
-                <p class="lead-text">${esc(p("servicesSubtitle"))}</p>
-                <p class="max-width-text-left">${esc(p("servicesIntro"))}</p>
+                <h2>\${esc(p("servicesHeadline"))}</h2>
+                <p class="lead-text">\${esc(p("servicesSubtitle"))}</p>
+                <p class="max-width-text-left">\${esc(p("servicesIntro"))}</p>
               </div>
               
               <div class="services-composition">
-                ${p("servicesList").map(srv => `
+                \${p("servicesList").map(srv => \`
                   <div class="service-block">
-                    <h4>${esc(srv[0])}</h4>
-                    <p>${esc(srv[1])}</p>
+                    <h4>\${esc(srv[0])}</h4>
+                    <p>\${esc(srv[1])}</p>
                   </div>
-                `).join("")}
+                \`).join("")}
               </div>
             </div>
           </section>
@@ -458,21 +460,21 @@
           <section class="public-section continuous-section" id="engine">
             <div class="public-shell">
               <div class="editorial-head text-center">
-                <h2>${esc(p("engineHeadline"))}</h2>
-                <p class="lead-text">${esc(p("engineSubtitle"))}</p>
+                <h2>\${esc(p("engineHeadline"))}</h2>
+                <p class="lead-text">\${esc(p("engineSubtitle"))}</p>
               </div>
               
               <div class="timeline-layout">
-                ${p("engineStages").map((stage, idx) => `
+                \${p("engineStages").map((stage, idx) => \`
                   <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                      <h4>${esc(stage[0])}</h4>
-                      <strong>${esc(stage[1])}</strong>
-                      <p>${esc(stage[2])}</p>
+                      <h4>\${esc(stage[0])}</h4>
+                      <strong>\${esc(stage[1])}</strong>
+                      <p>\${esc(stage[2])}</p>
                     </div>
                   </div>
-                `).join("")}
+                \`).join("")}
               </div>
             </div>
           </section>
@@ -481,30 +483,30 @@
           <section class="public-section continuous-section" id="icp">
             <div class="public-shell">
               <div class="editorial-head text-center">
-                <h2>${esc(p("icpHeadline"))}</h2>
-                <p class="lead-text">${esc(p("icpSubtitle"))}</p>
+                <h2>\${esc(p("icpHeadline"))}</h2>
+                <p class="lead-text">\${esc(p("icpSubtitle"))}</p>
               </div>
               
               <div class="split-layout">
                 <div class="split-side">
-                  <h3>${esc(p("icpA").title)}</h3>
-                  <em class="icp-quote">${esc(p("icpA").subtitle)}</em>
-                  <p>${esc(p("icpA").copy)}</p>
+                  <h3>\${esc(p("icpA").title)}</h3>
+                  <em class="icp-quote">\${esc(p("icpA").subtitle)}</em>
+                  <p>\${esc(p("icpA").copy)}</p>
                   <div class="icp-meta">
-                    <small>${esc(p("icpA").suitable)}</small>
+                    <small>\${esc(p("icpA").suitable)}</small>
                     <div class="icp-trigger">
-                      <span>${esc(currentLanguage === "ar" ? "الدافع:" : "Trigger:")}</span> "${esc(p("icpA").trigger)}"
+                      <span>\${esc(currentLanguage === "ar" ? "الدافع:" : "Trigger:")}</span> "\${esc(p("icpA").trigger)}"
                     </div>
                   </div>
                 </div>
                 <div class="split-side">
-                  <h3>${esc(p("icpB").title)}</h3>
-                  <em class="icp-quote">${esc(p("icpB").subtitle)}</em>
-                  <p>${esc(p("icpB").copy)}</p>
+                  <h3>\${esc(p("icpB").title)}</h3>
+                  <em class="icp-quote">\${esc(p("icpB").subtitle)}</em>
+                  <p>\${esc(p("icpB").copy)}</p>
                   <div class="icp-meta">
-                    <small>${esc(p("icpB").suitable)}</small>
+                    <small>\${esc(p("icpB").suitable)}</small>
                     <div class="icp-trigger">
-                      <span>${esc(currentLanguage === "ar" ? "الدافع:" : "Trigger:")}</span> "${esc(p("icpB").trigger)}"
+                      <span>\${esc(currentLanguage === "ar" ? "الدافع:" : "Trigger:")}</span> "\${esc(p("icpB").trigger)}"
                     </div>
                   </div>
                 </div>
@@ -516,32 +518,32 @@
           <section class="public-section continuous-section" id="usps">
             <div class="public-shell">
               <div class="editorial-head text-center">
-                <h2>${esc(p("uspsHeadline"))}</h2>
-                <p class="lead-text">${esc(p("uspsSubtitle"))}</p>
+                <h2>\${esc(p("uspsHeadline"))}</h2>
+                <p class="lead-text">\${esc(p("uspsSubtitle"))}</p>
               </div>
               
               <div class="usps-editorial-grid">
-                ${p("uspsList").map(usp => `
+                \${p("uspsList").map(usp => \`
                   <div class="usp-editorial">
-                    <h4>${esc(usp[0])}</h4>
-                    <strong>${esc(usp[1])}</strong>
-                    <p>${esc(usp[2])}</p>
+                    <h4>\${esc(usp[0])}</h4>
+                    <strong>\${esc(usp[1])}</strong>
+                    <p>\${esc(usp[2])}</p>
                   </div>
-                `).join("")}
+                \`).join("")}
               </div>
 
               <div class="operate-sub-section" style="margin-top: 100px;">
                 <div class="editorial-head text-center">
-                  <h2>${esc(p("operateHeadline"))}</h2>
-                  <p class="lead-text">${esc(p("operateSubtitle"))}</p>
+                  <h2>\${esc(p("operateHeadline"))}</h2>
+                  <p class="lead-text">\${esc(p("operateSubtitle"))}</p>
                 </div>
                 <div class="operate-flex">
-                  ${p("operateList").map(op => `
+                  \${p("operateList").map(op => \`
                     <div class="operate-item">
-                      <h4>${esc(op[0])}</h4>
-                      <p>${esc(op[1])}</p>
+                      <h4>\${esc(op[0])}</h4>
+                      <p>\${esc(op[1])}</p>
                     </div>
-                  `).join("")}
+                  \`).join("")}
                 </div>
               </div>
             </div>
@@ -551,18 +553,18 @@
           <section class="public-section continuous-section" id="pricing">
             <div class="public-shell">
               <div class="editorial-head text-center">
-                <h2>${esc(p("pricingHeadline"))}</h2>
-                <p class="lead-text">${esc(p("pricingSubtitle"))}</p>
+                <h2>\${esc(p("pricingHeadline"))}</h2>
+                <p class="lead-text">\${esc(p("pricingSubtitle"))}</p>
               </div>
               
               <div class="pricing-system-grid">
-                ${p("pricingPlans").map(plan => `
+                \${p("pricingPlans").map(plan => \`
                   <div class="pricing-block">
-                    <h4>${esc(plan[0])}</h4>
-                    <p>${esc(plan[1])}</p>
-                    <div class="pricing-label">${esc(p("contactPricing"))}</div>
+                    <h4>\${esc(plan[0])}</h4>
+                    <p>\${esc(plan[1])}</p>
+                    <div class="pricing-label">\${esc(p("contactPricing"))}</div>
                   </div>
-                `).join("")}
+                \`).join("")}
               </div>
             </div>
           </section>
@@ -570,12 +572,12 @@
           <!-- FINAL CTA -->
           <section class="public-section continuous-section final-cta-section" id="diagnostic">
             <div class="public-shell text-center">
-              <h2 class="giant-text">${esc(p("diagHeadline"))}</h2>
-              <p class="lead-text" style="margin:24px auto; max-width:600px;">${esc(p("diagCopy"))}</p>
-              <p style="margin:24px auto 40px; max-width:600px;">${esc(p("diagCopy2"))}</p>
+              <h2 class="giant-text">\${esc(p("diagHeadline"))}</h2>
+              <p class="lead-text" style="margin:24px auto; max-width:600px;">\${esc(p("diagCopy"))}</p>
+              <p style="margin:24px auto 40px; max-width:600px;">\${esc(p("diagCopy2"))}</p>
               
-              <button class="public-cta large-cta" id="openDiagnostic">${esc(p("cta"))}</button>
-              <p class="diag-support">${esc(p("diagSupport"))}</p>
+              <button class="public-cta large-cta" id="openDiagnostic">\${esc(p("cta"))}</button>
+              <p class="diag-support">\${esc(p("diagSupport"))}</p>
             </div>
           </section>
         </main>
@@ -584,41 +586,41 @@
           <div class="public-shell public-footer-inner">
             <div class="footer-brand">
               <img src="/static/img/witra-logo-gold.png" alt="WITRA">
-              <p>${esc(p("footer"))}</p>
+              <p>\${esc(p("footer"))}</p>
             </div>
             <div class="public-footer-columns">
               <div class="public-footer-column">
                 <div class="public-footer-links">
-                  ${navLinks()}
-                  <a href="/login">${esc(p("login"))}</a>
+                  \${navLinks()}
+                  <a href="/login">\${esc(p("login"))}</a>
                 </div>
               </div>
               <div class="public-footer-column">
-                <a href="#diagnostic" class="footer-cta-link">${esc(p("cta"))} →</a>
-                <button class="public-lang footer-lang-btn" id="footerLang">${currentLanguage === "en" ? "العربية" : "English"}</button>
+                <a href="#diagnostic" class="footer-cta-link">\${esc(p("cta"))} →</a>
+                <button class="public-lang footer-lang-btn" id="footerLang">\${currentLanguage === "en" ? "العربية" : "English"}</button>
               </div>
             </div>
           </div>
         </footer>
       </div>
-    `;
+    \`;
   }
 
   function formHtml() {
-    return `
+    return \`
       <div class="public-modal-backdrop" id="diagnosticModal">
         <div class="public-modal">
-          <button class="public-modal-close" id="closeDiagnostic" aria-label="${esc(t("close"))}">×</button>
-          <h2>${esc(t("formTitle"))}</h2>
-          <p>${esc(t("formText"))}</p>
+          <button class="public-modal-close" id="closeDiagnostic" aria-label="\${esc(t("close"))}">×</button>
+          <h2>\${esc(t("formTitle"))}</h2>
+          <p>\${esc(t("formText"))}</p>
           <form id="diagnosticForm">
             <div class="public-form-grid">
               <div class="public-form-field">
-                <label>${currentLanguage === "ar" ? "الاسم *" : "Name *"}</label>
+                <label>\${currentLanguage === "ar" ? "الاسم *" : "Name *"}</label>
                 <input name="name" required>
               </div>
               <div class="public-form-field">
-                <label>${currentLanguage === "ar" ? "اسم البيزنس *" : "Business name *"}</label>
+                <label>\${currentLanguage === "ar" ? "اسم البيزنس *" : "Business name *"}</label>
                 <input name="businessName" required>
               </div>
               <div class="public-form-field">
@@ -626,20 +628,20 @@
                 <input name="email" type="email" required>
               </div>
               <div class="public-form-field">
-                <label>${currentLanguage === "ar" ? "رقم الهاتف / WhatsApp *" : "Phone / WhatsApp *"}</label>
+                <label>\${currentLanguage === "ar" ? "رقم الهاتف / WhatsApp *" : "Phone / WhatsApp *"}</label>
                 <input name="phone" required>
               </div>
               <div class="public-form-field full">
-                <label>${currentLanguage === "ar" ? "أكبر تحدي تسويقي عندك *" : "Your biggest marketing challenge *"}</label>
+                <label>\${currentLanguage === "ar" ? "أكبر تحدي تسويقي عندك *" : "Your biggest marketing challenge *"}</label>
                 <textarea name="challenge" required></textarea>
               </div>
             </div>
             <div class="public-form-error" id="diagnosticError"></div>
-            <button class="public-cta" type="submit" id="diagnosticSubmit">${esc(t("submit"))}</button>
+            <button class="public-cta" type="submit" id="diagnosticSubmit">\${esc(t("submit"))}</button>
           </form>
         </div>
       </div>
-    `;
+    \`;
   }
 
   function openDiagnostic() { 
@@ -670,7 +672,7 @@
           return body; 
         }); 
       }).then(() => { 
-        form.innerHTML = `<div class="public-success">${esc(t("success"))}</div>`; 
+        form.innerHTML = \`<div class="public-success">\${esc(t("success"))}</div>\`; 
       }).catch(err => { 
         submit.disabled = false; 
         submit.textContent = t("submit"); 
@@ -762,3 +764,7 @@
     bindPage(); 
   };
 })();
+`;
+
+fs.writeFileSync('./public/static/public-site.js', publicSiteJs, 'utf8');
+console.log('Successfully updated public-site.js');

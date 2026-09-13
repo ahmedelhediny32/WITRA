@@ -1,4 +1,6 @@
+import fs from 'fs';
 
+const publicSiteCss = `
 :root {
   --w-burgundy-deep: #1F0810; /* Very dark foundation */
   --w-burgundy-primary: #34121E; /* Main base */
@@ -330,3 +332,7 @@ html { scroll-behavior: smooth; }
   .public-form-grid { grid-template-columns: 1fr; }
   .public-modal { padding: 30px 20px; }
 }
+`;
+
+fs.writeFileSync('./public/static/public-site.css', publicSiteCss, 'utf8');
+console.log('Successfully updated public-site.css');
