@@ -10,7 +10,7 @@
   --w-glass: rgba(52, 18, 30, 0.4);
 }
 
-body { margin: 0; background: var(--w-burgundy-deep); }
+body { margin: 0; }
 .public-site { 
   background: var(--w-burgundy-deep); 
   color: var(--w-cream); 
@@ -102,7 +102,7 @@ body { margin: 0; background: var(--w-burgundy-deep); }
 .hero-support { color: var(--w-muted); font-size: 22px; font-weight: 300; margin: 0 0 30px; line-height: 1.5; }
 .hero-paragraph { color: var(--w-muted); font-size: 17px; line-height: 1.7; max-width: 700px; margin: 0 auto 40px; }
 .public-hero-inner p { font-size: 18px; line-height: 1.6; margin: 0; color: rgba(255,255,255,0.7); max-width: 800px; }
-.public-hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.public-hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
 
 /* ANATOMY SECTION */
 .anatomy-section { padding: 120px 0; }
@@ -231,12 +231,107 @@ html[dir="rtl"] .is-visible .anatomy-item { transform: translateX(0); }
 .operate-item p { color: var(--w-muted); font-size: 15px; line-height: 1.6; margin: 0; }
 
 /* PRICING SYSTEM */
-.pricing-system-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.pricing-block { padding: 40px 32px; background: rgba(255,255,255,0.02); display: flex; flex-direction: column; transition: background 0.3s; }
-.pricing-block:hover { background: var(--w-glass); }
-.pricing-block h4 { color: var(--w-cream); font: 500 24px 'Playfair Display', serif; margin: 0 0 24px; }
-.pricing-block p { color: var(--w-muted); font-size: 15px; line-height: 1.7; margin: 0 0 40px; flex: 1; }
-.pricing-label { color: var(--w-gold); font: 600 12px 'IBM Plex Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 24px; }
+.pricing-system-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.pricing-block { 
+  padding: 40px 32px; 
+  background: rgba(255,255,255,0.02); 
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 16px;
+  display: flex; 
+  flex-direction: column; 
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Standalone / Hero Pricing Card */
+.pricing-block:nth-child(1) {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 40px;
+  background: linear-gradient(135deg, rgba(222,184,135,0.03), rgba(255,255,255,0.01));
+  border: 1px solid rgba(222,184,135,0.1);
+}
+
+.pricing-block::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--w-gold), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.pricing-block:hover { 
+  background: rgba(255,255,255,0.04); 
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(222,184,135,0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 40px rgba(222,184,135,0.05);
+}
+.pricing-block:hover::before { opacity: 1; }
+.pricing-block h4 { color: var(--w-cream); font: 500 28px 'Playfair Display', serif; margin: 0 0 24px; transition: color 0.3s; }
+.pricing-block:hover h4 { color: var(--w-gold); }
+
+/* Standalone adjustments */
+.pricing-block:nth-child(1) h4 { font-size: 36px; margin: 0; }
+.pricing-block:nth-child(1) .pricing-features { margin-bottom: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 24px; }
+.pricing-block:nth-child(1) .pricing-label { grid-column: 1 / -1; justify-content: flex-end; border-top: none; padding-top: 0; }
+
+/* Pricing Features List */
+.pricing-features { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0 0 40px; 
+  flex: 1; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 16px; 
+}
+.pricing-features li { 
+  color: var(--w-muted); 
+  font-size: 15px; 
+  line-height: 1.5; 
+  position: relative; 
+  padding-left: 28px; 
+  transition: color 0.3s; 
+}
+[dir='rtl'] .pricing-features li { padding-left: 0; padding-right: 28px; }
+.pricing-features li::before { 
+  content: '✓'; 
+  position: absolute; 
+  left: 0; 
+  top: 0;
+  color: var(--w-gold); 
+  font-weight: bold;
+  font-size: 16px;
+}
+[dir='rtl'] .pricing-features li::before { left: auto; right: 0; }
+.pricing-block:hover .pricing-features li { color: rgba(255,255,255,0.9); }
+
+.pricing-label { 
+  color: var(--w-gold); 
+  font: 600 13px 'IBM Plex Mono', monospace; 
+  text-transform: uppercase; 
+  letter-spacing: 0.1em; 
+  border-top: 1px solid rgba(255,255,255,0.05); 
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+.pricing-label::after {
+  content: '→';
+  font-size: 18px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+[dir='rtl'] .pricing-label::after { content: '←'; transform: translateX(10px); }
+.pricing-block:hover .pricing-label::after { opacity: 1; transform: translateX(0); }
 
 /* FINAL CTA */
 .final-cta-section { min-height: 80vh; display: grid; place-items: center; background: radial-gradient(circle at center, var(--w-burgundy-light) 0%, var(--w-burgundy-deep) 70%); }
@@ -294,6 +389,10 @@ html[dir="rtl"] .is-visible .anatomy-item { transform: translateX(0); }
 html { scroll-behavior: smooth; }
 
 /* RESPONSIVE */
+  @media (max-width: 992px) {
+    .pricing-block:nth-child(1) { grid-template-columns: 1fr; gap: 24px; }
+    .pricing-block:nth-child(1) .pricing-features { grid-template-columns: 1fr; }
+  }
 @media (max-width: 992px) {
   .public-hero h1 { font-size: clamp(34px, 7vw, 48px); }
   .comparison-layout { grid-template-columns: 1fr; gap: 30px; }
@@ -302,7 +401,7 @@ html { scroll-behavior: smooth; }
   .services-composition { grid-template-columns: 1fr; }
   .split-layout { grid-template-columns: 1fr; gap: 40px; }
   .usps-editorial-grid { grid-template-columns: 1fr; gap: 50px; }
-  .pricing-system-grid { grid-template-columns: 1fr 1fr; }
+  .pricing-system-grid { grid-template-columns: 1fr; }
   .operate-flex { flex-direction: column; gap: 40px; }
 }
 

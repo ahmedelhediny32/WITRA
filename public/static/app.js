@@ -1946,7 +1946,7 @@ function renderAdminServices(container) {
 function serviceFormModal(serviceId) {
   var s = serviceId ? (CACHE.services || []).filter(function (x) { return x.id === serviceId; })[0] : null;
   var body = '<div class="form-grid">' +
-    '<div class="form-field"><label>Name</label><input type="text" id="svcName" value="' + esc(s ? s.name : "") + '"><v>' +
+    '<div class="form-field"><label>Name</label><input type="text" id="svcName" value="' + esc(s ? s.name : "") + '"></div>' +
     '<div class="form-field" style="margin-bottom:14px;"><label>Headline</label><input type="text" id="svcHeadline" value="' + esc(s ? s.headline : "") + '"></div>' +
     '<div class="form-field" style="margin-bottom:14px;"><label>What You\'ll Get (one per line)</label><textarea id="svcWhatYouGet" style="min-height:80px;">' + esc(s ? s.whatYouGet.join("\n") : "") + '</textarea></div>' +
     '<div class="form-field"><label>Price</label><input type="text" id="svcPrice" value="' + esc(s ? s.price : "") + '"></div>' +
@@ -1961,7 +1961,7 @@ function serviceFormModal(serviceId) {
     if (!name) { document.getElementById("svcFormError").textContent = "Service name is required."; return; }
     var fields = {
       name: name,
-      category: document.getElementById("svcCategory").value,
+      category: s ? s.category : "Services",
       headline: document.getElementById("svcHeadline").value,
       whatYouGet: document.getElementById("svcWhatYouGet").value.split("\n").map(function (x) { return x.trim(); }).filter(Boolean),
       price: document.getElementById("svcPrice").value

@@ -8,12 +8,12 @@
     en: {
       nav: ["The System", "Identity", "Services", "How It Works", "Why WITRA", "Pricing"],
       login: "Login", cta: "Book a Diagnostic", explore: "See How WITRA Works",
-      
+
       heroTitle: "A Business Is a System.",
       heroSubtitle: "WITRA Designs Growth Systems.",
       heroSupport: "Egyptian businesses don't need more posts — they need commercial systems.",
       heroText: "WITRA diagnoses the problems behind stalled growth, designs the system around your business, and operates it with you — from strategy and creative to digital marketing, measurement, and optimization.",
-      
+
       problemHeadline: "Most Agencies Sell Activity.\nWITRA Builds the System Behind Growth.",
       problemCopy: "The problem isn't that your business isn't marketing. The problem is that the pieces aren't working together.",
       problemCopy2: "Random content. Disconnected campaigns. Unclear positioning. Reports full of numbers that don't explain what changed.",
@@ -22,7 +22,7 @@
       problemBeforeList: ["Random content", "Unclear strategy", "Disconnected campaigns", "Vanity metrics", "Reactive decisions", "Agency dependency"],
       problemWithTitle: "WITH WITRA",
       problemWithList: ["Diagnosed problems", "Clear growth roadmap", "Connected marketing system", "Business-focused metrics", "Data-led decisions", "Documented processes"],
-      
+
       anatomyEyebrow: "BRAND CONCEPT",
       anatomyHeadline: "The Anatomy of WITRA",
       anatomyItems: [
@@ -31,7 +31,7 @@
         ["▲", "The Triangle", "Direction, focus, and innovation."],
         ["WIT", "The Core 'Wit'", "Sharp intelligence, strategic thinking, and precise execution."]
       ],
-      
+
       systemHeadline: "The WITRA Growth System",
       systemSubtitle: "Diagnose. Design. Build. Operate. Measure. Optimize.",
       systemIntro: "Growth doesn't come from isolated campaigns. It comes from a connected system where strategy, creative, execution, data, and optimization work together.",
@@ -118,10 +118,10 @@
       pricingHeadline: "Choose the Level of Growth You Need",
       pricingSubtitle: "Start where your business is. Build from there.",
       pricingPlans: [
-        ["BUSINESS CONSULTING", "Marketing diagnosis, strategic consulting, and commercial direction."],
-        ["CORE", "Strategy + planning + creative/design + digital marketing."],
-        ["PREMIUM", "Everything in Core + branding and visual identity."],
-        ["GOLD", "Offline campaigns and activation-focused marketing."]
+        ["BUSINESS CONSULTING", ["Marketing diagnosis", "Strategic consulting", "Commercial direction", "90-Day Action Plan"]],
+        ["CORE", ["Strategy", "Content Plan", "Creative & Design", "Digital Marketing"]],
+        ["PREMIUM", ["Strategy", "Content Plan", "Creative & Design", "Digital Marketing", "Branding & Identity"]],
+        ["GOLD", ["Strategy", "Content Plan", "Creative & Design", "Digital Marketing", "Branding & Identity", "Offline Campaigns"]]
       ],
       contactPricing: "Contact for pricing",
 
@@ -136,12 +136,12 @@
     ar: {
       nav: ["المنظومة", "هويتنا", "الخدمات", "بنشتغل إزاي", "ليه WITRA", "الأسعار"],
       login: "تسجيل الدخول", cta: "احجز جلسة تشخيص", explore: "اعرف بنشتغل إزاي",
-      
+
       heroTitle: "البيزنس منظومة.",
       heroSubtitle: "WITRA تبني منظومة النمو.",
       heroSupport: "الشركات مش محتاجة محتوى أكتر؛ محتاجة منظومة تسويق مرتبطة بالبيزنس وبتحقق نمو حقيقي.",
-      heroText: "في WITRA بنبدأ بفهم المشكلة الحقيقية، ثم بنبني المنظومة المناسبة لبيزنسك، ونشتغل معاك على تنفيذها وقياس نتائجها وتحسينها باستمرار — من الاستراتيجية والـ Creative إلى الـ Digital Marketing والقياس والتطوير.",
-      
+      heroText: "في WITRA بنبدأ بفهم المشكلة الحقيقية، ثم بنبني المنظومة المناسبة للبزنس الخاص بيك، ونشتغل معاك على تنفيذها وقياس نتائجها وتحسينها باستمرار — من الاستراتيجية والـ Creative إلى الـ Digital Marketing والقياس والتطوير.",
+
       problemHeadline: "معظم الوكالات بتبيع نشاط.\nWITRA بتبني المنظومة وراء النمو.",
       problemCopy: "المشكلة مش إن البيزنس مش بيعمل Marketing. المشكلة إن كل جزء شغال لوحده.",
       problemCopy2: "محتوى عشوائي. حملات منفصلة. Positioning غير واضح. وتقارير مليانة أرقام من غير ما تقولك إيه اللي اتغير فعلًا.",
@@ -150,7 +150,7 @@
       problemBeforeList: ["محتوى عشوائي", "استراتيجية غير واضحة", "حملات منفصلة", "أرقام شكلية", "قرارات رد فعل", "اعتماد كامل على الوكالة"],
       problemWithTitle: "مع WITRA",
       problemWithList: ["مشكلة واضحة ومُشخّصة", "خطة نمو محددة", "Marketing System متكامل", "مؤشرات مرتبطة بالبيزنس", "قرارات مبنية على البيانات", "نظام واضح قابل للتطوير"],
-      
+
       anatomyEyebrow: "مفهوم العلامة التجارية",
       anatomyHeadline: "بنية WITRA",
       anatomyItems: [
@@ -159,7 +159,7 @@
         ["▲", "المثلث", "التوجيه، التركيز، والابتكار."],
         ["WIT", "جوهر الـ 'Wit'", "الذكاء الحاد، التفكير الاستراتيجي، والتنفيذ الدقيق."]
       ],
-      
+
       systemHeadline: "منظومة WITRA للنمو",
       systemSubtitle: "نشخّص. نصمّم. نبني. نشغّل. نقيس. نطوّر.",
       systemIntro: "النمو مش نتيجة حملة منفصلة. النمو بيحصل لما الاستراتيجية، والـ Creative، والتنفيذ، والبيانات، والتحسين يشتغلوا مع بعض كمنظومة واحدة.",
@@ -200,7 +200,7 @@
       ],
 
       engineHeadline: "بنشتغل معاك إزاي؟",
-      engineSubtitle: "واحد لواحد. بالبيانات. وحول احتياجات بيزنسك.",
+      engineSubtitle: "واحد لواحد. بالبيانات. وحول احتياجات البزنس الخاص بيك.",
       engineStages: [
         ["01 — التشخيص", "بنبدأ بالبيزنس، مش بجدول المحتوى.", "بنراجع التسويق الحالي، الـ Positioning، رحلة العميل، المنافسين، والأرقام."],
         ["02 — جلسة الاستراتيجية", "بنحدد الاتجاه مع بعض.", "جلسة استراتيجية مباشرة نركز فيها على البيزنس، أهدافه، وتحدياته."],
@@ -246,10 +246,10 @@
       pricingHeadline: "اختار مستوى النمو المناسب لبيزنسك.",
       pricingSubtitle: "ابدأ من احتياجك الحالي، وابني عليه مع نمو البيزنس.",
       pricingPlans: [
-        ["BUSINESS CONSULTING", "تشخيص تسويقي، استشارات استراتيجية، وتوجيه تجاري."],
-        ["CORE", "Strategy + Planning + Creative/Design + Digital Marketing."],
-        ["PREMIUM", "كل ما في Core بالإضافة إلى Branding والهوية البصرية."],
-        ["GOLD", "حملات وActivations ميدانية تركز على الحضور الحقيقي في السوق."]
+        ["BUSINESS CONSULTING", ["استشارة تسويقية شاملة", "استراتيجية أعمال", "توجيه تجاري", "خطة عمل لـ 90 يوم"]],
+        ["CORE", ["الاستراتيجية", "خطة المحتوى", "التصميم والابتكار", "التسويق الرقمي"]],
+        ["PREMIUM", ["الاستراتيجية", "خطة المحتوى", "التصميم والابتكار", "التسويق الرقمي", "الهوية البصرية"]],
+        ["GOLD", ["الاستراتيجية", "خطة المحتوى", "التصميم والابتكار", "التسويق الرقمي", "الهوية البصرية", "حملات ميدانية (Offline)"]]
       ],
       contactPricing: "تواصل لمعرفة الأسعار",
 
@@ -267,16 +267,16 @@
   function local(en, ar) { return currentLanguage === "ar" ? ar : en; }
   function esc(value) { return String(value == null ? "" : value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
 
-  function navLinks() { 
-    return t("nav").map((label, index) => { 
+  function navLinks() {
+    return t("nav").map((label, index) => {
       const ids = ["problem", "identity", "services", "engine", "usps", "pricing"];
-      return `<a href="#${ids[index]}">${esc(label)}</a>`; 
-    }).join(""); 
+      return `<a href="#${ids[index]}">${esc(label)}</a>`;
+    }).join("");
   }
 
   function pageHtml() {
     const p = t;
-    
+
     return `
       <div class="public-site theme-burgundy">
         
@@ -559,8 +559,10 @@
                 ${p("pricingPlans").map(plan => `
                   <div class="pricing-block">
                     <h4>${esc(plan[0])}</h4>
-                    <p>${esc(plan[1])}</p>
-                    <div class="pricing-label">${esc(p("contactPricing"))}</div>
+                    <ul class="pricing-features">
+                      ${plan[1].map(f => '<li>' + esc(f) + '</li>').join("")}
+                    </ul>
+                    <a href="#diagnostic" class="pricing-label">${esc(p("contactPricing"))}</a>
                   </div>
                 `).join("")}
               </div>
@@ -642,9 +644,9 @@
     `;
   }
 
-  function openDiagnostic() { 
-    document.body.insertAdjacentHTML("beforeend", formHtml()); 
-    bindForm(); 
+  function openDiagnostic() {
+    document.body.insertAdjacentHTML("beforeend", formHtml());
+    bindForm();
   }
 
   function bindForm() {
@@ -656,55 +658,55 @@
       var submit = document.getElementById("diagnosticSubmit");
       var error = document.getElementById("diagnosticError");
       var data = Object.fromEntries(new FormData(form).entries());
-      submit.disabled = true; 
-      submit.textContent = t("working"); 
+      submit.disabled = true;
+      submit.textContent = t("working");
       error.textContent = "";
-      
-      fetch("/api/public/diagnostic", { 
-        method: "POST", 
-        headers: { "Content-Type": "application/json" }, 
-        body: JSON.stringify(data) 
-      }).then(response => { 
-        return response.json().then(body => { 
-          if (!response.ok) throw new Error(body.error || t("error")); 
-          return body; 
-        }); 
-      }).then(() => { 
-        form.innerHTML = `<div class="public-success">${esc(t("success"))}</div>`; 
-      }).catch(err => { 
-        submit.disabled = false; 
-        submit.textContent = t("submit"); 
-        error.textContent = err.message || t("error"); 
+
+      fetch("/api/public/diagnostic", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      }).then(response => {
+        return response.json().then(body => {
+          if (!response.ok) throw new Error(body.error || t("error"));
+          return body;
+        });
+      }).then(() => {
+        form.innerHTML = `<div class="public-success">${esc(t("success"))}</div>`;
+      }).catch(err => {
+        submit.disabled = false;
+        submit.textContent = t("submit");
+        error.textContent = err.message || t("error");
       });
     });
   }
 
   function bindPage() {
-    document.getElementById("publicLang").addEventListener("click", () => { 
-      currentLanguage = currentLanguage === "en" ? "ar" : "en"; 
-      localStorage.setItem("witra-public-lang", currentLanguage); 
-      document.documentElement.lang = currentLanguage; 
-      document.documentElement.dir = currentLanguage === "ar" ? "rtl" : "ltr"; 
-      renderPublicSite(); 
+    document.getElementById("publicLang").addEventListener("click", () => {
+      currentLanguage = currentLanguage === "en" ? "ar" : "en";
+      localStorage.setItem("witra-public-lang", currentLanguage);
+      document.documentElement.lang = currentLanguage;
+      document.documentElement.dir = currentLanguage === "ar" ? "rtl" : "ltr";
+      renderPublicSite();
     });
-    
-    document.getElementById("footerLang").addEventListener("click", () => { 
-      document.getElementById("publicLang").click(); 
+
+    document.getElementById("footerLang").addEventListener("click", () => {
+      document.getElementById("publicLang").click();
     });
-    
-    document.getElementById("publicMenu").addEventListener("click", function () { 
-      var open = document.getElementById("publicNavLinks").classList.toggle("open"); 
-      this.setAttribute("aria-expanded", open ? "true" : "false"); 
+
+    document.getElementById("publicMenu").addEventListener("click", function () {
+      var open = document.getElementById("publicNavLinks").classList.toggle("open");
+      this.setAttribute("aria-expanded", open ? "true" : "false");
     });
-    
-    window.addEventListener("scroll", () => { 
-      var header = document.querySelector(".public-header"); 
-      if (header) header.classList.toggle("scrolled", window.scrollY > 12); 
+
+    window.addEventListener("scroll", () => {
+      var header = document.querySelector(".public-header");
+      if (header) header.classList.toggle("scrolled", window.scrollY > 12);
     }, { passive: true });
-    
+
     var sectionLinks = Array.prototype.slice.call(document.querySelectorAll(".public-nav-links a"));
     var sections = sectionLinks.map(link => document.querySelector(link.getAttribute("href"))).filter(Boolean);
-    
+
     sectionLinks.forEach(link => {
       link.addEventListener("click", (event) => {
         var href = link.getAttribute("href");
@@ -717,48 +719,48 @@
         document.getElementById("publicMenu").setAttribute("aria-expanded", "false");
       });
     });
-    
-    document.querySelectorAll(".continuous-section, .mission-section, .public-hero-inner").forEach(element => { 
-      element.classList.add("public-reveal"); 
-      if (element.classList.contains("public-hero-inner")) element.classList.add("is-visible"); 
+
+    document.querySelectorAll(".continuous-section, .mission-section, .public-hero-inner").forEach(element => {
+      element.classList.add("public-reveal");
+      if (element.classList.contains("public-hero-inner")) element.classList.add("is-visible");
     });
-    
-    var revealObserver = "IntersectionObserver" in window ? new IntersectionObserver((entries) => { 
-      entries.forEach(entry => { 
-        if (entry.isIntersecting) entry.target.classList.add("is-visible"); 
-      }); 
+
+    var revealObserver = "IntersectionObserver" in window ? new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("is-visible");
+      });
     }, { threshold: .1 }) : null;
-    
-    document.querySelectorAll(".public-reveal").forEach(element => { 
-      if (revealObserver) revealObserver.observe(element); else element.classList.add("is-visible"); 
+
+    document.querySelectorAll(".public-reveal").forEach(element => {
+      if (revealObserver) revealObserver.observe(element); else element.classList.add("is-visible");
     });
-    
-    var activeObserver = "IntersectionObserver" in window ? new IntersectionObserver((entries) => { 
-      entries.forEach(entry => { 
-        if (!entry.isIntersecting) return; 
-        sectionLinks.forEach(link => { 
-          link.classList.toggle("is-active", link.getAttribute("href") === "#" + entry.target.id); 
-        }); 
-      }); 
+
+    var activeObserver = "IntersectionObserver" in window ? new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        sectionLinks.forEach(link => {
+          link.classList.toggle("is-active", link.getAttribute("href") === "#" + entry.target.id);
+        });
+      });
     }, { rootMargin: "-40% 0px -50%", threshold: 0 }) : null;
-    
+
     sections.forEach(section => { if (activeObserver) activeObserver.observe(section); });
-    
-    document.querySelectorAll('a[href="#diagnostic"]').forEach(link => { 
-      link.addEventListener("click", (event) => { 
-        event.preventDefault(); 
-        openDiagnostic(); 
-      }); 
+
+    document.querySelectorAll('a[href="#diagnostic"]').forEach(link => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        openDiagnostic();
+      });
     });
-    
+
     const diagBtn = document.getElementById("openDiagnostic");
-    if(diagBtn) diagBtn.addEventListener("click", openDiagnostic);
+    if (diagBtn) diagBtn.addEventListener("click", openDiagnostic);
   }
 
-  window.renderPublicSite = function () { 
-    document.documentElement.lang = currentLanguage; 
-    document.documentElement.dir = currentLanguage === "ar" ? "rtl" : "ltr"; 
-    document.getElementById("root").innerHTML = pageHtml(); 
-    bindPage(); 
+  window.renderPublicSite = function () {
+    document.documentElement.lang = currentLanguage;
+    document.documentElement.dir = currentLanguage === "ar" ? "rtl" : "ltr";
+    document.getElementById("root").innerHTML = pageHtml();
+    bindPage();
   };
 })();
