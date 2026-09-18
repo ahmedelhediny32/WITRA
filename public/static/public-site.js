@@ -7,42 +7,31 @@
   var copy = {
     en: {
       nav: ["The System", "Identity", "Services", "How It Works", "Why WITRA", "Pricing"],
-      login: "Login", cta: "Book a Diagnostic", explore: "See How WITRA Works",
+      login: "Login", cta: "Start your journey", explore: "See How WITRA Works",
 
       heroTitle: "A Business Is a System.",
       heroSubtitle: "WITRA Designs Growth Systems.",
-      heroSupport: "Egyptian businesses don't need more posts — they need commercial systems.",
-      heroText: "WITRA diagnoses the problems behind stalled growth, designs the system around your business, and operates it with you — from strategy and creative to digital marketing, measurement, and optimization.",
+      heroSupport: "Businesses don't need more posts — they need commercial systems.",
+      heroText: "Stop creating more. Start building what drives growth. WITRA turns business challenges into clear, connected growth systems — combining strategy, creative, digital marketing, and performance into one system built around your business..",
 
       problemHeadline: "Most Agencies Sell Activity.\nWITRA Builds the System Behind Growth.",
-      problemCopy: "The problem isn't that your business isn't marketing. The problem is that the pieces aren't working together.",
       problemCopy2: "Random content. Disconnected campaigns. Unclear positioning. Reports full of numbers that don't explain what changed.",
       problemCopy3: "WITRA takes a different approach: diagnose the business first, design the growth system second, then operate and measure what actually matters.",
       problemBeforeTitle: "BEFORE WITRA",
-      problemBeforeList: ["Random content", "Unclear strategy", "Disconnected campaigns", "Vanity metrics", "Reactive decisions", "Agency dependency"],
+      problemBeforeList: ["Unclear strategy", "Random content", "Disconnected campaigns", "Vanity metrics", "Reactive decisions", "Agency dependency", "Fragmented results"],
       problemWithTitle: "WITH WITRA",
-      problemWithList: ["Diagnosed problems", "Clear growth roadmap", "Connected marketing system", "Business-focused metrics", "Data-led decisions", "Documented processes"],
+      problemWithList: ["Diagnosed problems", "Clear Strategy", "Connected marketing system", "Business-focused metrics", "Data-led decisions", "Documented processes", "Clear growth roadmap"],
 
       anatomyEyebrow: "BRAND CONCEPT",
       anatomyHeadline: "The Anatomy of WITRA",
       anatomyItems: [
-        ["W", "The Letter W", "Strength, stability, and reliability."],
-        ["Y", "The Hidden Y", "Growth, forward movement, and ambition."],
-        ["▲", "The Triangle", "Direction, focus, and innovation."],
-        ["WIT", "The Core 'Wit'", "Sharp intelligence, strategic thinking, and precise execution."]
+        ["<img src='/static/img/icon-new-w.png?v=1' style='width: 100%; height: 100%; object-fit: contain;' alt='W'>", "The Letter \"W\"", "Strength, stability and reliability."],
+        ["<img src='/static/img/icon-new-y.png?v=1' style='width: 100%; height: 100%; object-fit: contain;' alt='Y'>", "The Letter \"Y\"", "Growth, forward movement and ambition."],
+        ["<img src='/static/img/icon-new-tri.png?v=1' style='width: 100%; height: 100%; object-fit: contain;' alt='Triangle'>", "The Triangle", "Direction, focus and innovation."],
+        ["<span style='font-family: \"Playfair Display\", serif; font-size: 20px; font-weight: 700; color: var(--w-gold); line-height: 1;'>WIT</span>", "The Core 'Wit'", "Sharp intelligence, strategic thinking, precise execution, and unmatched creative vision."]
       ],
 
-      systemHeadline: "The WITRA Growth System",
-      systemSubtitle: "Diagnose. Design. Build. Operate. Measure. Optimize.",
-      systemIntro: "Growth doesn't come from isolated campaigns. It comes from a connected system where strategy, creative, execution, data, and optimization work together.",
-      systemStages: [
-        ["01 — DIAGNOSE", "Find what's actually holding the business back."],
-        ["02 — DESIGN", "Build the strategy and growth architecture around the business."],
-        ["03 — BUILD", "Create the assets and infrastructure that make the strategy real."],
-        ["04 — OPERATE", "Run the system with the client — not around the client."],
-        ["05 — MEASURE", "Track the numbers that actually matter."],
-        ["06 — OPTIMIZE", "Learn from the numbers and improve what works."]
-      ],
+
 
       identityHeadline: "Built on Four Principles.",
       identitySubtitle: "The way we think about business is the way we build marketing.",
@@ -71,14 +60,16 @@
         ["06 — BUSINESS CONSULTING", "Marketing and commercial consulting, sales enablement, offer design, and business reviews focused on the numbers that matter."]
       ],
 
-      engineHeadline: "How WITRA Works",
-      engineSubtitle: "One-to-One. Data-Led. Built Around Your Business.",
+      engineHeadline: "The WITRA Growth System",
+      engineSubtitle: "Diagnose. Design. Build. Operate. Measure. Optimize.",
+      engineIntro: "Growth doesn't come from isolated campaigns. It comes from a connected system where strategy, creative, execution, data, and optimization work together.",
       engineStages: [
-        ["01 — DIAGNOSE", "We start with the business, not the content calendar.", "We audit the current marketing, positioning, customer journey, competitors, and numbers."],
-        ["02 — STRATEGY SESSION", "We sit down and build the direction together.", "Founder-level strategy focused on the actual business, its goals, and its constraints."],
-        ["03 — BUILD THE SYSTEM", "Strategy becomes execution.", "We build the creative, content, branding, campaigns, digital assets, and infrastructure required to execute the plan."],
-        ["04 — OPERATE & TRACK", "We don't disappear after the strategy deck.", "WITRA operates alongside the client, tracks performance, communicates clearly, and continuously improves execution."],
-        ["05 — REVIEW & OPTIMIZE", "Every month, we look at what actually moved the business.", "We review the numbers, identify what worked and what didn't, then optimize the system."]
+        ["01 — DIAGNOSE", "Find what's actually holding the business back.", "We audit the current marketing, positioning, customer journey, and numbers to diagnose the real bottlenecks."],
+        ["02 — DESIGN & STRATEGY", "We build the direction together.", "A founder-level strategy session focused on building the growth architecture around your actual business goals and constraints."],
+        ["03 — BUILD", "Strategy becomes execution.", "We create the assets, campaigns, branding, and digital infrastructure that make the strategy real and ready to launch."],
+        ["04 — OPERATE", "Run the system with the client — not around the client.", "WITRA operates alongside your team. We don't disappear after the strategy deck; we execute daily and communicate clearly."],
+        ["05 — MEASURE", "Track the numbers that actually matter.", "We move past vanity metrics to measure real business performance, tracking what truly impacts your bottom line."],
+        ["06 — OPTIMIZE", "Learn from the numbers and improve.", "Every month, we review what worked and what didn't. We refine the system continuously to maximize growth and efficiency."]
       ],
 
       icpHeadline: "Who WITRA Is Built For",
@@ -135,42 +126,31 @@
     },
     ar: {
       nav: ["المنظومة", "هويتنا", "الخدمات", "بنشتغل إزاي", "ليه WITRA", "الأسعار"],
-      login: "تسجيل الدخول", cta: "احجز جلسة تشخيص", explore: "اعرف بنشتغل إزاي",
+      login: "تسجيل الدخول", cta: "ابدأ رحلتك", explore: "اعرف بنشتغل إزاي",
 
       heroTitle: "البيزنس منظومة.",
       heroSubtitle: "WITRA تبني منظومة النمو.",
       heroSupport: "الشركات مش محتاجة محتوى أكتر؛ محتاجة منظومة تسويق مرتبطة بالبيزنس وبتحقق نمو حقيقي.",
-      heroText: "في WITRA بنبدأ بفهم المشكلة الحقيقية، ثم بنبني المنظومة المناسبة للبزنس الخاص بيك، ونشتغل معاك على تنفيذها وقياس نتائجها وتحسينها باستمرار — من الاستراتيجية والـ Creative إلى الـ Digital Marketing والقياس والتطوير.",
+      heroText: "توقف عن مجرد صناعة المزيد، وابدأ في بناء ما يحرك النمو. WITRA تحول تحديات البيزنس إلى منظومات نمو واضحة ومترابطة — من خلال دمج الاستراتيجية، الـ Creative، الـ Digital Marketing، والأداء في منظومة واحدة مبنية حول البيزنس الخاص بك.",
 
       problemHeadline: "معظم الوكالات بتبيع نشاط.\nWITRA بتبني المنظومة وراء النمو.",
-      problemCopy: "المشكلة مش إن البيزنس مش بيعمل Marketing. المشكلة إن كل جزء شغال لوحده.",
       problemCopy2: "محتوى عشوائي. حملات منفصلة. Positioning غير واضح. وتقارير مليانة أرقام من غير ما تقولك إيه اللي اتغير فعلًا.",
       problemCopy3: "WITRA بتشتغل بطريقة مختلفة: نشخّص المشكلة الأول، نبني منظومة النمو ثانيًا، وبعدها ننفّذ ونقيس ونطوّر اللي بيحقق نتيجة حقيقية.",
       problemBeforeTitle: "قبل WITRA",
-      problemBeforeList: ["محتوى عشوائي", "استراتيجية غير واضحة", "حملات منفصلة", "أرقام شكلية", "قرارات رد فعل", "اعتماد كامل على الوكالة"],
+      problemBeforeList: ["استراتيجية غير واضحة", "محتوى عشوائي", "حملات منفصلة", "أرقام شكلية", "قرارات رد فعل", "اعتماد كامل على الوكالة", "نتائج مشتتة"],
       problemWithTitle: "مع WITRA",
-      problemWithList: ["مشكلة واضحة ومُشخّصة", "خطة نمو محددة", "Marketing System متكامل", "مؤشرات مرتبطة بالبيزنس", "قرارات مبنية على البيانات", "نظام واضح قابل للتطوير"],
+      problemWithList: ["مشكلة واضحة ومُشخّصة", "استراتيجية واضحة", "Marketing System متكامل", "مؤشرات مرتبطة بالبيزنس", "قرارات مبنية على البيانات", "نظام واضح قابل للتطوير", "خطة نمو محددة"],
 
       anatomyEyebrow: "مفهوم العلامة التجارية",
       anatomyHeadline: "بنية WITRA",
       anatomyItems: [
-        ["W", "حرف W", "القوة، الاستقرار، والاعتمادية."],
-        ["Y", "حرف Y الخفي", "النمو، التقدم للأمام، والطموح."],
-        ["▲", "المثلث", "التوجيه، التركيز، والابتكار."],
-        ["WIT", "جوهر الـ 'Wit'", "الذكاء الحاد، التفكير الاستراتيجي، والتنفيذ الدقيق."]
+        ["<img src='/static/img/icon-new-w.png?v=1' style='width: 100%; height: 100%; object-fit: contain;' alt='W'>", 'حرف "W"', "القوة، الاستقرار والاعتمادية."],
+        ["<img src='/static/img/icon-new-y.png?v=1' style='width: 100%; height: 100%; object-fit: contain;' alt='Y'>", 'حرف "Y"', "النمو، التقدم للأمام والطموح."],
+        ["<img src='/static/img/icon-new-tri.png?v=1' style='width: 100%; height: 100%; object-fit: contain;' alt='Triangle'>", "المثلث", "التوجيه، التركيز والابتكار."],
+        ["<span style='font-family: \"Playfair Display\", serif; font-size: 20px; font-weight: 700; color: var(--w-gold); line-height: 1;'>WIT</span>", "جوهر 'Wit'", "الذكاء الحاد، التفكير الاستراتيجي، التنفيذ الدقيق، والرؤية الإبداعية الاستثنائية."]
       ],
 
-      systemHeadline: "منظومة WITRA للنمو",
-      systemSubtitle: "نشخّص. نصمّم. نبني. نشغّل. نقيس. نطوّر.",
-      systemIntro: "النمو مش نتيجة حملة منفصلة. النمو بيحصل لما الاستراتيجية، والـ Creative، والتنفيذ، والبيانات، والتحسين يشتغلوا مع بعض كمنظومة واحدة.",
-      systemStages: [
-        ["01 — نشخّص", "نفهم إيه اللي معطّل النمو فعلًا."],
-        ["02 — نصمّم", "نبني استراتيجية النمو حول البيزنس."],
-        ["03 — نبني", "نحوّل الاستراتيجية إلى واقع."],
-        ["04 — نشغّل", "نشغّل المنظومة مع العميل، مش بعيد عنه."],
-        ["05 — نقيس", "نتابع الأرقام اللي تهم البيزنس فعلًا."],
-        ["06 — نطوّر", "نتعلم من الأرقام ونطوّر اللي بيحقق نتيجة."]
-      ],
+
 
       identityHeadline: "أربع مبادئ بنبني بيها كل حاجة.",
       identitySubtitle: "طريقة تفكيرنا في البيزنس هي نفسها طريقة بنائنا للتسويق.",
@@ -199,14 +179,16 @@
         ["06 — Business Consulting", "استشارات تسويقية وتجارية، تطوير الـ Offers، دعم المبيعات، ومراجعات دورية تركز على الأرقام التي تؤثر في البيزنس."]
       ],
 
-      engineHeadline: "بنشتغل معاك إزاي؟",
-      engineSubtitle: "واحد لواحد. بالبيانات. وحول احتياجات البزنس الخاص بيك.",
+      engineHeadline: "منظومة WITRA للنمو",
+      engineSubtitle: "نشخّص. نصمّم. نبني. نشغّل. نقيس. نطوّر.",
+      engineIntro: "النمو مش نتيجة حملة منفصلة. النمو بيحصل لما الاستراتيجية، والـ Creative، والتنفيذ، والبيانات، والتحسين يشتغلوا مع بعض كمنظومة واحدة.",
       engineStages: [
-        ["01 — التشخيص", "بنبدأ بالبيزنس، مش بجدول المحتوى.", "بنراجع التسويق الحالي، الـ Positioning، رحلة العميل، المنافسين، والأرقام."],
-        ["02 — جلسة الاستراتيجية", "بنحدد الاتجاه مع بعض.", "جلسة استراتيجية مباشرة نركز فيها على البيزنس، أهدافه، وتحدياته."],
-        ["03 — بناء المنظومة", "الاستراتيجية تتحول إلى تنفيذ.", "بنطوّر الـ Creative، المحتوى، الـ Branding، الحملات، الـ Digital Assets، والأنظمة المطلوبة للتنفيذ."],
-        ["04 — التنفيذ والمتابعة", "مش بنختفي بعد الخطة.", "بننفذ، نتابع الأداء، نتواصل بوضوح، ونطوّر الشغل باستمرار."],
-        ["05 — المراجعة والتطوير", "كل شهر بنرجع للسؤال الأهم: إيه اللي حرّك البيزنس؟", "بنراجع الأرقام، نحدد اللي نجح واللي محتاج تغيير، وبعدها نطوّر المنظومة."]
+        ["01 — التشخيص", "نفهم إيه اللي معطّل النمو فعلًا.", "بنراجع التسويق الحالي، الـ Positioning، رحلة العميل، والأرقام عشان نفهم إيه اللي موقف النمو."],
+        ["02 — الاستراتيجية والتصميم", "بنحدد الاتجاه ونبني الخطة مع بعض.", "جلسة استراتيجية مباشرة لتصميم خطة النمو حول البيزنس الحقيقي، أهدافه، والتحديات اللي بتواجهه."],
+        ["03 — بناء المنظومة", "الاستراتيجية تتحول إلى تنفيذ.", "بنطوّر الـ Creative، المحتوى، الـ Branding، والأنظمة المطلوبة لتحويل الخطة لواقع جاهز للانطلاق."],
+        ["04 — التنفيذ", "نشغّل المنظومة معاك، مش بعيد عنك.", "مش بنختفي بعد تسليم الخطة. بننفذ الشغل يومياً، نتابع الأداء، ونتواصل بوضوح كجزء من فريقك."],
+        ["05 — القياس", "نتابع الأرقام اللي تهم البيزنس فعلًا.", "بنبعد عن الأرقام الشكلية ونقيس الأداء الحقيقي اللي بيأثر على مبيعاتك ونموك."],
+        ["06 — التطوير", "نتعلم من الأرقام ونطوّر اللي بيحقق نتيجة.", "كل شهر بنراجع إيه اللي نجح وإيه اللي محتاج تغيير، وبنحسن الأداء باستمرار لضمان أفضل نتيجة."]
       ],
 
       icpHeadline: "مين WITRA مناسبة له؟",
@@ -282,7 +264,7 @@
         
         <header class="public-header">
           <div class="public-header-inner public-nav">
-            <a href="#top"><img class="public-logo" src="/static/img/witra-logo-gold.png" alt="WITRA"></a>
+            <a href="#top"><img class="public-logo" src="/static/img/logo-full-color.png?v=2" alt="WITRA"></a>
             <button class="public-mobile-menu" id="publicMenu" aria-expanded="false" aria-controls="publicNavLinks">
               <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
             </button>
@@ -356,16 +338,38 @@
         <!-- ANATOMY SECTION (BRAND CONCEPT) -->
         <section class="continuous-section anatomy-section" id="anatomy">
           <div class="public-shell">
-            <div class="section-header text-center">
-              <span class="eyebrow">${esc(p("anatomyEyebrow"))}</span>
+            <div class="editorial-head text-center">
+              <p class="lead-text">${esc(p("anatomyEyebrow"))}</p>
               <h2>${esc(p("anatomyHeadline"))}</h2>
             </div>
             
             <div class="anatomy-grid">
               <div class="anatomy-visual public-reveal">
-                <div class="anatomy-logo-wrapper">
-                  <span class="anatomy-letter v-part">V</span>
-                  <span class="anatomy-letter triangle-part">▲</span>
+                <img class="anatomy-top-logo" src="/static/img/logo-full-color.png?v=2" alt="WITRA Logo" />
+                <div class="anatomy-core-values">
+                  <div class="core-value-item">
+                    <div class="core-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><path d="M22 2l-7 7"/><path d="M17 2h5v5"/></svg></div>
+                    <div class="core-text">
+                      <h5>STRATEGY</h5>
+                      <p>Smart thinking,<br>real results.</p>
+                    </div>
+                  </div>
+                  <div class="core-divider"></div>
+                  <div class="core-value-item">
+                    <div class="core-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 9l-5 5-4-4-5 5"/><path d="M18 9v6"/><path d="M18 9h-6"/></svg></div>
+                    <div class="core-text">
+                      <h5>GROWTH</h5>
+                      <p>Scaling brands.<br>Driving success.</p>
+                    </div>
+                  </div>
+                  <div class="core-divider"></div>
+                  <div class="core-value-item">
+                    <div class="core-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2v1"/><path d="M12 11v6"/><path d="M19 7l-1 1"/><path d="M6 8L5 7"/><path d="M2 12h1"/><path d="M21 12h1"/><path d="M12 4a6 6 0 0 0-6 6c0 2 1.5 4.5 3 6h6c1.5-1.5 3-4 3-6a6 6 0 0 0-6-6z"/></svg></div>
+                    <div class="core-text">
+                      <h5>CREATIVITY</h5>
+                      <p>Creative ideas,<br>powerful impact.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               
@@ -389,8 +393,7 @@
             <div class="public-shell">
               <div class="editorial-head">
                 <h2 class="pre-line">${esc(p("problemHeadline"))}</h2>
-                <p class="lead-text">${esc(p("problemCopy"))}</p>
-                <p>${esc(p("problemCopy2"))}</p>
+                <p class="lead-text">${esc(p("problemCopy2"))}</p>
                 <p class="gold-text">${esc(p("problemCopy3"))}</p>
               </div>
               
@@ -407,29 +410,6 @@
                     ${p("problemWithList").map(item => `<li>${esc(item)}</li>`).join("")}
                   </ul>
                 </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- THE WITRA GROWTH SYSTEM -->
-          <section class="public-section continuous-section" id="witra-system">
-            <div class="public-shell">
-              <div class="editorial-head text-center">
-                <h2>${esc(p("systemHeadline"))}</h2>
-                <p class="lead-text">${esc(p("systemSubtitle"))}</p>
-                <p class="max-width-text">${esc(p("systemIntro"))}</p>
-              </div>
-              
-              <div class="system-flow">
-                ${p("systemStages").map((stage, idx) => `
-                  <div class="system-node">
-                    <div class="node-dot"></div>
-                    <div class="node-content">
-                      <h4>${esc(stage[0])}</h4>
-                      <p>${esc(stage[1])}</p>
-                    </div>
-                  </div>
-                `).join("")}
               </div>
             </div>
           </section>
@@ -454,12 +434,13 @@
             </div>
           </section>
 
-          <!-- HOW IT WORKS -->
+          <!-- HOW IT WORKS (Merged Growth System) -->
           <section class="public-section continuous-section" id="engine">
             <div class="public-shell">
               <div class="editorial-head text-center">
                 <h2>${esc(p("engineHeadline"))}</h2>
                 <p class="lead-text">${esc(p("engineSubtitle"))}</p>
+                <p class="max-width-text">${esc(p("engineIntro"))}</p>
               </div>
               
               <div class="timeline-layout">
@@ -585,7 +566,7 @@
         <footer class="public-footer">
           <div class="public-shell public-footer-inner">
             <div class="footer-brand">
-              <img src="/static/img/witra-logo-gold.png" alt="WITRA">
+              <img src="/static/img/logo-full-color.png?v=2" alt="WITRA">
               <p>${esc(p("footer"))}</p>
             </div>
             <div class="public-footer-columns">
