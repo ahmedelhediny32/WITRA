@@ -9,10 +9,10 @@
       nav: ["The System", "Identity", "Services", "How It Works", "Why WITRA", "Pricing"],
       login: "Login", cta: "Start your journey", explore: "See How WITRA Works",
 
-      heroTitle: "A Business Is a System.",
+      heroTitle: "Business Is a System.",
       heroSubtitle: "WITRA Designs Growth Systems.",
       heroSupport: "Businesses don't need more posts — they need commercial systems.",
-      heroText: "Stop creating more. Start building what drives growth. WITRA turns business challenges into clear, connected growth systems — combining strategy, creative, digital marketing, and performance into one system built around your business..",
+      heroText: "Stop creating more. Start building what drives growth. WITRA turns business challenges into clear, connected growth systems — Marketing strategy / Plan , creative, digital / Offline marketing, and performance into one system built around your business..",
 
       problemHeadline: "Most Agencies Sell Activity.\nWITRA Builds the System Behind Growth.",
       problemCopy2: "Random content. Disconnected campaigns. Unclear positioning. Reports full of numbers that don't explain what changed.",
@@ -28,7 +28,7 @@
         ["<img src='/static/img/icon-new-w.png?v=1' style='width: 100%; height: 100%; object-fit: contain;' alt='W'>", "The Letter \"W\"", "Strength, stability and reliability."],
         ["<img src='/static/img/icon-new-y.png?v=1' style='width: 100%; height: 100%; object-fit: contain;' alt='Y'>", "The Letter \"Y\"", "Growth, forward movement and ambition."],
         ["<img src='/static/img/icon-new-tri.png?v=1' style='width: 100%; height: 100%; object-fit: contain;' alt='Triangle'>", "The Triangle", "Direction, focus and innovation."],
-        ["<span style='font-family: \"Playfair Display\", serif; font-size: 20px; font-weight: 700; color: var(--w-gold); line-height: 1;'>WIT</span>", "The Core 'Wit'", "Sharp intelligence, strategic thinking, precise execution, and unmatched creative vision."]
+        ["<span style='font-family: \"Playfair Display\", serif; font-size: 20px; font-weight: 700; color: var(--w-gold); line-height: 1;'>WIT</span>", "The Core 'Wit'", "Sharp intelligence, strategic thinking, precise execution, and distinctive creative vision."]
       ],
 
 
@@ -36,28 +36,27 @@
       identityHeadline: "Built on Four Principles.",
       identitySubtitle: "The way we think about business is the way we build marketing.",
       identityVals: [
-        ["SHARP", "Precise diagnosis before any prescription.", "We never guess. We audit, understand, then act."],
+        ["SHARP", "Precise diagnosis before any prescription.", "We never guess. We analyze, understand, then act."],
         ["SIMPLE", "No jargon. No unnecessary complexity.", "Clear plans. Clear priorities. Clear prices. Clear results."],
         ["UNIQUE", "Every client gets a system designed for their business.", "Never a recycled template disguised as strategy."],
         ["ACCOUNTABLE", "Weekly numbers. Monthly reviews. Real business outcomes.", "If it doesn't move the business, we stop doing it."]
       ],
 
       missionHeadline: "From Invisible to Unmissable.",
-      missionCopy: "Our mission is to transform Egyptian small and medium businesses from invisible to unmissable — through honest, data-driven marketing systems that generate real revenue, not vanity metrics.",
+      missionCopy: "Our mission is to transform Egyptian small and medium businesses from invisible to unmissable — through honest, data-driven marketing systems that generate real revenue, Actionable Business Metrics.",
       missionHighlight: "We measure ourselves by one number: client growth.",
       visionHeadline: "Our Vision",
-      visionCopy: "To be the defining growth partner for Egyptian businesses, setting the standard for how marketing should operate and generate real impact.",
+      visionCopy: "To be the defining growth partner for Egyptian SMEs (Small & medium enterprises), setting the standard for how marketing should operate and generate real impact.",
 
       servicesHeadline: "The Full Service Stack",
       servicesSubtitle: "Six lines of work. One connected system.",
       servicesIntro: "Strategy is only valuable when it can be executed. WITRA connects strategy, marketing, creative, technology, and commercial thinking under one operating system.",
       servicesList: [
-        ["01 — MARKETING STRATEGY", "Market & competitor analysis, target-audience definition, positioning, and growth roadmaps built around real business goals."],
-        ["02 — DIGITAL MARKETING", "Social media management, content strategy and creation, paid advertising, and performance marketing designed to drive measurable growth."],
+        ["01 — BUSINESS CONSULTING", "Marketing and commercial consulting, sales enablement, offer design, and business reviews focused on the numbers that matter."],
+        ["02 — MARKETING STRATEGY", "Market & competitor analysis, target-audience definition, positioning, and growth roadmaps built around real business goals."],
         ["03 — BRANDING & IDENTITY", "Brand development, brand strategy, logo design, visual identity systems, and brand guidelines that make businesses recognizable and credible."],
-        ["04 — CREATIVE & GRAPHIC DESIGN", "Social campaigns, marketing materials, corporate profiles, packaging, and creative systems built to communicate with clarity and impact."],
-        ["05 — WEB & MOBILE DEVELOPMENT", "Websites, e-commerce stores, mobile applications, performance optimization, security, and conversion-focused digital experiences."],
-        ["06 — BUSINESS CONSULTING", "Marketing and commercial consulting, sales enablement, offer design, and business reviews focused on the numbers that matter."]
+        ["04— MARKETING & CREATIVE", "Integrated digital and offline marketing, creative design, content, and paid campaigns — built as one connected system to strengthen your brand, engage your audience, and drive measurable growth."],
+        ["05 — WEB & MOBILE DEVELOPMENT", "Websites, e-commerce stores, mobile applications, performance optimization, security, and conversion-focused digital experiences."]
       ],
 
       engineHeadline: "The WITRA Growth System",
@@ -91,7 +90,7 @@
       uspsSubtitle: "A different operating model for businesses that want more than activity.",
       uspsList: [
         ["01 — DIAGNOSE BEFORE YOU PRESCRIBE™", "Every engagement starts by understanding the business before prescribing the solution.", "We look at the problem before we tell you what to do."],
-        ["02 — ONE-TO-ONE CAFÉ CONSULTING", "Founder-level strategy sessions built around real conversations.", "We believe Egyptian business is built on relationships. That's why we work closely, directly, and one-to-one."],
+        ["02 — ONE-TO-ONE CONSULTING", "Founder-level strategy sessions built around real conversations.", "We believe Egyptian business is built on relationships. That's why we work closely, directly, and one-to-one."],
         ["03 — RADICAL REPORTING", "No disappearing act after the campaign launches.", "Weekly numbers. Monthly business reviews. Clear reporting."],
         ["04 — SYSTEMS, NOT CAMPAIGNS", "We don't want your marketing to depend on one campaign.", "We build systems that continue working and improving."],
         ["05 — COPY CRAFT", "Sharp messaging designed for how Egyptian customers actually think, talk, and buy.", "Clear offers. Strong hooks. No artificial translation feel."],
@@ -117,9 +116,7 @@
       contactPricing: "Contact for pricing",
 
       diagHeadline: "Start With a Diagnosis.",
-      diagCopy: "Before we prescribe a marketing solution, we want to understand the business behind it.",
       diagCopy2: "Tell us where the business is today, where you want it to go, and what's currently getting in the way. We'll start there.",
-      diagSupport: "No generic pitch. No recycled proposal. Start with the real problem.",
 
       footer: "Designing the systems behind business growth.",
       close: "Close", success: "Thank you. Your diagnostic request is with the WITRA team.", submit: "Send Diagnostic Request", formTitle: "Let's Find What Your Business Needs Next.", formText: "A short conversation to understand the business before recommending anything.", required: "Please complete the required fields.", working: "Sending...", error: "Something went wrong. Please try again."
@@ -131,7 +128,7 @@
       heroTitle: "البيزنس منظومة.",
       heroSubtitle: "WITRA تبني منظومة النمو.",
       heroSupport: "الشركات مش محتاجة محتوى أكتر؛ محتاجة منظومة تسويق مرتبطة بالبيزنس وبتحقق نمو حقيقي.",
-      heroText: "توقف عن مجرد صناعة المزيد، وابدأ في بناء ما يحرك النمو. WITRA تحول تحديات البيزنس إلى منظومات نمو واضحة ومترابطة — من خلال دمج الاستراتيجية، الـ Creative، الـ Digital Marketing، والأداء في منظومة واحدة مبنية حول البيزنس الخاص بك.",
+      heroText: "توقف عن مجرد صناعة المزيد، وابدأ في بناء ما يحرك النمو. WITRA تحول تحديات البيزنس إلى منظومات نمو واضحة ومترابطة — من خلال دمج استراتيجية / خطة التسويق، الـ Creative، الـ Digital / Offline Marketing، والأداء في منظومة واحدة مبنية حول البيزنس الخاص بك.",
 
       problemHeadline: "معظم الوكالات بتبيع نشاط.\nWITRA بتبني المنظومة وراء النمو.",
       problemCopy2: "محتوى عشوائي. حملات منفصلة. Positioning غير واضح. وتقارير مليانة أرقام من غير ما تقولك إيه اللي اتغير فعلًا.",
@@ -171,12 +168,11 @@
       servicesSubtitle: "ستة مجالات. منظومة واحدة.",
       servicesIntro: "الاستراتيجية قيمتها الحقيقية بتظهر في التنفيذ. عشان كده بنربط الاستراتيجية، التسويق، الـ Creative، التكنولوجيا، والتفكير التجاري داخل منظومة واحدة.",
       servicesList: [
-        ["01 — استراتيجية التسويق", "تحليل السوق والمنافسين، تحديد الجمهور، بناء الـ Positioning، ووضع خطط نمو مرتبطة بأهداف البيزنس الحقيقية."],
-        ["02 — التسويق الرقمي", "إدارة السوشيال ميديا، استراتيجية وصناعة المحتوى، الإعلانات المدفوعة، وPerformance Marketing بهدف تحقيق نمو يمكن قياسه."],
+        ["01 — Business Consulting", "استشارات تسويقية وتجارية، تطوير الـ Offers، دعم المبيعات، ومراجعات دورية تركز على الأرقام التي تؤثر في البيزنس."],
+        ["02 — استراتيجية التسويق", "تحليل السوق والمنافسين، تحديد الجمهور، بناء الـ Positioning، ووضع خطط نمو مرتبطة بأهداف البيزنس الحقيقية."],
         ["03 — Branding & Identity", "بناء العلامة التجارية، الاستراتيجية، تصميم الـ Logo، الهوية البصرية، والـ Brand Guidelines."],
-        ["04 — Creative & Graphic Design", "تصميم الحملات والمحتوى، المواد التسويقية، الـ Corporate Profiles، والـ Packaging بشكل يخدم الرسالة والبيزنس."],
-        ["05 — Web & Mobile Development", "تصميم وتطوير المواقع، متاجر الـ E-commerce، التطبيقات، وتحسين الأداء والأمان وتجربة المستخدم والتحويلات."],
-        ["06 — Business Consulting", "استشارات تسويقية وتجارية، تطوير الـ Offers، دعم المبيعات، ومراجعات دورية تركز على الأرقام التي تؤثر في البيزنس."]
+        ["04 — Marketing & Creative", "تسويق رقمي وميداني متكامل، تصميم إبداعي، صناعة محتوى، وحملات مدفوعة — مبنية كمنظومة واحدة لتعزيز علامتك التجارية، التفاعل مع جمهورك، وتحقيق نمو حقيقي."],
+        ["05 — Web & Mobile Development", "تصميم وتطوير المواقع، متاجر الـ E-commerce، التطبيقات، وتحسين الأداء والأمان وتجربة المستخدم والتحويلات."]
       ],
 
       engineHeadline: "منظومة WITRA للنمو",
@@ -212,7 +208,7 @@
         ["01 — نشخّص قبل ما نقترح الحل™", "كل تعاون بيبدأ بفهم وتشخيص حقيقي للبيزنس قبل ما نقترح الحل.", "بنشوف المشكلة الأول، وبعدها نقولك إيه اللي محتاج يتعمل."],
         ["02 — استشارات واحد لواحد", "استراتيجية مع حد فاهم البيزنس، مش Meeting مليان كلام تسويقي.", "بنؤمن إن أفضل القرارات بتطلع من نقاش مباشر، عشان كده بنشتغل قريب من العميل وبشكل واحد لواحد."],
         ["03 — تقارير واضحة. بدون تجميل.", "مفيش اختفاء بعد إطلاق الحملة.", "أرقام أسبوعية. مراجعات شهرية. وتقارير واضحة."],
-        ["04 — منظومات، مش حملات.", "هدفنا مش إن الحملة تنجح أسبوعين. هدفنا نبني نظام يفضل يشتغل ويتطور.", ""],
+        ["04 — منظومات، مش حملات.", "مش عايزين تسويقك يعتمد على حملة واحدة.", "بنبني أنظمة تستمر في الشغل والتطور."],
         ["05 — Copy يفهم السوق.", "رسائل تسويقية مصممة بالطريقة اللي العميل المصري بيفكر ويتكلم ويشتري بيها.", "Offers واضحة. Hooks قوية. ومن غير إحساس الترجمة أو الكلام المصطنع."],
         ["06 — تجربة Premium. بتكلفة تناسب الـ SME.", "استراتيجية قوية، Design احترافي، وخدمة على مستوى Senior — من غير تكلفة أو تعقيد أكبر من احتياج البيزنس."]
       ],
@@ -236,9 +232,7 @@
       contactPricing: "تواصل لمعرفة الأسعار",
 
       diagHeadline: "ابدأ بالتشخيص.",
-      diagCopy: "قبل ما نقترح عليك أي حل تسويقي، عايزين نفهم البيزنس اللي وراه.",
       diagCopy2: "قولنا البيزنس واقف فين دلوقتي، عايز توصله لفين، وإيه اللي معطّل النمو. ومن هنا نبدأ.",
-      diagSupport: "من غير Pitch محفوظ. من غير Proposal مكرر. نبدأ من المشكلة الحقيقية.",
 
       footer: "نبني المنظومات اللي بتخلي البيزنس ينمو.",
       close: "إغلاق", success: "شكرًا. فريق WITRA استلم طلب التشخيص.", submit: "إرسال طلب التشخيص", formTitle: "خلينا نعرف بيزنسك محتاج إيه بعد كده.", formText: "مكالمة قصيرة نفهم فيها البيزنس قبل ما نقترح أي حاجة.", required: "من فضلك أكمل البيانات المطلوبة.", working: "جاري الإرسال...", error: "حصل خطأ. حاول مرة تانية."
@@ -553,12 +547,19 @@
           <!-- FINAL CTA -->
           <section class="public-section continuous-section final-cta-section" id="diagnostic">
             <div class="public-shell text-center">
-              <h2 class="giant-text">${esc(p("diagHeadline"))}</h2>
-              <p class="lead-text" style="margin:24px auto; max-width:600px;">${esc(p("diagCopy"))}</p>
-              <p style="margin:24px auto 40px; max-width:600px;">${esc(p("diagCopy2"))}</p>
-              
-              <button class="public-cta large-cta" id="openDiagnostic">${esc(p("cta"))}</button>
-              <p class="diag-support">${esc(p("diagSupport"))}</p>
+              <div class="cta-banner">
+                <h2 class="giant-text" style="color: var(--w-gold);">${esc(p("diagHeadline"))}</h2>
+                ${p("diagCopy") ? `<p class="lead-text" style="margin:24px auto; max-width:600px;">${esc(p("diagCopy"))}</p>` : ''}
+                <p style="margin:24px auto 40px; max-width:600px; color: var(--w-muted); font-size: 18px; line-height: 1.6;">${esc(p("diagCopy2"))}</p>
+                
+                <div class="cta-button-wrapper">
+                  <button class="public-cta large-cta shine-effect" id="openDiagnostic">
+                    <span class="cta-text">${esc(p("cta"))}</span>
+                    <span class="cta-icon">→</span>
+                  </button>
+                </div>
+                ${p("diagSupport") ? `<p class="diag-support" style="margin-top: 16px; font-size: 14px; opacity: 0.6;">${esc(p("diagSupport"))}</p>` : ''}
+              </div>
             </div>
           </section>
         </main>
