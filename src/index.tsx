@@ -56,13 +56,13 @@ app.get("*", (c) => {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link href="/static/style.css?v=8" rel="stylesheet">
-<link href="/static/public-site.css?v=10" rel="stylesheet">
+<link href="/static/style.css?v=9" rel="stylesheet">
+<link href="/static/public-site.css?v=11" rel="stylesheet">
 </head>
 <body>
 <div id="root"><div class="app-loading"><div class="spinner"></div></div></div>
-<script src="/static/public-site.js?v=19"></script>
-<script src="/static/app.js?v=9"></script>
+<script src="/static/public-site.js?v=20"></script>
+<script src="/static/app.js?v=10"></script>
 </body>
 </html>`);
 });

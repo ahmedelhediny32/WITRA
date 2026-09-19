@@ -363,6 +363,8 @@
   @media (max-width:900px){
     .sidebar{position:fixed;left:-260px;z-index:50;height:100vh;transition:left .2s;}
     .sidebar.open{left:0;}
+    html.rtl .sidebar{left:auto;right:-260px;transition:right .2s;}
+    html.rtl .sidebar.open{left:auto;right:0;}
     .content{padding:20px 16px 50px;}
     .topbar{padding:14px 16px;}
   }
@@ -580,34 +582,6 @@ details[open] > summary .accordion-arrow { transform: rotate(90deg); }
 
 /* ============ MOBILE APP SHELL ============ */
 @media (max-width: 768px) {
-  .app-shell { flex-direction: column; }
-  .content-area { order: 1; flex: 1; width: 100%; box-sizing: border-box; }
-  .sidebar { 
-    order: 2; 
-    width: 100%; 
-    flex-direction: row; 
-    padding: 0; 
-    overflow-x: auto; 
-    border-top: 1px solid var(--line); 
-    border-right: none; 
-    background: var(--sidebar-bg);
-  }
-  html.rtl .app-shell .sidebar { border-left: none; }
-  .sidebar-brand, .sidebar-user, .sidebar-group-label { display: none; }
-  .sidebar-group { display: flex; flex-direction: row; margin: 0; border: none; }
-  .sidebar-link { 
-    flex-direction: column; 
-    padding: 10px; 
-    font-size: 11px; 
-    border-radius: 0; 
-    white-space: nowrap; 
-    align-items: center; 
-    justify-content: center;
-    flex: 1;
-    min-width: 60px;
-  }
-  .sidebar-link .icon { margin: 0 0 4px 0; }
-  html.rtl .sidebar-link .icon { margin-left: 0; }
   .content-scroll { padding: 16px; width: 100%; box-sizing: border-box; }
   
   /* Tables */
