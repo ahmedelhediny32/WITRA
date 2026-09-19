@@ -93,7 +93,7 @@
         ["03 — RADICAL REPORTING", "No disappearing act after the campaign launches.", "Weekly numbers. Monthly business reviews. Clear reporting."],
         ["04 — SYSTEMS, NOT CAMPAIGNS", "We don't want your marketing to depend on one campaign.", "We build systems that continue working and improving."],
         ["05 — COPY CRAFT", "Sharp messaging designed for how Egyptian customers actually think, talk, and buy.", "Clear offers. Strong hooks. No artificial translation feel."],
-        ["06 — LUXURY EXPERIENCE. SME PRICE.", "Premium thinking, premium design, premium service — packaged for ambitious businesses without unnecessary enterprise overhead."]
+        ["06 — LUXURY EXPERIENCE. SME PRICE.", "Premium thinking, premium design, premium service.", "Packaged for ambitious businesses without unnecessary enterprise overhead."]
       ],
 
       operateHeadline: "How We Operate",
@@ -209,7 +209,7 @@
         ["03 — تقارير واضحة. بدون تجميل.", "مفيش اختفاء بعد إطلاق الحملة.", "أرقام أسبوعية. مراجعات شهرية. وتقارير واضحة."],
         ["04 — منظومات، مش حملات.", "مش عايزين تسويقك يعتمد على حملة واحدة.", "بنبني أنظمة تستمر في الشغل والتطور."],
         ["05 — أسلوب يفهم السوق", "رسائل تسويقية مصممة بالطريقة اللي العميل المصري بيفكر ويتكلم ويشتري بيها.", "Offers واضحة. Hooks قوية. ومن غير إحساس الترجمة أو الكلام المصطنع."],
-        ["06 — تجربة Premium. بتكلفة تناسب الـ SME.", "استراتيجية قوية، Design احترافي، وخدمة على مستوى Senior — من غير تكلفة أو تعقيد أكبر من احتياج البيزنس."]
+        ["06 — تجربة Premium. بتكلفة تناسب الـ SME.", "استراتيجية قوية، Design احترافي، وخدمة على مستوى Senior.", "من غير تكلفة أو تعقيد أكبر من احتياج البيزنس."]
       ],
 
       operateHeadline: "طريقة شغلنا",
