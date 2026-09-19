@@ -12,7 +12,7 @@
       heroTitle: "Business Is a System.",
       heroSubtitle: "WITRA Designs Growth Systems.",
       heroSupport: "Businesses don't need more posts — they need commercial systems.",
-      heroText: "Stop creating more. Start building what drives growth. WITRA turns business challenges into clear, connected growth systems — Marketing strategy / Plan , creative, digital / Offline marketing, and performance into one system built around your business..",
+      heroText: "Stop creating more. Start building what drives growth. WITRA turns business challenges into clear, connected growth systems — Marketing strategy / Plan , creative, digital / Offline marketing, and performance into one system built around your business.",
 
       problemHeadline: "Most Agencies Sell Activity.\nWITRA Builds the System Behind Growth.",
       problemCopy2: "Random content. Disconnected campaigns. Unclear positioning. Reports full of numbers that don't explain what changed.",
@@ -39,8 +39,7 @@
         ["SHARP", "Precise diagnosis before any prescription.", "We never guess. We analyze, understand, then act."],
         ["SIMPLE", "No jargon. No unnecessary complexity.", "Clear plans. Clear priorities. Clear prices. Clear results."],
         ["UNIQUE", "Every client gets a system designed for their business.", "Never a recycled template disguised as strategy."],
-        ["ACCOUNTABLE", "Weekly numbers. Monthly reviews. Real business outcomes.", "If it doesn't move the business, we stop doing it."]
-      ],
+        ["RESULTS", "Weekly metrics. Monthly reviews. Real business impact.", "If it doesn’t move the business forward, it doesn’t belong in the system."]],
 
       missionHeadline: "From Invisible to Unmissable.",
       missionCopy: "Our mission is to transform Egyptian small and medium businesses from invisible to unmissable — through honest, data-driven marketing systems that generate real revenue, Actionable Business Metrics.",
@@ -49,13 +48,13 @@
       visionCopy: "To be the defining growth partner for Egyptian SMEs (Small & medium enterprises), setting the standard for how marketing should operate and generate real impact.",
 
       servicesHeadline: "The Full Service Stack",
-      servicesSubtitle: "Six lines of work. One connected system.",
+      servicesSubtitle: "FIVE lines of work. One connected system.",
       servicesIntro: "Strategy is only valuable when it can be executed. WITRA connects strategy, marketing, creative, technology, and commercial thinking under one operating system.",
       servicesList: [
         ["01 — BUSINESS CONSULTING", "Marketing and commercial consulting, sales enablement, offer design, and business reviews focused on the numbers that matter."],
         ["02 — MARKETING STRATEGY", "Market & competitor analysis, target-audience definition, positioning, and growth roadmaps built around real business goals."],
         ["03 — BRANDING & IDENTITY", "Brand development, brand strategy, logo design, visual identity systems, and brand guidelines that make businesses recognizable and credible."],
-        ["04— MARKETING & CREATIVE", "Integrated digital and offline marketing, creative design, content, and paid campaigns — built as one connected system to strengthen your brand, engage your audience, and drive measurable growth."],
+        ["04 — MARKETING & CREATIVE", "Integrated digital and offline marketing, creative design, content, and paid campaigns — built as one connected system to strengthen your brand, engage your audience, and drive measurable growth."],
         ["05 — WEB & MOBILE DEVELOPMENT", "Websites, e-commerce stores, mobile applications, performance optimization, security, and conversion-focused digital experiences."]
       ],
 
@@ -67,7 +66,7 @@
         ["02 — DESIGN & STRATEGY", "We build the direction together.", "A founder-level strategy session focused on building the growth architecture around your actual business goals and constraints."],
         ["03 — BUILD", "Strategy becomes execution.", "We create the assets, campaigns, branding, and digital infrastructure that make the strategy real and ready to launch."],
         ["04 — OPERATE", "Run the system with the client — not around the client.", "WITRA operates alongside your team. We don't disappear after the strategy deck; we execute daily and communicate clearly."],
-        ["05 — MEASURE", "Track the numbers that actually matter.", "We move past vanity metrics to measure real business performance, tracking what truly impacts your bottom line."],
+        ["05 — MEASURE", "Using WITRA’s Performance Tracking System.", "We move past vanity metrics to measure real business performance, tracking what truly impacts your bottom line."],
         ["06 — OPTIMIZE", "Learn from the numbers and improve.", "Every month, we review what worked and what didn't. We refine the system continuously to maximize growth and efficiency."]
       ],
 
@@ -110,8 +109,8 @@
       pricingPlans: [
         ["BUSINESS CONSULTING", ["Marketing diagnosis", "Strategic consulting", "Commercial direction", "90-Day Action Plan"]],
         ["CORE", ["Strategy", "Content Plan", "Creative & Design", "Digital Marketing"]],
-        ["PREMIUM", ["Strategy", "Content Plan", "Creative & Design", "Digital Marketing", "Branding & Identity"]],
-        ["GOLD", ["Strategy", "Content Plan", "Creative & Design", "Digital Marketing", "Branding & Identity", "Offline Campaigns"]]
+        ["GOLD", ["Strategy", "Content Plan", "Creative & Design", "Digital Marketing", "Branding & Identity"]],
+        ["PREMIUM", ["Strategy", "Content Plan", "Creative & Design", "Digital Marketing", "Branding & Identity", "Offline Campaigns"]]
       ],
       contactPricing: "Contact for pricing",
 
@@ -128,9 +127,9 @@
       heroTitle: "البيزنس منظومة.",
       heroSubtitle: "WITRA تبني منظومة النمو.",
       heroSupport: "الشركات مش محتاجة محتوى أكتر؛ محتاجة منظومة تسويق مرتبطة بالبيزنس وبتحقق نمو حقيقي.",
-      heroText: "توقف عن مجرد صناعة المزيد، وابدأ في بناء ما يحرك النمو. WITRA تحول تحديات البيزنس إلى منظومات نمو واضحة ومترابطة — من خلال دمج استراتيجية / خطة التسويق، الـ Creative، الـ Digital / Offline Marketing، والأداء في منظومة واحدة مبنية حول البيزنس الخاص بك.",
+      heroText: "توقف عن مجرد صناعة المزيد، وابدأ في بناء ما يحرك النمو. WITRA تحول تحديات البيزنس إلى منظومات نمو واضحة ومترابطة — من خلال دمج استراتيجية / خطة التسويق، الـ Creative، الـ Digital / Offline Marketing، وقياس الأداء في منظومة واحدة مبنية حول البيزنس الخاص بك.",
 
-      problemHeadline: "معظم الوكالات بتبيع نشاط.\nWITRA بتبني المنظومة وراء النمو.",
+      problemHeadline: "معظم الوكالات بتبيع صور / ريلز.\nWITRA بتبني المنظومة وراء النمو.",
       problemCopy2: "محتوى عشوائي. حملات منفصلة. Positioning غير واضح. وتقارير مليانة أرقام من غير ما تقولك إيه اللي اتغير فعلًا.",
       problemCopy3: "WITRA بتشتغل بطريقة مختلفة: نشخّص المشكلة الأول، نبني منظومة النمو ثانيًا، وبعدها ننفّذ ونقيس ونطوّر اللي بيحقق نتيجة حقيقية.",
       problemBeforeTitle: "قبل WITRA",
@@ -139,7 +138,7 @@
       problemWithList: ["مشكلة واضحة ومُشخّصة", "استراتيجية واضحة", "Marketing System متكامل", "مؤشرات مرتبطة بالبيزنس", "قرارات مبنية على البيانات", "نظام واضح قابل للتطوير", "خطة نمو محددة"],
 
       anatomyEyebrow: "مفهوم العلامة التجارية",
-      anatomyHeadline: "بنية WITRA",
+      anatomyHeadline: "WITRA",
       anatomyItems: [
         ["<img src='/static/img/icon-new-w.png?v=1' style='width: 100%; height: 100%; object-fit: contain;' alt='W'>", 'حرف "W"', "القوة، الاستقرار والاعتمادية."],
         ["<img src='/static/img/icon-new-y.png?v=1' style='width: 100%; height: 100%; object-fit: contain;' alt='Y'>", 'حرف "Y"', "النمو، التقدم للأمام والطموح."],
@@ -149,30 +148,30 @@
 
 
 
-      identityHeadline: "أربع مبادئ بنبني بيها كل حاجة.",
-      identitySubtitle: "طريقة تفكيرنا في البيزنس هي نفسها طريقة بنائنا للتسويق.",
+      identityHeadline: "أربع مبادئ أصيلة لكل خطوة.",
+      identitySubtitle: "رؤية واضحة - هوية حقيقية - طريق واحد للبيزنس والتسويق",
       identityVals: [
         ["SHARP — دقيق", "نشخّص قبل ما نوصف الحل.", "مش بنفترض. بنفهم، نحلّل، وبعدها نتحرك."],
         ["SIMPLE — بسيط", "من غير تعقيد ولا كلام تسويقي فارغ.", "خطة واضحة. أولويات واضحة. أسعار واضحة. نتائج واضحة."],
         ["UNIQUE — مختلف", "كل بيزنس له منظومته الخاصة.", "مش بنعيد استخدام Template ونقدمه على إنه Strategy."],
-        ["ACCOUNTABLE — مسؤول", "أرقام أسبوعية. مراجعات شهرية. ونتائج حقيقية للبيزنس.", "لو حاجة مش بتحرك البيزنس، بنوقفها."]
+        ["RESULTS — نتائج", "أرقام أسبوعية. مراجعات شهرية. ونتائج حقيقية للبيزنس.", "لو مش بيحقق أثر حقيقي، ملوش مكان في النظام."]
       ],
 
       missionHeadline: "من غير ظاهر... إلى مستحيل يتجاهلوه.",
       missionCopy: "مهمتنا إننا نحول الشركات الصغيرة والمتوسطة في مصر من بيزنس غير ظاهر إلى بيزنس واضح، قوي، ومميز في سوقه — من خلال منظومات تسويق مبنية على البيانات وتحقق نمو حقيقي، مش مجرد أرقام شكلية.",
-      missionHighlight: "المقياس الحقيقي لنجاحنا هو نمو العميل.",
+      missionHighlight: "المقياس الوحيد لنجاحنا هو نمو العميل.",
       visionHeadline: "رؤيتنا",
-      visionCopy: "أن نكون شريك النمو الأساسي للشركات المصرية، وأن نضع معياراً جديداً لكيفية عمل وكالات التسويق وتأثيرها الحقيقي.",
+      visionCopy: "أن نكون شريك النمو الأساسي للشركات المصرية الصغيرة والمتوسطة، وأن نضع معياراً جديداً لكيفية عمل وكالات التسويق وتأثيرها الحقيقي.",
 
       servicesHeadline: "منظومة خدمات متكاملة",
-      servicesSubtitle: "ستة مجالات. منظومة واحدة.",
+      servicesSubtitle: "خمس خدمات. منظومة واحدة.",
       servicesIntro: "الاستراتيجية قيمتها الحقيقية بتظهر في التنفيذ. عشان كده بنربط الاستراتيجية، التسويق، الـ Creative، التكنولوجيا، والتفكير التجاري داخل منظومة واحدة.",
       servicesList: [
-        ["01 — Business Consulting", "استشارات تسويقية وتجارية، تطوير الـ Offers، دعم المبيعات، ومراجعات دورية تركز على الأرقام التي تؤثر في البيزنس."],
+        ["01 — استشارات تجارية (نمو)", "استشارات تسويقية وتجارية، تطوير الـ Offers، دعم المبيعات، ومراجعات دورية تركز على الأرقام التي تؤثر في البيزنس."],
         ["02 — استراتيجية التسويق", "تحليل السوق والمنافسين، تحديد الجمهور، بناء الـ Positioning، ووضع خطط نمو مرتبطة بأهداف البيزنس الحقيقية."],
-        ["03 — Branding & Identity", "بناء العلامة التجارية، الاستراتيجية، تصميم الـ Logo، الهوية البصرية، والـ Brand Guidelines."],
-        ["04 — Marketing & Creative", "تسويق رقمي وميداني متكامل، تصميم إبداعي، صناعة محتوى، وحملات مدفوعة — مبنية كمنظومة واحدة لتعزيز علامتك التجارية، التفاعل مع جمهورك، وتحقيق نمو حقيقي."],
-        ["05 — Web & Mobile Development", "تصميم وتطوير المواقع، متاجر الـ E-commerce، التطبيقات، وتحسين الأداء والأمان وتجربة المستخدم والتحويلات."]
+        ["03 — الهوية والعلامة التجارية", "بناء العلامة التجارية، الاستراتيجية، تصميم الـ Logo، الهوية البصرية، والـ Brand Guidelines."],
+        ["04 — التسويق والإبداع", "تسويق رقمي وميداني متكامل، تصميم إبداعي، صناعة محتوى، وحملات مدفوعة — مبنية كمنظومة واحدة لتعزيز علامتك التجارية، التفاعل مع جمهورك، وتحقيق نمو حقيقي."],
+        ["05 — تطوير المواقع والتطبيقات", "تصميم وتطوير المواقع، متاجر الـ E-commerce، التطبيقات، وتحسين الأداء والأمان وتجربة المستخدم والتحويلات."]
       ],
 
       engineHeadline: "منظومة WITRA للنمو",
@@ -180,23 +179,23 @@
       engineIntro: "النمو مش نتيجة حملة منفصلة. النمو بيحصل لما الاستراتيجية، والـ Creative، والتنفيذ، والبيانات، والتحسين يشتغلوا مع بعض كمنظومة واحدة.",
       engineStages: [
         ["01 — التشخيص", "نفهم إيه اللي معطّل النمو فعلًا.", "بنراجع التسويق الحالي، الـ Positioning، رحلة العميل، والأرقام عشان نفهم إيه اللي موقف النمو."],
-        ["02 — الاستراتيجية والتصميم", "بنحدد الاتجاه ونبني الخطة مع بعض.", "جلسة استراتيجية مباشرة لتصميم خطة النمو حول البيزنس الحقيقي، أهدافه، والتحديات اللي بتواجهه."],
+        ["02 — الاستراتيجية والتصميم", "بنحدد الاتجاه ونبني الخطة مع بعض.", "استراتيجية مباشرة لتصميم خطة النمو حول البيزنس الحقيقي، أهدافه، والتحديات اللي بتواجهه."],
         ["03 — بناء المنظومة", "الاستراتيجية تتحول إلى تنفيذ.", "بنطوّر الـ Creative، المحتوى، الـ Branding، والأنظمة المطلوبة لتحويل الخطة لواقع جاهز للانطلاق."],
         ["04 — التنفيذ", "نشغّل المنظومة معاك، مش بعيد عنك.", "مش بنختفي بعد تسليم الخطة. بننفذ الشغل يومياً، نتابع الأداء، ونتواصل بوضوح كجزء من فريقك."],
-        ["05 — القياس", "نتابع الأرقام اللي تهم البيزنس فعلًا.", "بنبعد عن الأرقام الشكلية ونقيس الأداء الحقيقي اللي بيأثر على مبيعاتك ونموك."],
+        ["05 — القياس", "باستخدام نظام تتبع الأداء الخاص بـ WITRA", "بنبعد عن الأرقام الشكلية ونقيس الأداء الحقيقي اللي بيأثر على مبيعاتك ونموك."],
         ["06 — التطوير", "نتعلم من الأرقام ونطوّر اللي بيحقق نتيجة.", "كل شهر بنراجع إيه اللي نجح وإيه اللي محتاج تغيير، وبنحسن الأداء باستمرار لضمان أفضل نتيجة."]
       ],
 
       icpHeadline: "مين WITRA مناسبة له؟",
       icpSubtitle: "مش كل بيزنس محتاج WITRA. وده مقصود.",
       icpA: {
-        title: "الشركة اللي بتكبر", subtitle: '"صاحب البيزنس اللي زهق من الوكالات."',
+        title: "بزنس بيحاول يكبر", subtitle: "صاحب البيزنس اللي زهق من الوكالات.",
         copy: "دفعت في Posts وحملات وتقارير، لكن لسه مش شايف العلاقة الواضحة بين الـ Marketing وبين نمو البيزنس؟ أنت مش محتاج نشاط أكتر. أنت محتاج منظومة شغالة مع البيزنس.",
         suitable: "العيادات • العقارات • F&B • الأكاديميات • شركات الخدمات • الشركات الصغيرة والمتوسطة",
         trigger: "أنا محتاج Marketing يجيبلي عملاء فعلًا."
       },
       icpB: {
-        title: "المؤسس الطموح", subtitle: '"اللي بيبني حاجة تستاهل تكبر."',
+        title: "المؤسس الطموح", subtitle: "اللي بيبني حاجة تستاهل تكبر.",
         copy: "عندك منتج أو خدمة عندها Potential وعايز تبني Positioning قوي، حضور موثوق، وGrowth Engine يساعدك تكبر؟",
         suitable: "Startups • New Brands • Tech Businesses • Service Startups",
         trigger: "محتاج أبني حضور قوي وأكبر بسرعة من غير ما أهدر الميزانية."
@@ -209,7 +208,7 @@
         ["02 — استشارات واحد لواحد", "استراتيجية مع حد فاهم البيزنس، مش Meeting مليان كلام تسويقي.", "بنؤمن إن أفضل القرارات بتطلع من نقاش مباشر، عشان كده بنشتغل قريب من العميل وبشكل واحد لواحد."],
         ["03 — تقارير واضحة. بدون تجميل.", "مفيش اختفاء بعد إطلاق الحملة.", "أرقام أسبوعية. مراجعات شهرية. وتقارير واضحة."],
         ["04 — منظومات، مش حملات.", "مش عايزين تسويقك يعتمد على حملة واحدة.", "بنبني أنظمة تستمر في الشغل والتطور."],
-        ["05 — Copy يفهم السوق.", "رسائل تسويقية مصممة بالطريقة اللي العميل المصري بيفكر ويتكلم ويشتري بيها.", "Offers واضحة. Hooks قوية. ومن غير إحساس الترجمة أو الكلام المصطنع."],
+        ["05 — أسلوب يفهم السوق", "رسائل تسويقية مصممة بالطريقة اللي العميل المصري بيفكر ويتكلم ويشتري بيها.", "Offers واضحة. Hooks قوية. ومن غير إحساس الترجمة أو الكلام المصطنع."],
         ["06 — تجربة Premium. بتكلفة تناسب الـ SME.", "استراتيجية قوية، Design احترافي، وخدمة على مستوى Senior — من غير تكلفة أو تعقيد أكبر من احتياج البيزنس."]
       ],
 
@@ -224,10 +223,10 @@
       pricingHeadline: "اختار مستوى النمو المناسب لبيزنسك.",
       pricingSubtitle: "ابدأ من احتياجك الحالي، وابني عليه مع نمو البيزنس.",
       pricingPlans: [
-        ["BUSINESS CONSULTING", ["استشارة تسويقية شاملة", "استراتيجية أعمال", "توجيه تجاري", "خطة عمل لـ 90 يوم"]],
-        ["CORE", ["الاستراتيجية", "خطة المحتوى", "التصميم والابتكار", "التسويق الرقمي"]],
-        ["PREMIUM", ["الاستراتيجية", "خطة المحتوى", "التصميم والابتكار", "التسويق الرقمي", "الهوية البصرية"]],
-        ["GOLD", ["الاستراتيجية", "خطة المحتوى", "التصميم والابتكار", "التسويق الرقمي", "الهوية البصرية", "حملات ميدانية (Offline)"]]
+        ["استشارات تجارية", ["استشارة تسويقية شاملة", "استراتيجية أعمال", "توجيه تجاري", "خطة عمل لـ 90 يوم"]],
+        ["الباقة الأساسية", ["الاستراتيجية", "خطة المحتوى", "التصميم والابتكار", "التسويق الرقمي"]],
+        ["الباقة الذهبية", ["الاستراتيجية", "خطة المحتوى", "التصميم والابتكار", "التسويق الرقمي", "الهوية البصرية"]],
+        ["الباقة المتميزة", ["الاستراتيجية", "خطة المحتوى", "التصميم والابتكار", "التسويق الرقمي", "الهوية البصرية", "حملات ميدانية (Offline)"]]
       ],
       contactPricing: "تواصل لمعرفة الأسعار",
 
@@ -235,7 +234,7 @@
       diagCopy2: "قولنا البيزنس واقف فين دلوقتي، عايز توصله لفين، وإيه اللي معطّل النمو. ومن هنا نبدأ.",
 
       footer: "نبني المنظومات اللي بتخلي البيزنس ينمو.",
-      close: "إغلاق", success: "شكرًا. فريق WITRA استلم طلب التشخيص.", submit: "إرسال طلب التشخيص", formTitle: "خلينا نعرف بيزنسك محتاج إيه بعد كده.", formText: "مكالمة قصيرة نفهم فيها البيزنس قبل ما نقترح أي حاجة.", required: "من فضلك أكمل البيانات المطلوبة.", working: "جاري الإرسال...", error: "حصل خطأ. حاول مرة تانية."
+      close: "إغلاق", success: "شكرًا. فريق WITRA استلم طلب التشخيص.", submit: "إرسال طلب التشخيص", formTitle: "خلينا نحدد البزنس الخاص بيك محتاج أيه؟", formText: "مكالمة قصيرة نفهم فيها البيزنس قبل ما نقترح أي حاجة.", required: "من فضلك أكمل البيانات المطلوبة.", working: "جاري الإرسال...", error: "حصل خطأ. حاول مرة تانية."
     }
   };
 

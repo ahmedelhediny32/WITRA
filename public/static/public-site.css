@@ -229,7 +229,7 @@ html[dir="rtl"] .is-visible .anatomy-item { transform: translateX(0); }
 .before-col:hover { opacity: 1; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 .with-col { background: linear-gradient(145deg, var(--w-glass), rgba(230, 193, 109, 0.05)); border: 1px solid rgba(230, 193, 109, 0.2); border-top: 2px solid var(--w-gold); box-shadow: 0 20px 40px rgba(0,0,0,0.3); transform: translateY(-10px); }
 .with-col:hover { transform: translateY(-15px); box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
-.comp-col h3 { font: 600 14px 'IBM Plex Mono', monospace; letter-spacing: 0.15em; color: var(--w-muted); margin: 0 0 32px; }
+.comp-col h3 { font: 600 14px 'IBM Plex Mono', monospace; letter-spacing: 0.15em; color: #ffffff; margin: 0 0 32px; }
 .with-col h3 { color: var(--w-gold); font-size: 16px; font-weight: 700; letter-spacing: 0.2em; }
 .clean-list { list-style: none; padding: 0; margin: 0; font-size: 17px; color: var(--w-muted); line-height: 2.6; }
 .clean-list li { position: relative; padding-left: 32px; margin-bottom: 8px; }
