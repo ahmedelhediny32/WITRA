@@ -202,6 +202,11 @@ var locales = {
     "Name": "الاسم",
     "Email": "الإيميل",
     "Role": "الصلاحية",
+    "Joined Date": "تاريخ الانضمام",
+    "User": "مستخدم",
+    "Users": "مستخدمين",
+    "Client Platform Users": "مستخدمي المنصة",
+    "Review": "مراجعة",
 
     "e.g. Sunrise Bakery": "مثل: مخبز الشروق",
     "e.g. Retail": "مثل: تجزئة",
@@ -2403,7 +2408,7 @@ function renderAdminTeam(container) {
           var cUsers = usersByClient[c.id];
           if (cUsers && cUsers.length > 0) {
              html += '<details class="accordion-item" style="margin-bottom:8px; border:1px solid var(--line); border-radius:6px; overflow:hidden;">';
-             html += '<summary style="padding:12px 16px; background:var(--paper); cursor:pointer; font-weight:600; display:flex; justify-content:space-between; align-items:center;">' + '<div style="display:flex; align-items:center;"><span class="accordion-arrow">▶</span> ' + esc(c.name) + '</div> <span class="status-badge" style="background:var(--canvas);color:var(--ink);">' + cUsers.length + ' Users</span></summary>';
+             html += '<summary style="padding:12px 16px; background:var(--paper); cursor:pointer; font-weight:600; display:flex; justify-content:space-between; align-items:center;">' + '<div style="display:flex; align-items:center;"><span class="accordion-arrow">▶</span> ' + esc(c.name) + '</div> <span class="status-badge" style="background:var(--canvas);color:var(--ink);">' + cUsers.length + ' ' + (cUsers.length === 1 ? esc(t("User")) : esc(t("Users"))) + '</span></summary>';
              html += '<div style="background:var(--paper);">';
              html += '<table class="data-table"><thead><tr><th>' + esc(t("Name")) + '</th><th>' + esc(t("Email")) + '</th><th>' + esc(t("Role")) + '</th><th>' + esc(t("Joined Date")) + '</th></tr></thead><tbody>';
              html += cUsers.map(function(u) {
