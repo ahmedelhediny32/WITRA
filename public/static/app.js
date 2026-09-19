@@ -1383,7 +1383,7 @@ function kpiHero(icon, label, val, footnote) {
     (footnote ? '<div class="kpi-hero-foot">' + esc(footnote) + '</div>' : '') + '</div></div>';
 }
 function activityRow(a) {
-  return '<div class="activity-row"><div class="activity-dot"></div><div style="flex:1;"><div class="activity-text">' + t(a.text) + '</div></div><div class="activity-time">' + timeAgo(a.time) + '</div></div>';
+  return '<div class="activity-row"><div class="activity-dot"></div><div style="flex:1; min-width:0;"><div class="activity-text">' + t(a.text) + '</div></div><div class="activity-time">' + timeAgo(a.time) + '</div></div>';
 }
 function emptyState(emoji, title, desc) {
   return '<div class="empty-state"><div class="emoji">' + emoji + '</div><h4>' + esc(title) + '</h4><p>' + esc(desc) + '</p></div>';
