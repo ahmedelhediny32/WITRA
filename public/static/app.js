@@ -225,7 +225,7 @@ var locales = {
     "+Included in Core": "+ مشمولة في باقة Core",
     "of spend (min 10,000) 15%": "من الميزانية الإعلانية (بحد أدنى 10,000) 15%",
     "15% of spend (min 10,000)": "15% من الميزانية (بحد أدنى 10,000)",
-    "8,000 – 15,000 (one-time)": "8,000 - 15,000 (لمرة واحدة)",
+    "8,000 - 15,000 (one-time)": "8,000 - 15,000 (لمرة واحدة)",
     "25,000 – 60,000 (one-time)": "25,000 - 60,000 (لمرة واحدة)",
     "Full Presence & Messaging Audit": "مراجعة شاملة للظهور والرسائل",
     "Competitor & Funnel Analysis": "تحليل المنافسين ومسار المبيعات",
@@ -966,7 +966,7 @@ function initials(name) { return (name || "?").split(" ").map(function (w) { ret
 function fmtMoney(n) { var num = Number(n) || 0; return num.toLocaleString("en-US"); }
 function todayIso() { return new Date().toISOString().slice(0, 10); }
 function currentMonthKey() { var d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0"); }
-function planNameFromList(plans, id) { var p = (plans || []).filter(function (p) { return p.id === id; })[0]; return p ? p.name : id; }
+function planNameFromList(plans, id) { var p = (plans || []).filter(function (p) { return p.id === id; })[0]; return p ? (typeof local !== 'undefined' ? local(p.name, p.name_ar || p.name) : p.name) : id; }
 function clientHasEntitlement(plans, client, key) {
   var plan = (plans || []).filter(function (p) { return p.id === client.planId; })[0];
   return !!(plan && plan.entitlements.indexOf(key) !== -1);
