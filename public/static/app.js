@@ -207,6 +207,35 @@ var locales = {
     "Users": "مستخدمين",
     "Client Platform Users": "مستخدمي المنصة",
     "Review": "مراجعة",
+    "Your Business. Your Marketing. Your Growth.": "أعمالك. تسويقك. نموك.",
+    "Your email": "إيميلك",
+    "Password": "كلمة السر",
+    "Sign In": "تسجيل الدخول",
+    "Signing in…": "جاري تسجيل الدخول…",
+    "Forgot password?": "نسيت كلمة السر؟",
+    "Please enter both email and password.": "يرجى إدخال الإيميل وكلمة السر.",
+    "Invalid credentials": "البيانات غير صحيحة",
+    "User not found": "المستخدم غير موجود",
+    "Please contact your WITRA account manager to reset your password.": "يرجى التواصل مع مدير حسابك في WITRA لإعادة تعيين كلمة السر.",
+
+    "Content Ops Tracker": "متتبع عمليات المحتوى",
+    "🔒 Locked": "🔒 مقفول",
+    "Plan every Story, post and field activation in one calendar — and know exactly what shipped versus what didn't, every month.": "خطط لكل ستوري، بوست، وتفعيل ميداني في تقويم واحد — واعرف بالضبط إيه اللي تم نشره وإيه اللي لأ، كل شهر.",
+    "Story &amp; content calendars, day by day": "تقويم المحتوى والستوريز، يوم بيوم",
+    "Status tracking — Planned → Posted / Published": "تتبع الحالة — مخطط ← تم النشر",
+    "Automatic monthly execution reports": "تقارير تنفيذ شهرية تلقائية",
+    "One shared calendar your whole team can see": "تقويم مشترك واحد فريقك كله يقدر يشوفه",
+    "Why you need it —": "ليه محتاجه —",
+    "Right now your content plan lives in someone's head or a WhatsApp thread. This turns it into something you can actually see progress on.": "حالياً خطة المحتوى بتاعتك موجودة في دماغ حد أو في جروب واتساب. ده بيحولها لحاجة تقدر تتابع تقدمها بوضوح.",
+    "Included from the <b>Core</b> plan and up": "متوفر في باقة <b>Core</b> والي أعلى منها",
+    "Request Upgrade →": "اطلب الترقية ←",
+
+    "Brand Assets": "أصول العلامة التجارية",
+    "Manage logos, colors and typography": "إدارة الشعارات والألوان والخطوط",
+    "Team Members": "أعضاء الفريق",
+    "Manage under Team": "يمكن إدارتها من قسم الفريق",
+    "Notification Preferences": "إعدادات الإشعارات",
+    "Email and in-app alerts": "تنبيهات الإيميل والتطبيق",
 
     "e.g. Sunrise Bakery": "مثل: مخبز الشروق",
     "e.g. Retail": "مثل: تجزئة",
@@ -1119,12 +1148,12 @@ function loginHtml(errorMsg) {
   return '<div class="login-screen"><div class="login-card">' +
     '<img class="login-mark" alt="WITRA" src="/static/img/witra-mark.png">' +
     '<h1>WITRA Marketing Solutions</h1>' +
-    '<div class="login-tag">Your Business. Your Marketing. Your Growth.</div>' +
-    (errorMsg ? '<div class="login-error">' + esc(errorMsg) + '</div>' : '') +
-    '<div class="login-field"><label>Email</label><input type="email" id="loginEmail" placeholder="Your email" autocomplete="username"></div>' +
-    '<div class="login-field"><label>Password</label><input type="password" id="loginPassword" placeholder="••••••••••••" autocomplete="current-password"></div>' +
-    '<button class="login-submit" id="loginSubmit">Sign In</button>' +
-    '<a class="login-forgot" href="#" id="loginForgot">Forgot password?</a>' +
+    '<div class="login-tag">' + esc(t("Your Business. Your Marketing. Your Growth.")) + '</div>' +
+    (errorMsg ? '<div class="login-error">' + esc(t(errorMsg)) + '</div>' : '') +
+    '<div class="login-field"><label>' + esc(t("Email")) + '</label><input type="email" id="loginEmail" placeholder="' + esc(t("Your email")) + '" autocomplete="username"></div>' +
+    '<div class="login-field"><label>' + esc(t("Password")) + '</label><input type="password" id="loginPassword" placeholder="••••••••••••" autocomplete="current-password"></div>' +
+    '<button class="login-submit" id="loginSubmit">' + esc(t("Sign In")) + '</button>' +
+    '<a class="login-forgot" href="#" id="loginForgot">' + esc(t("Forgot password?")) + '</a>' +
     '</div></div>';
 }
 function bindLoginEvents() {
@@ -1135,10 +1164,10 @@ function bindLoginEvents() {
     var email = (emailInput.value || "").trim();
     var password = passInput.value || "";
     if (!email || !password) {
-      renderLoginError("Please enter both email and password.");
+      renderLoginError(t("Please enter both email and password."));
       return;
     }
-    setButtonLoading(submitBtn, true, "Signing in…");
+    setButtonLoading(submitBtn, true, t("Signing in…"));
     api.auth.login(email, password).then(function (res) {
       state.currentUser = res.user;
       state.impersonatingClientId = null;
@@ -1153,7 +1182,7 @@ function bindLoginEvents() {
       render();
     }).catch(function (err) {
       setButtonLoading(submitBtn, false);
-      renderLoginError(err.message);
+      renderLoginError(t(err.message));
     });
   }
   submitBtn.addEventListener("click", doLogin);
@@ -1162,7 +1191,7 @@ function bindLoginEvents() {
   var forgot = document.getElementById("loginForgot");
   if (forgot) forgot.addEventListener("click", function (e) {
     e.preventDefault();
-    toast("Please contact your WITRA account manager to reset your password.");
+    toast(t("Please contact your WITRA account manager to reset your password."));
   });
 }
 function renderLoginError(msg) {
@@ -1172,7 +1201,7 @@ function renderLoginError(msg) {
   if (existing) { existing.textContent = msg; return; }
   var div = document.createElement("div");
   div.className = "login-error";
-  div.textContent = msg;
+  div.textContent = t(msg);
   var tag = card.querySelector(".login-tag");
   tag.insertAdjacentElement("afterend", div);
 }
@@ -3029,12 +3058,12 @@ function renderClientContentPlanner(container) {
     var c = r[0].client, plans = r[1];
     if (!clientHasEntitlement(plans, c, "content_plan")) {
       container.innerHTML = '<div class="service-card locked" style="max-width:520px;">' +
-        '<div class="head"><h4>Content Ops Tracker</h4><span class="status-badge status-locked">🔒 Locked</span></div>' +
-        '<div class="headline">Plan every Story, post and field activation in one calendar — and know exactly what shipped versus what didn\'t, every month.</div>' +
-        '<ul><li>Story &amp; content calendars, day by day</li><li>Status tracking — Planned → Posted / Published</li><li>Automatic monthly execution reports</li><li>One shared calendar your whole team can see</li></ul>' +
-        '<div class="why"><b>Why you need it —</b> Right now your content plan lives in someone\'s head or a WhatsApp thread. This turns it into something you can actually see progress on.</div>' +
-        '<div class="price">Included from the <b>Core</b> plan and up</div>' +
-        '<button class="btn btn-primary btn-sm" data-request-upgrade="core">Request Upgrade →</button></div>';
+        '<div class="head"><h4>' + esc(t("Content Ops Tracker")) + '</h4><span class="status-badge status-locked">' + esc(t("🔒 Locked")) + '</span></div>' +
+        '<div class="headline">' + esc(t("Plan every Story, post and field activation in one calendar — and know exactly what shipped versus what didn't, every month.")) + '</div>' +
+        '<ul><li>' + t("Story &amp; content calendars, day by day") + '</li><li>' + esc(t("Status tracking — Planned → Posted / Published")) + '</li><li>' + esc(t("Automatic monthly execution reports")) + '</li><li>' + esc(t("One shared calendar your whole team can see")) + '</li></ul>' +
+        '<div class="why"><b>' + esc(t("Why you need it —")) + '</b> ' + esc(t("Right now your content plan lives in someone's head or a WhatsApp thread. This turns it into something you can actually see progress on.")) + '</div>' +
+        '<div class="price">' + t("Included from the <b>Core</b> plan and up") + '</div>' +
+        '<button class="btn btn-primary btn-sm" data-request-upgrade="core">' + esc(t("Request Upgrade →")) + '</button></div>';
       bindContentDelegation();
       return;
     }
@@ -3215,7 +3244,7 @@ function renderClientSettings(container) {
     ["Team Members", "Manage under Team"],
     ["Notification Preferences", "Email and in-app alerts"]];
   container.innerHTML = '<div class="panel-card"><div class="settings-list">' + rows.map(function (r) {
-    return '<div class="settings-row"><div><div class="lbl">' + esc(r[0]) + '</div><div class="desc">' + esc(r[1]) + '</div></div><button class="btn btn-sm" data-manage-setting="' + esc(r[0]) + '">Manage</button></div>';
+    return '<div class="settings-row"><div><div class="lbl">' + esc(t(r[0])) + '</div><div class="desc">' + esc(t(r[1])) + '</div></div><button class="btn btn-sm" data-manage-setting="' + esc(r[0]) + '">' + esc(t("Manage")) + '</button></div>';
   }).join('') + '</div></div>';
   bindContentDelegation();
 }

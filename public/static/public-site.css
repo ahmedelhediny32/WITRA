@@ -499,6 +499,7 @@ html { scroll-behavior: smooth; }
 @media (max-width: 768px) {
   .anatomy-grid { grid-template-columns: 1fr; }
   .anatomy-visual { height: 300px; padding: 20px; }
+  .system-flow { grid-template-columns: 1fr; }
 }
 
 /* ENHANCED CTA SECTION */

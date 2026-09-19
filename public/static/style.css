@@ -577,3 +577,52 @@ details[open] > summary .accordion-arrow { transform: rotate(90deg); }
   .attachment-upload-form { flex-direction: column; align-items: stretch; }
   .attachment-actions { flex-direction: column; }
 }
+
+/* ============ MOBILE APP SHELL ============ */
+@media (max-width: 768px) {
+  .app-shell { flex-direction: column; }
+  .content-area { order: 1; flex: 1; width: 100%; box-sizing: border-box; }
+  .sidebar { 
+    order: 2; 
+    width: 100%; 
+    flex-direction: row; 
+    padding: 0; 
+    overflow-x: auto; 
+    border-top: 1px solid var(--line); 
+    border-right: none; 
+    background: var(--sidebar-bg);
+  }
+  html.rtl .app-shell .sidebar { border-left: none; }
+  .sidebar-brand, .sidebar-user, .sidebar-group-label { display: none; }
+  .sidebar-group { display: flex; flex-direction: row; margin: 0; border: none; }
+  .sidebar-link { 
+    flex-direction: column; 
+    padding: 10px; 
+    font-size: 11px; 
+    border-radius: 0; 
+    white-space: nowrap; 
+    align-items: center; 
+    justify-content: center;
+    flex: 1;
+    min-width: 60px;
+  }
+  .sidebar-link .icon { margin: 0 0 4px 0; }
+  html.rtl .sidebar-link .icon { margin-left: 0; }
+  .content-scroll { padding: 16px; width: 100%; box-sizing: border-box; }
+  
+  /* Tables */
+  .data-table { display: block; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+  
+  /* Login */
+  .login-card { max-width: 90%; width: auto; padding: 30px 20px; }
+  .login-mark { width: 180px; }
+  
+  /* Modal */
+  .modal-box { max-height: 95vh; margin: 10px; max-width: calc(100% - 20px); }
+  
+  /* Toolbar */
+  .toolbar { flex-direction: column; align-items: stretch; gap: 10px; }
+  .toolbar input[type="search"] { width: 100%; box-sizing: border-box; }
+  .toolbar .btn { width: 100%; justify-content: center; }
+  html.rtl .toolbar input[type="search"] { text-align: right; }
+}
