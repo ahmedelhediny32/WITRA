@@ -1932,7 +1932,7 @@ function renderAdminServices(container) {
         '<div class="price">' + esc(s.price) + '</div>' +
         '<ul>' + s.whatYouGet.slice(0, 4).map(function (w) { return '<li>' + esc(t(w)) + '</li>'; }).join('') + '</ul>' +
         '<div class="cell-sub">' + esc(t("Included in: ")) + (s.includedIn.length ? s.includedIn.map(function (pid) { return planNameFromList(plans, pid); }).join(", ") : t("Standalone only")) + '</div>' +
-        '<div style="margin-top:12px;"><button class="btn btn-sm" data-edit-service="' + s.id + '">Edit</button></div></div>';
+        '<div style="margin-top:auto;"><button class="btn btn-sm" data-edit-service="' + s.id + '">Edit</button></div></div>';
     }).join('') + '</div>';
     container.innerHTML = html;
     document.getElementById("addServiceBtn").addEventListener("click", function () { serviceFormModal(null); });
