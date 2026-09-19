@@ -227,8 +227,9 @@ var locales = {
     "15% of spend (min 10,000)": "15% من الميزانية (بحد أدنى 10,000)",
     "8,000 - 15,000 (one-time)": "8,000 - 15,000 (لمرة واحدة)",
     "25,000 – 60,000 (one-time)": "25,000 - 60,000 (لمرة واحدة)",
-    "Full Presence & Messaging Audit": "مراجعة شاملة للظهور والرسائل",
-    "Competitor & Funnel Analysis": "تحليل المنافسين ومسار المبيعات",
+    "Edit": "تعديل",
+    "+ Add Service": "+ إضافة خدمة",
+    "Active": "نشط",
     "Written Growth Diagnosis": "تقرير مكتوب لتشخيص النمو",
     "90-Day Action Plan": "خطة عمل لمدة 90 يومًا",
     "Campaign Strategy": "استراتيجية الحملات",
@@ -966,7 +967,7 @@ function initials(name) { return (name || "?").split(" ").map(function (w) { ret
 function fmtMoney(n) { var num = Number(n) || 0; return num.toLocaleString("en-US"); }
 function todayIso() { return new Date().toISOString().slice(0, 10); }
 function currentMonthKey() { var d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0"); }
-function planNameFromList(plans, id) { var p = (plans || []).filter(function (p) { return p.id === id; })[0]; return p ? (typeof local !== 'undefined' ? local(p.name, p.name_ar || p.name) : p.name) : id; }
+function planNameFromList(plans, id) { var p = (plans || []).filter(function (p) { return p.id === id; })[0]; return p ? (typeof trF !== 'undefined' ? trF(p.name, p.name_ar || p.name) : p.name) : id; }
 function clientHasEntitlement(plans, client, key) {
   var plan = (plans || []).filter(function (p) { return p.id === client.planId; })[0];
   return !!(plan && plan.entitlements.indexOf(key) !== -1);
@@ -1925,14 +1926,14 @@ function reviewRequestModal(reqId) {
 function renderAdminServices(container) {
   Promise.all([getServices(), getPlans()]).then(function (r) {
     var services = r[0], plans = r[1];
-    var html = '<div class="toolbar"><span style="flex:1;"></span><button class="btn btn-primary btn-sm" id="addServiceBtn">+ Add Service</button></div>';
+    var html = '<div class="toolbar"><span style="flex:1;"></span><button class="btn btn-primary btn-sm" id="addServiceBtn">' + esc(t("+ Add Service")) + '</button></div>';
     html += '<div class="service-grid">' + services.map(function (s) {
-      return '<div class="service-card"><div class="head"><h4>' + esc(trF(s.name, s.nameAr)) + '</h4><span class="status-badge status-active">' + esc(s.status) + '</span></div>' +
+      return '<div class="service-card"><div class="head"><h4>' + esc(trF(s.name, s.nameAr)) + '</h4><span class="status-badge status-active">' + esc(t(s.status)) + '</span></div>' +
         '<div class="headline">' + esc(trF(s.headline, s.headlineAr)) + '</div>' +
-        '<div class="price">' + esc(s.price) + '</div>' +
-        '<ul>' + s.whatYouGet.slice(0, 4).map(function (w) { return '<li>' + esc(t(w)) + '</li>'; }).join('') + '</ul>' +
+        '<div class="price">' + esc(t(s.price)) + '</div>' +
+        '<ul>' + (trF(s.whatYouGet, s.whatYouGetAr) || s.whatYouGet).slice(0, 4).map(function (w) { return '<li>' + esc(t(w)) + '</li>'; }).join('') + '</ul>' +
         '<div class="cell-sub">' + esc(t("Included in: ")) + (s.includedIn.length ? s.includedIn.map(function (pid) { return planNameFromList(plans, pid); }).join(", ") : t("Standalone only")) + '</div>' +
-        '<div style="margin-top:auto;"><button class="btn btn-sm" data-edit-service="' + s.id + '">Edit</button></div></div>';
+        '<div style="margin-top:auto;"><button class="btn btn-sm" data-edit-service="' + s.id + '">' + esc(t("Edit")) + '</button></div></div>';
     }).join('') + '</div>';
     container.innerHTML = html;
     document.getElementById("addServiceBtn").addEventListener("click", function () { serviceFormModal(null); });
