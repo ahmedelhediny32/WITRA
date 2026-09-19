@@ -953,7 +953,7 @@ var api = {
 function esc(v) { if (v === undefined || v === null) return ""; return String(v).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
 
 function inlineBillingStatusSelect(c) {
-  return '<select data-inline-billing-status="' + c.id + '" class="status-badge ' + healthClass(c.billingStatus) + '" style="border:none; outline:none; cursor:pointer; appearance:menulist; padding-right:4px; font-family:inherit; font-weight:600; font-size:12px;">' +
+  return '<select onclick="event.stopPropagation()" data-inline-billing-status="' + c.id + '" class="status-badge ' + healthClass(c.billingStatus) + '" style="border:none; outline:none; cursor:pointer; appearance:menulist; padding-right:4px; font-family:inherit; font-weight:600; font-size:12px;">' +
     '<option value="Active"' + (c.billingStatus === 'Active' ? ' selected' : '') + '>' + esc(t("Active")) + '</option>' +
     '<option value="Renewed"' + (c.billingStatus === 'Renewed' ? ' selected' : '') + '>' + esc(t("Renewed")) + '</option>' +
     '<option value="Expired"' + (c.billingStatus === 'Expired' ? ' selected' : '') + '>' + esc(t("Expired")) + '</option>' +
